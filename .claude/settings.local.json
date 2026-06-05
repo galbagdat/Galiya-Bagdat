@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(git config *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git -c user.name=\"Galiya Bagdat\" -c user.email=\"galbagdat7@gmail.com\" commit -qm \"Персональный сайт-визитка «Галия Багдат» \\(RU/KZ/EN\\) по PRD\")"
+    ]
+  }
+}
