@@ -45,7 +45,9 @@
       "Bash(rm -rf /tmp/wa /tmp/check3901.jpg)",
       "Bash(git -c user.name=\"Galiya Bagdat\" -c user.email=\"galbagdat7@gmail.com\" commit -qm \"Биография: обновлён текст профиля \\(магистр, коуч №1, советник семей, Family Leadership Academy\\)\")",
       "Bash(cp \"/Users/galiya/Downloads/фото галия 2.JPG\" photo-hero.jpg)",
-      "Bash(sips -g pixelWidth -g pixelHeight photo-hero.jpg)"
+      "Bash(sips -g pixelWidth -g pixelHeight photo-hero.jpg)",
+      "Bash(cd \"/Users/galiya/Desktop/вайбкодинг/11111\" && cp \"/Users/galiya/Downloads/IMG_7198.JPG\" photo-baku-arena.jpg && echo \"copied\" && grep -n 'class=\"collage stagger\"' index.html)",
+      "Bash(python3 -)"
     ]
   }
 }
