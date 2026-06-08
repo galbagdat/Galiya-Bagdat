@@ -3,820 +3,644 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Галия Багдат — Президент Международной Ассоциации ICU в РК и Средней Азии</title>
-<meta name="description" content="Галия Багдат (Нурбекова Галия Багдатовна) — эксперт по коучингу и обучению руководителей. Президент Международной Ассоциации ICU в РК и Средней Азии." />
+<title>Галия Багдат — Коучинг · Лидерство · Family Office</title>
+<meta name="description" content="Галия Багдат (Нурбекова Галия Багдатовна) — Президент Международной Ассоциации ICU в РК и Средней Азии, со-основатель Tumar Family Office. Миссия — быть вкладом в других людей." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600;1,700&family=Manrope:wght@300;400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --green-deep:#0d3b2e;
-    --green-deeper:#08291f;
-    --green-live:#1f7a5c;
-    --green-soft:#2e9c78;
-    --gold:#c9a24b;
-    --gold-light:#e3c878;
-    --cream:#f7f2e7;
-    --cream-warm:#efe6d2;
-    --ink:#21271f;
-    --ink-soft:#4a4f44;
-    --paper:#fbf8f1;
-    --radius:18px;
-    --maxw:1180px;
+    --paper:#f3efe6;
+    --paper-2:#ece6d9;
+    --ink:#2a2723;
+    --ink-soft:#5f5a51;
+    --line:#d8d0c0;
+    --gold:#b3893f;
+    --red:#a8453b;
+    --green:#15362b;
+    --green-2:#0f281f;
+    --maxw:1280px;
     --ease:cubic-bezier(.22,.61,.36,1);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    margin:0;
-    font-family:'Manrope',system-ui,sans-serif;
-    color:var(--ink);
-    background:var(--cream);
-    line-height:1.6;
-    overflow-x:hidden;
-    -webkit-font-smoothing:antialiased;
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:'Manrope',system-ui,sans-serif;line-height:1.7;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
   }
-  h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1;margin:0;}
-  a{color:inherit;}
-  img{max-width:100%;display:block;}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
-  .eyebrow{
-    font-family:'Manrope',sans-serif;font-weight:600;font-size:.74rem;
-    letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
-    margin-bottom:18px;
+  /* paper grain overlay */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-  .eyebrow.on-dark{color:var(--gold-light);}
+  h1,h2,h3,h4,blockquote{font-family:'Playfair Display',Georgia,serif;font-weight:600;margin:0;line-height:1.08;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px;position:relative;z-index:2;}
+  .label{font-size:.72rem;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);}
+  .num-tag{font-family:'Manrope',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;color:var(--red);}
 
   /* ---------- HEADER ---------- */
   header{
-    position:sticky;top:0;z-index:100;
-    background:rgba(247,242,231,.82);
-    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(201,162,75,.22);
-    transform:translateY(-100%);opacity:0;
-    animation:dropIn .8s var(--ease) .15s forwards;
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 40px;background:rgba(243,239,230,.78);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+    transform:translateY(-100%);animation:drop .8s var(--ease) .1s forwards;
   }
-  @keyframes dropIn{to{transform:translateY(0);opacity:1;}}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--maxw);margin:0 auto;}
-  .brand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--green-deep);letter-spacing:.01em;}
-  .brand span{color:var(--gold);}
-  .lang{display:flex;gap:4px;background:rgba(13,59,46,.06);border-radius:999px;padding:4px;}
-  .lang button{
-    border:0;background:transparent;cursor:pointer;
-    font-family:'Manrope',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.06em;
-    color:var(--ink-soft);padding:7px 14px;border-radius:999px;transition:all .3s var(--ease);
+  @keyframes drop{to{transform:translateY(0);}}
+  .hbrand{line-height:1.1;}
+  .hbrand .nm{font-family:'Playfair Display',serif;font-style:italic;font-size:1.4rem;font-weight:600;color:var(--green);}
+  .hbrand .sub{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px;}
+  .hright{display:flex;align-items:center;gap:18px;}
+  .lang{display:flex;gap:2px;}
+  .lang button{border:0;background:transparent;cursor:pointer;font-family:'Manrope',sans-serif;
+    font-weight:600;font-size:.74rem;letter-spacing:.12em;color:var(--ink-soft);padding:6px 9px;border-radius:6px;transition:.3s;}
+  .lang button.active{color:var(--green);background:rgba(21,54,43,.08);}
+  .lang button:hover:not(.active){color:var(--ink);}
+  .capsule{border:1px solid var(--green);color:var(--green);border-radius:999px;padding:10px 22px;
+    font-size:.78rem;font-weight:600;letter-spacing:.06em;transition:.35s var(--ease);}
+  .capsule:hover{background:var(--green);color:var(--paper);}
+
+  /* ---------- LEFT INDEX ---------- */
+  .index-nav{
+    position:fixed;left:40px;top:50%;transform:translateY(-50%);z-index:40;width:210px;
+    opacity:0;animation:fadeIn 1s var(--ease) 1s forwards;
   }
-  .lang button.active{background:var(--green-deep);color:var(--gold-light);box-shadow:0 4px 14px rgba(13,59,46,.25);}
-  .lang button:hover:not(.active){color:var(--green-deep);}
+  @keyframes fadeIn{to{opacity:1;}}
+  .index-nav .ttl{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);
+    padding-bottom:12px;margin-bottom:6px;border-bottom:1px solid var(--line);}
+  .index-nav a{display:flex;gap:12px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--line);
+    font-size:.8rem;color:var(--ink-soft);transition:.3s;}
+  .index-nav a .n{font-size:.66rem;font-weight:700;color:var(--red);min-width:20px;}
+  .index-nav a:hover,.index-nav a.active{color:var(--green);padding-left:6px;}
+  @media(max-width:1180px){.index-nav{display:none;}}
 
   /* ---------- HERO ---------- */
-  .hero{
-    position:relative;padding:84px 0 72px;overflow:hidden;
-    background:
-      radial-gradient(900px 500px at 85% -5%,rgba(46,156,120,.16),transparent 60%),
-      radial-gradient(700px 480px at -5% 110%,rgba(201,162,75,.14),transparent 60%),
-      var(--cream);
-  }
-  .hero .grid{display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:center;}
-  .hero-status{font-size:.8rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--green-live);margin-bottom:22px;}
-  .hero h1{font-size:clamp(3rem,7vw,5.4rem);color:var(--green-deep);letter-spacing:-.01em;}
-  .hero h1 em{font-style:normal;color:var(--gold);display:block;}
-  .hero .role{font-size:1.18rem;color:var(--ink-soft);max-width:30ch;margin:22px 0 34px;font-weight:400;}
-  .stats{display:flex;gap:34px;flex-wrap:wrap;margin-bottom:38px;}
-  .stat .num{font-family:'Cormorant Garamond',serif;font-size:2.7rem;font-weight:700;color:var(--green-deep);line-height:1;}
-  .stat .num b{color:var(--gold);font-weight:700;}
-  .stat .lbl{font-size:.82rem;color:var(--ink-soft);margin-top:6px;max-width:16ch;}
-  .btn{
-    display:inline-flex;align-items:center;gap:10px;cursor:pointer;
-    font-family:'Manrope',sans-serif;font-weight:600;font-size:.92rem;letter-spacing:.02em;
-    background:var(--green-deep);color:var(--gold-light);
-    border:0;padding:16px 30px;border-radius:999px;text-decoration:none;
-    transition:transform .35s var(--ease),box-shadow .35s var(--ease),background .35s;
-    box-shadow:0 10px 30px rgba(13,59,46,.22);
-  }
-  .btn:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(13,59,46,.32);background:var(--green-deeper);}
-  .btn .arr{transition:transform .35s var(--ease);}
-  .btn:hover .arr{transform:translateX(5px);}
-  .btn.gold{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--green-deeper);box-shadow:0 10px 30px rgba(201,162,75,.34);}
+  .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;overflow:hidden;}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%;}
+  .hero .scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,20,18,.62),rgba(20,20,18,.12) 45%,rgba(20,20,18,.28));z-index:1;}
+  .hero .ph-fallback{position:absolute;inset:0;z-index:0;background:
+    radial-gradient(120% 90% at 70% 20%,rgba(179,137,63,.4),transparent 55%),
+    linear-gradient(135deg,var(--green),var(--green-2));}
+  .hero .inner{position:relative;z-index:2;padding:0 40px 9vh;max-width:var(--maxw);margin:0 auto;width:100%;}
+  .hero .ey{color:var(--paper);opacity:.85;font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;margin-bottom:18px;}
+  .hero h1{font-style:italic;font-size:clamp(3.4rem,10vw,8rem);color:#fff;letter-spacing:-.01em;font-weight:600;}
+  .hero .role{color:rgba(255,255,255,.9);font-size:clamp(1rem,2vw,1.3rem);max-width:42ch;margin-top:20px;font-weight:400;}
+  .scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,.8);
+    font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px;}
+  .scroll-hint::after{content:"";width:1px;height:34px;background:rgba(255,255,255,.6);animation:pulse 2s var(--ease) infinite;}
+  @keyframes pulse{0%,100%{opacity:.3;transform:scaleY(.6);}50%{opacity:1;transform:scaleY(1);}}
 
-  /* portrait frame */
-  .portrait-frame{position:relative;}
-  .portrait-frame::before{
-    content:"";position:absolute;inset:-14px;border:1px solid var(--gold);border-radius:calc(var(--radius) + 8px);
-    pointer-events:none;
-  }
-  .portrait-frame .ph{
-    border-radius:var(--radius);aspect-ratio:4/5;width:100%;object-fit:cover;
-    box-shadow:0 26px 60px rgba(13,59,46,.28);
-  }
-  .ph{ /* styled placeholder fallback */
-    background:
-      radial-gradient(120% 90% at 30% 20%,rgba(46,156,120,.35),transparent 60%),
-      linear-gradient(135deg,var(--green-deep),var(--green-deeper));
-    display:flex;align-items:flex-end;justify-content:center;color:rgba(227,200,120,.85);
-    font-family:'Cormorant Garamond',serif;font-size:1rem;text-align:center;padding:18px;
-    position:relative;
-  }
-  .ph[data-label]::after{content:attr(data-label);opacity:.8;font-size:.85rem;letter-spacing:.04em;}
+  /* ---------- MISSION ---------- */
+  .mission{background:var(--green);color:var(--paper);min-height:78vh;display:flex;align-items:center;text-align:center;}
+  .mission .label{color:var(--gold);margin-bottom:30px;display:block;}
+  .mission blockquote{font-style:italic;font-size:clamp(2.4rem,6vw,5rem);color:#fff;max-width:16ch;margin:0 auto;font-weight:600;}
+  .mission .cap{font-family:'Caveat',cursive;font-size:1.6rem;color:var(--gold);margin-top:30px;}
 
   /* ---------- SECTION SHELL ---------- */
-  section{padding:96px 0;position:relative;}
-  .section-dark{
-    background:
-      radial-gradient(800px 500px at 90% 0%,rgba(46,156,120,.18),transparent 60%),
-      radial-gradient(700px 460px at 5% 100%,rgba(201,162,75,.12),transparent 60%),
-      var(--green-deep);
-    color:var(--cream);
-  }
-  .section-dark h2,.section-dark h3{color:var(--cream);}
-  .section-cream{background:var(--cream);}
-  .section-paper{background:var(--paper);}
-  h2.title{font-size:clamp(2.1rem,4vw,3.1rem);color:var(--green-deep);max-width:18ch;margin-bottom:14px;}
-  .section-dark h2.title{color:var(--cream);}
-  .lead{font-size:1.1rem;color:var(--ink-soft);max-width:60ch;}
-  .section-dark .lead{color:rgba(247,242,231,.82);}
+  section{padding:120px 0;position:relative;}
+  .sec-head{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:start;margin-bottom:64px;}
+  .sec-head .meta{display:flex;flex-direction:column;gap:6px;padding-top:8px;}
+  .sec-head .meta .label{color:var(--red);}
+  .sec-head h2{font-style:italic;font-size:clamp(2.2rem,5vw,4rem);color:var(--green);max-width:16ch;}
+  .lead{font-size:1.12rem;color:var(--ink-soft);max-width:62ch;letter-spacing:.01em;}
 
-  /* gold divider */
-  .divider{height:1px;width:100%;max-width:var(--maxw);margin:0 auto;
-    background:linear-gradient(90deg,transparent,rgba(201,162,75,.55),transparent);
-    background-size:200% 100%;animation:shimmer 6s linear infinite;}
-  @keyframes shimmer{to{background-position:-200% 0;}}
+  /* biography two-col */
+  .bio{display:grid;grid-template-columns:.4fr 1fr;gap:48px;}
+  .bio .side .label{display:block;margin-bottom:14px;color:var(--red);}
+  .bio .side p{font-size:.86rem;color:var(--ink-soft);}
+  .bio-portrait{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 25%;border-radius:2px;margin-bottom:22px;box-shadow:0 18px 40px rgba(20,20,18,.16);}
+  .bio .body p{font-size:1.16rem;color:var(--ink);margin:0 0 22px;letter-spacing:.012em;}
+  .bio .body p.hl{font-family:'Playfair Display',serif;font-style:italic;font-size:1.5rem;color:var(--green);line-height:1.3;}
 
-  /* ---------- ABOUT ---------- */
-  .about .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center;}
-  .about .ph{aspect-ratio:4/5;border-radius:var(--radius);box-shadow:0 24px 56px rgba(13,59,46,.22);}
-  .about p{font-size:1.12rem;color:var(--ink-soft);}
+  /* recognition numbered list */
+  .reglist{border-top:1px solid var(--line);}
+  .reglist .row{display:grid;grid-template-columns:64px 1fr;gap:20px;align-items:baseline;
+    padding:24px 4px;border-bottom:1px solid var(--line);transition:.4s var(--ease);}
+  .reglist .row:hover{background:rgba(179,137,63,.06);padding-left:14px;}
+  .reglist .row .n{font-family:'Manrope',sans-serif;font-weight:700;font-size:.9rem;color:var(--red);letter-spacing:.08em;}
+  .reglist .row p{margin:0;font-size:1.12rem;color:var(--ink);letter-spacing:.01em;}
+  .reglist .row.star p{font-style:italic;font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--green);}
 
-  /* ---------- MOTTO ---------- */
-  .motto{text-align:center;}
-  .motto blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.4vw,3.4rem);
-    color:var(--cream);font-weight:500;max-width:20ch;margin:0 auto 28px;line-height:1.15;}
-  .motto blockquote em{color:var(--gold-light);font-style:italic;}
-  .motto .meta-quote{font-size:1.12rem;color:rgba(247,242,231,.8);max-width:54ch;margin:0 auto 18px;}
-  .motto .sign{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-light);font-style:italic;}
+  /* achievements band */
+  .band{background:var(--green-2);color:var(--paper);}
+  .band .label{color:var(--gold);}
+  .band .sec-head h2{color:#fff;}
+  .figs{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:20px;}
+  .fig{border-top:1px solid rgba(255,255,255,.18);padding-top:22px;}
+  .fig .v{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(2rem,3.4vw,3.1rem);color:var(--gold);line-height:1;}
+  .fig .k{font-size:.84rem;color:rgba(243,239,230,.78);margin-top:12px;letter-spacing:.02em;}
 
-  /* ---------- CARDS GRID ---------- */
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;}
-  .cards.two{grid-template-columns:repeat(2,1fr);}
-  .card{
-    background:var(--paper);border:1px solid rgba(13,59,46,.08);border-radius:var(--radius);
-    padding:30px 28px;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s;
-    position:relative;overflow:hidden;
-  }
-  .section-dark .card{background:rgba(247,242,231,.05);border-color:rgba(201,162,75,.2);backdrop-filter:blur(4px);}
-  .card:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(13,59,46,.16);border-color:rgba(201,162,75,.5);}
-  .card .ic{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;
-    background:linear-gradient(135deg,rgba(201,162,75,.2),rgba(46,156,120,.15));color:var(--gold);margin-bottom:18px;font-size:1.3rem;}
-  .card h3{font-size:1.45rem;color:var(--green-deep);margin-bottom:8px;}
-  .section-dark .card h3{color:var(--gold-light);}
-  .card p{font-size:.98rem;color:var(--ink-soft);margin:0;}
-  .section-dark .card p{color:rgba(247,242,231,.78);}
+  /* projects */
+  .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line);}
+  .proj{padding:44px 36px;border-bottom:1px solid var(--line);transition:.45s var(--ease);position:relative;}
+  .proj:nth-child(odd){border-right:1px solid var(--line);}
+  .proj:hover{background:rgba(21,54,43,.04);}
+  .proj .n{font-family:'Manrope',sans-serif;font-weight:700;font-size:.8rem;color:var(--red);letter-spacing:.12em;}
+  .proj h3{font-style:italic;font-size:1.9rem;color:var(--green);margin:14px 0 14px;}
+  .proj p{margin:0;color:var(--ink-soft);font-size:1.02rem;}
+  .proj .tag{display:inline-block;margin-top:18px;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
 
-  /* regalia as refined list cards */
-  .regalia{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:46px;}
-  .reg-item{display:flex;gap:16px;align-items:flex-start;padding:20px 22px;border-radius:14px;
-    background:rgba(247,242,231,.05);border:1px solid rgba(201,162,75,.18);transition:all .4s var(--ease);}
-  .reg-item:hover{border-color:rgba(201,162,75,.5);background:rgba(247,242,231,.08);}
-  .reg-item .dot{flex:0 0 auto;width:9px;height:9px;border-radius:50%;margin-top:9px;
-    background:var(--gold);box-shadow:0 0 0 4px rgba(201,162,75,.18);}
-  .reg-item p{margin:0;color:rgba(247,242,231,.88);font-size:1rem;}
+  /* philosophy */
+  .philo{text-align:center;background:var(--paper-2);}
+  .philo .label{color:var(--red);margin-bottom:26px;display:block;}
+  .philo blockquote{font-style:italic;font-size:clamp(2rem,5vw,3.6rem);color:var(--green);max-width:18ch;margin:0 auto 28px;}
+  .philo .meta{font-size:1.16rem;color:var(--ink-soft);max-width:50ch;margin:0 auto 22px;letter-spacing:.012em;}
+  .philo .sign{font-family:'Caveat',cursive;font-size:2rem;color:var(--gold);}
 
-  /* ---------- ACHIEVEMENTS tiles ---------- */
-  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px;}
-  .tile{background:var(--paper);border-radius:var(--radius);padding:30px 24px;border:1px solid rgba(13,59,46,.07);
-    transition:transform .4s var(--ease),box-shadow .4s var(--ease);}
-  .tile:hover{transform:translateY(-6px);box-shadow:0 20px 46px rgba(13,59,46,.14);}
-  .tile .num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--gold);line-height:1;}
-  .tile .lbl{font-size:.92rem;color:var(--ink-soft);margin-top:10px;}
+  /* moments collage */
+  .collage{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:160px;gap:18px;margin-top:30px;}
+  .collage figure{margin:0;overflow:hidden;position:relative;border-radius:2px;box-shadow:0 14px 34px rgba(20,20,18,.14);}
+  .collage figure img,.collage figure .ph{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease);}
+  .collage figure:hover img,.collage figure:hover .ph{transform:scale(1.06);}
+  .collage figure figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 14px 12px;color:#fff;
+    font-size:.78rem;letter-spacing:.04em;background:linear-gradient(to top,rgba(20,20,18,.82),transparent);}
+  .c1{grid-column:span 3;grid-row:span 2;}
+  .c2{grid-column:span 3;grid-row:span 2;}
+  .c3{grid-column:span 2;grid-row:span 2;}
+  .c4{grid-column:span 2;grid-row:span 2;}
+  .c5{grid-column:span 2;grid-row:span 2;}
+  .c6{grid-column:span 6;grid-row:span 2;}
+  .collage figure img.por{object-position:center 20%;}
+  .collage .ph{background:linear-gradient(135deg,var(--green),var(--green-2));display:flex;align-items:flex-end;
+    justify-content:center;color:rgba(243,239,230,.6);font-size:.8rem;padding:14px;text-align:center;}
+  .collage .ph::after{content:attr(data-label);}
+  .handwrite{font-family:'Caveat',cursive;font-size:2rem;color:var(--red);transform:rotate(-3deg);text-align:right;margin-top:24px;}
 
-  /* ---------- LISTS ---------- */
-  .feature-list{margin-top:40px;display:grid;gap:14px;}
-  .feature-list li{list-style:none;display:flex;gap:14px;align-items:flex-start;font-size:1.04rem;color:var(--ink-soft);}
-  .section-dark .feature-list li{color:rgba(247,242,231,.85);}
-  .feature-list li::before{content:"✦";color:var(--gold);flex:0 0 auto;margin-top:2px;}
-  ul.clean{padding:0;margin:0;}
+  /* vibe band */
+  .vibe{background:var(--green);color:var(--paper);}
+  .vibe .pill{display:inline-block;border:1px solid rgba(179,137,63,.6);color:var(--gold);border-radius:999px;
+    padding:6px 18px;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:30px;}
+  .vibe blockquote{font-style:italic;font-size:clamp(1.8rem,4vw,3rem);color:#fff;max-width:24ch;margin:0 0 34px;}
+  .vibe p{font-size:1.12rem;color:rgba(243,239,230,.85);max-width:64ch;margin:0 0 18px;letter-spacing:.01em;}
+  .vibe .final{font-family:'Caveat',cursive;font-size:2rem;color:var(--gold);margin-top:14px;}
 
-  /* ---------- CAREER collapsible ---------- */
-  .career-toggle{margin-top:30px;}
-  .collapse{max-height:0;overflow:hidden;transition:max-height .6s var(--ease);}
-  .collapse.open{max-height:1200px;}
-  .career-body{padding-top:26px;display:grid;gap:14px;}
+  /* services */
+  .services{border-top:1px solid var(--line);}
+  .srv{display:grid;grid-template-columns:64px 1fr auto;gap:22px;align-items:center;
+    padding:30px 4px;border-bottom:1px solid var(--line);transition:.4s var(--ease);}
+  .srv:hover{padding-left:14px;background:rgba(179,137,63,.06);}
+  .srv .n{font-weight:700;font-size:.9rem;color:var(--red);letter-spacing:.08em;}
+  .srv h3{font-style:italic;font-size:1.7rem;color:var(--green);font-weight:600;}
+  .srv .ar{color:var(--gold);font-size:1.2rem;transition:transform .4s var(--ease);}
+  .srv:hover .ar{transform:translateX(8px);}
 
-  /* ---------- GALLERY ---------- */
-  .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px;}
-  .gallery.single{grid-template-columns:minmax(0,720px);justify-content:center;}
-  .gallery figure{margin:0;border-radius:var(--radius);overflow:hidden;position:relative;box-shadow:0 18px 44px rgba(13,59,46,.18);}
-  .gallery .ph{aspect-ratio:4/3;width:100%;object-fit:cover;transition:transform .8s var(--ease);}
-  .gallery figure:hover .ph{transform:scale(1.05);}
-  .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 20px 16px;
-    background:linear-gradient(to top,rgba(8,41,31,.86),transparent);color:var(--cream);font-size:.94rem;}
+  /* contacts */
+  .contact{background:var(--green-2);color:var(--paper);}
+  .contact .label{color:var(--gold);}
+  .contact .sec-head h2{color:#fff;}
+  .clist{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:10px;}
+  .clist a{display:block;padding:30px 26px;border:1px solid rgba(243,239,230,.16);border-radius:4px;transition:.4s var(--ease);}
+  .clist a:hover{border-color:var(--gold);background:rgba(243,239,230,.04);transform:translateY(-4px);}
+  .clist .k{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(243,239,230,.6);}
+  .clist .v{font-family:'Playfair Display',serif;font-style:italic;font-size:1.4rem;color:#fff;margin-top:12px;}
 
-  /* ---------- VIBE42 ---------- */
-  .vibe blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3.4vw,2.6rem);
-    color:var(--cream);max-width:24ch;line-height:1.2;margin:0 0 28px;}
-  .vibe .body p{font-size:1.1rem;color:rgba(247,242,231,.84);max-width:62ch;margin:0 0 16px;}
-  .vibe .pill{display:inline-block;background:rgba(201,162,75,.16);border:1px solid rgba(201,162,75,.4);
-    color:var(--gold-light);padding:6px 16px;border-radius:999px;font-size:.82rem;font-weight:600;letter-spacing:.04em;margin-bottom:26px;}
-  .vibe .final{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--gold-light);margin-top:20px;}
+  /* footer */
+  footer{background:var(--green-2);color:rgba(243,239,230,.6);text-align:center;padding:40px 24px;border-top:1px solid rgba(243,239,230,.12);font-size:.84rem;}
+  footer .nm{font-family:'Playfair Display',serif;font-style:italic;color:var(--paper);font-size:1.2rem;margin-bottom:8px;}
 
-  /* ---------- CONTACT ---------- */
-  .contact .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;}
-  form{display:grid;gap:16px;margin-top:34px;}
-  .field label{display:block;font-size:.8rem;font-weight:600;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:7px;}
-  .field input,.field textarea{
-    width:100%;font-family:'Manrope',sans-serif;font-size:1rem;color:var(--ink);
-    background:var(--paper);border:1px solid rgba(13,59,46,.16);border-radius:12px;padding:14px 16px;transition:border-color .3s,box-shadow .3s;
-  }
-  .field input:focus,.field textarea:focus{outline:0;border-color:var(--gold);box-shadow:0 0 0 4px rgba(201,162,75,.16);}
-  .field textarea{min-height:120px;resize:vertical;}
-  .form-note{font-size:.84rem;color:var(--ink-soft);margin-top:4px;}
-  .form-ok{display:none;font-size:.95rem;color:var(--green-live);font-weight:600;margin-top:6px;}
-  .form-ok.show{display:block;}
-  .direct{margin-top:34px;display:grid;gap:14px;}
-  .direct a{display:flex;align-items:center;gap:16px;text-decoration:none;padding:18px 20px;border-radius:14px;
-    background:var(--paper);border:1px solid rgba(13,59,46,.1);transition:transform .35s var(--ease),border-color .35s,box-shadow .35s;}
-  .direct a:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 14px 34px rgba(13,59,46,.12);}
-  .direct .ic{width:46px;height:46px;border-radius:12px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;
-    background:linear-gradient(135deg,var(--green-deep),var(--green-live));color:var(--gold-light);font-size:1.2rem;}
-  .direct .ct-lbl{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
-  .direct .ct-val{font-size:1.05rem;font-weight:600;color:var(--green-deep);}
-
-  /* ---------- FOOTER ---------- */
-  footer{background:var(--green-deeper);color:rgba(247,242,231,.7);text-align:center;padding:42px 24px;font-size:.9rem;}
-  footer .brand{display:inline-block;margin-bottom:10px;color:var(--cream);}
-
-  /* ---------- REVEAL ANIMATION ---------- */
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
   .reveal.in{opacity:1;transform:none;}
-  .stagger > *{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
-  .stagger.in > *{opacity:1;transform:none;}
-  .stagger.in > *:nth-child(2){transition-delay:.08s;}
-  .stagger.in > *:nth-child(3){transition-delay:.16s;}
-  .stagger.in > *:nth-child(4){transition-delay:.24s;}
-  .stagger.in > *:nth-child(5){transition-delay:.32s;}
-  .stagger.in > *:nth-child(6){transition-delay:.40s;}
-  .stagger.in > *:nth-child(7){transition-delay:.48s;}
-  .stagger.in > *:nth-child(8){transition-delay:.56s;}
+  .stagger>*{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+  .stagger.in>*{opacity:1;transform:none;}
+  .stagger.in>*:nth-child(2){transition-delay:.06s;}
+  .stagger.in>*:nth-child(3){transition-delay:.12s;}
+  .stagger.in>*:nth-child(4){transition-delay:.18s;}
+  .stagger.in>*:nth-child(5){transition-delay:.24s;}
+  .stagger.in>*:nth-child(6){transition-delay:.30s;}
+  .stagger.in>*:nth-child(7){transition-delay:.36s;}
+  .stagger.in>*:nth-child(8){transition-delay:.42s;}
+  .stagger.in>*:nth-child(9){transition-delay:.48s;}
+  .stagger.in>*:nth-child(10){transition-delay:.54s;}
 
-  @media (prefers-reduced-motion: reduce){
-    *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto;}
-    .reveal,.stagger > *{opacity:1 !important;transform:none !important;}
-    header{transform:none;opacity:1;}
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms !important;transition-duration:.001ms !important;scroll-behavior:auto;}
+    .reveal,.stagger>*{opacity:1 !important;transform:none !important;}
+    header,.index-nav{animation:none;opacity:1;transform:none;}
   }
 
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width:920px){
-    .hero .grid,.about .grid,.contact .grid{grid-template-columns:1fr;gap:40px;}
-    .hero .portrait-frame{max-width:380px;margin:0 auto;}
-    .cards,.cards.two{grid-template-columns:1fr;}
-    .regalia{grid-template-columns:1fr;}
-    .tiles{grid-template-columns:repeat(2,1fr);}
-    .gallery{grid-template-columns:1fr;}
-    section{padding:70px 0;}
+  /* responsive */
+  @media(max-width:900px){
+    .wrap{padding:0 24px;}
+    header{padding:16px 24px;}
+    .hbrand .sub{display:none;}
+    section{padding:80px 0;}
+    .sec-head{grid-template-columns:1fr;gap:14px;margin-bottom:40px;}
+    .bio{grid-template-columns:1fr;gap:24px;}
+    .figs{grid-template-columns:repeat(2,1fr);}
+    .projects{grid-template-columns:1fr;}
+    .proj:nth-child(odd){border-right:0;}
+    .clist{grid-template-columns:1fr;}
+    .collage{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;}
+    .c1,.c2,.c3,.c4,.c5{grid-column:span 1;grid-row:span 1;}
+    .c1{grid-column:span 2;grid-row:span 2;}
   }
-  @media (max-width:520px){
-    .nav{padding:14px 18px;}
-    .brand{font-size:1.25rem;}
-    .lang button{padding:6px 10px;font-size:.72rem;}
-    .stats{gap:24px;}
-    .tiles{grid-template-columns:1fr;}
-    .hero{padding:54px 0 50px;}
+  @media(max-width:520px){
+    .capsule{padding:8px 14px;font-size:.7rem;}
+    .lang button{padding:5px 6px;}
+    .srv{grid-template-columns:40px 1fr auto;gap:12px;}
   }
 </style>
 </head>
 <body>
 
-<!-- ============ HEADER ============ -->
+<!-- HEADER -->
 <header>
-  <div class="nav">
-    <div class="brand">Галия <span>Багдат</span></div>
-    <div class="lang" role="group" aria-label="Language switcher">
+  <a href="#hero" class="hbrand">
+    <div class="nm">Галия Багдат</div>
+    <div class="sub" data-i18n="brand.sub">Коучинг · Лидерство · Family Office</div>
+  </a>
+  <div class="hright">
+    <div class="lang" role="group" aria-label="Language">
       <button data-lang="ru" class="active">RU</button>
       <button data-lang="kz">KZ</button>
       <button data-lang="en">EN</button>
     </div>
+    <a href="#contact" class="capsule" data-i18n="nav.contact">Связаться</a>
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="top">
-  <div class="wrap">
-    <div class="grid">
-      <div>
-        <div class="hero-status" data-i18n="hero.status">Президент Международной Ассоциации ICU в РК и Средней Азии</div>
-        <h1><span data-i18n="hero.firstname">Галия</span> <em data-i18n="hero.lastname">Багдат</em></h1>
-        <p class="role" data-i18n="hero.role">Эксперт по коучингу и обучению первых руководителей. Психолог, бизнес-тренер, мастер-коуч ICU.</p>
-        <div class="stats">
-          <div class="stat"><div class="num">10 000<b>+</b></div><div class="lbl" data-i18n="hero.stat1">проведённых тренингов</div></div>
-          <div class="stat"><div class="num">27<b>+</b></div><div class="lbl" data-i18n="hero.stat2">лет опыта в управлении</div></div>
-          <div class="stat"><div class="num">№1</div><div class="lbl" data-i18n="hero.stat3">онлайн-школа коучинга</div></div>
-        </div>
-        <a href="#contact" class="btn" data-i18n="hero.cta">Записаться на консультацию <span class="arr">→</span></a>
-      </div>
-      <div class="portrait-frame">
-        <img class="ph" src="photo-portrait2.jpg" alt="Галия Багдат — студийный портрет" data-label="Студийный портрет"
-             onerror="this.removeAttribute('src');this.classList.add('is-ph');" />
-      </div>
-    </div>
+<!-- LEFT INDEX -->
+<nav class="index-nav" aria-label="Index">
+  <div class="ttl">Index</div>
+  <a href="#bio"><span class="n">01</span><span data-i18n="idx.bio">Биография</span></a>
+  <a href="#recognition"><span class="n">02</span><span data-i18n="idx.rec">Признание</span></a>
+  <a href="#achievements"><span class="n">03</span><span data-i18n="idx.ach">Достижения</span></a>
+  <a href="#projects"><span class="n">04</span><span data-i18n="idx.proj">Проекты</span></a>
+  <a href="#philosophy"><span class="n">05</span><span data-i18n="idx.phil">Философия</span></a>
+  <a href="#moments"><span class="n">06</span><span data-i18n="idx.mom">Моменты</span></a>
+  <a href="#vibe42"><span class="n">07</span><span>Vibe42</span></a>
+  <a href="#services"><span class="n">08</span><span data-i18n="idx.srv">Сотрудничество</span></a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="ph-fallback"></div>
+  <img src="photo-dior.jpg" alt="Галия Багдат"
+       onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='photo-portrait2.jpg';}else{this.style.display='none';}" />
+  <div class="scrim"></div>
+  <div class="inner reveal">
+    <div class="ey" data-i18n="hero.ey">Президент Международной Ассоциации ICU в РК и Средней Азии</div>
+    <h1>Галия Багдат</h1>
+    <p class="role" data-i18n="hero.role">Коуч первых руководителей · со-основатель Tumar Family Office · автор Vibe42</p>
   </div>
+  <div class="scroll-hint" data-i18n="hero.scroll">Листайте</div>
 </section>
 
-<div class="divider"></div>
-
-<!-- ============ ABOUT ============ -->
-<section class="about section-cream" id="about">
-  <div class="wrap">
-    <div class="grid reveal">
-      <div class="portrait-frame">
-        <img class="ph" src="portrait.jpg" alt="Галия Багдат — портрет" data-label="Портрет"
-             onerror="this.removeAttribute('src');this.classList.add('is-ph');" />
-      </div>
-      <div>
-        <div class="eyebrow" data-i18n="about.eyebrow">О себе</div>
-        <h2 class="title" data-i18n="about.title">Развитие людей как профессия и призвание</h2>
-        <p data-i18n="about.p1">Более 27 лет в управлении и более 13 лет в развитии коучинга, психологического сопровождения и образовательных технологий. Единственный коуч из Казахстана и Центральной Азии со статусом почётного члена ICU.</p>
-        <p data-i18n="about.p2">Магистр психологии и педагогики, доцент. Под её руководством открыты девять региональных офлайн-филиалов ICU в Казахстане. Личные гранты на обучение профессии — 23 млн тенге.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ MOTTO ============ -->
-<section class="motto section-dark">
+<!-- MISSION -->
+<section class="mission" id="mission">
   <div class="wrap reveal">
-    <div class="eyebrow on-dark" data-i18n="motto.eyebrow">Девиз и философия</div>
-    <blockquote data-i18n="motto.quote">Хочешь изменить мир — <em>измени себя</em></blockquote>
-    <p class="meta-quote" data-i18n="motto.meta">Развитие — как живое дерево: оно растёт лишь тогда, когда одновременно пускает корни глубже и тянется к свету.</p>
-    <div class="sign" data-i18n="motto.sign">— Галия Багдат</div>
+    <span class="label" data-i18n="mis.label">Миссия</span>
+    <blockquote data-i18n="mis.text">Быть вкладом в других людей</blockquote>
+    <div class="cap" data-i18n="mis.sign">— Галия Багдат</div>
   </div>
 </section>
 
-<!-- ============ REGALIA ============ -->
-<section class="section-dark" id="regalia" style="padding-top:40px;">
+<!-- BIOGRAPHY -->
+<section id="bio">
   <div class="wrap">
-    <div class="reveal">
-      <div class="eyebrow on-dark" data-i18n="reg.eyebrow">Признание и экспертиза</div>
-      <h2 class="title" data-i18n="reg.title">Регалии и профессиональный статус</h2>
+    <div class="sec-head reveal">
+      <div class="meta"><span class="label">01</span><span class="num-tag" data-i18n="idx.bio">Биография</span></div>
+      <h2 data-i18n="bio.title">Развитие людей как профессия и призвание</h2>
     </div>
-    <div class="regalia stagger">
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.1">Президент Международной Ассоциации ICU (International Coach Union) в РК и Средней Азии</p></div>
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.2">Сооснователь Tumar Family Office</p></div>
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.3">Психолог, бизнес-тренер, тренер ДМД</p></div>
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.4">Ученица академика В. В. Козлова</p></div>
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.5">Попечитель школы «Айқанат»</p></div>
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.6">Преподаватель Академии госуправления при Президенте РК (программа «Руководитель новой формации» и MBA)</p></div>
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.7">Сертифицированный бизнес-тренер · Мастер-коуч ICU · Бизнес-тренер по коучингу ICU/ICTA · Мастер-коуч первых руководителей</p></div>
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.8">Трансформатор команд — создаёт команды изменений</p></div>
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.9">Автор нескольких авторских обучающих программ</p></div>
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.10">Внедрила коучинг в Академию государственного управления при Президенте РК</p></div>
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.11">Один из разработчиков профессионального стандарта (карточки профессии) коуча в РК</p></div>
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.12">Спикер форумов и конференций, в том числе экономического форума и BeWoman</p></div>
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.13">Награждена грамотами Министра Просвещения РК</p></div>
-      <div class="reg-item"><span class="dot"></span><p data-i18n="reg.14">Награждена Министерством науки и высшего образования РК; звание почётного работника сферы образования</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ACHIEVEMENTS ============ -->
-<section class="section-cream" id="achievements">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="eyebrow" data-i18n="ach.eyebrow">Достижения</div>
-      <h2 class="title" data-i18n="ach.title">Системные результаты в цифрах</h2>
-    </div>
-    <div class="tiles stagger">
-      <div class="tile"><div class="num">10 000+</div><div class="lbl" data-i18n="ach.1">проведённых тренингов</div></div>
-      <div class="tile"><div class="num">9</div><div class="lbl" data-i18n="ach.2">региональных филиалов ICU открыто в Казахстане</div></div>
-      <div class="tile"><div class="num">23 млн ₸</div><div class="lbl" data-i18n="ach.3">личных грантов на обучение профессии</div></div>
-      <div class="tile"><div class="num">13+</div><div class="lbl" data-i18n="ach.4">лет развития коучинга и образовательных технологий</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ EDUCATION ============ -->
-<section class="section-paper" id="education">
-  <div class="wrap reveal">
-    <div class="eyebrow" data-i18n="edu.eyebrow">Образование</div>
-    <h2 class="title" data-i18n="edu.title">Академическая и профессиональная база</h2>
-    <ul class="feature-list clean">
-      <li data-i18n="edu.1">Магистр психологии и педагогики, доцент</li>
-      <li data-i18n="edu.2">Ученица академика В. В. Козлова</li>
-      <li data-i18n="edu.3">Сертифицированный бизнес-тренер · Мастер-коуч ICU · Бизнес-тренер по коучингу ICU/ICTA</li>
-      <li data-i18n="edu.4">Автор сертификационных программ по коучингу для преподавателей вузов</li>
-      <li data-i18n="edu.5">Преподаватель Академии госуправления при Президенте РК (программа «Руководитель новой формации» и MBA)</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============ PERSONALITY ============ -->
-<section class="section-cream" id="personality">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="eyebrow" data-i18n="pers.eyebrow">Личность и общественная деятельность</div>
-      <h2 class="title" data-i18n="pers.title">Ценности за пределами профессии</h2>
-    </div>
-    <div class="cards stagger">
-      <div class="card"><div class="ic">✦</div><h3 data-i18n="pers.1.t">Попечительство</h3><p data-i18n="pers.1.d">Попечитель школы «Айқанат» — поддержка образования и развития детей.</p></div>
-      <div class="card"><div class="ic">❀</div><h3 data-i18n="pers.2.t">Семья</h3><p data-i18n="pers.2.d">Семья как опора и источник внутренней устойчивости.</p></div>
-      <div class="card"><div class="ic">☾</div><h3 data-i18n="pers.3.t">Медитация</h3><p data-i18n="pers.3.d">Практики осознанности и работа с внутренним состоянием.</p></div>
-      <div class="card"><div class="ic">✚</div><h3 data-i18n="pers.4.t">Медицинские лагеря</h3><p data-i18n="pers.4.d">Участие в организации медицинских лагерей и помощи людям.</p></div>
-      <div class="card"><div class="ic">♡</div><h3 data-i18n="pers.5.t">Волонтёрство</h3><p data-i18n="pers.5.d">Общественные инициативы и волонтёрская деятельность.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CAREER (collapsible) ============ -->
-<section class="section-paper" id="career">
-  <div class="wrap reveal">
-    <div class="eyebrow" data-i18n="car.eyebrow">Карьера</div>
-    <h2 class="title" data-i18n="car.title">Управленческий опыт</h2>
-    <p class="lead" data-i18n="car.lead">Более 27 лет в управлении — от руководящих ролей до построения команд изменений и внедрения коучинговой культуры в крупных институтах.</p>
-    <button class="btn gold career-toggle" id="careerToggle" aria-expanded="false" data-i18n="car.toggle.open">Показать подробнее <span class="arr">↓</span></button>
-    <div class="collapse" id="careerCollapse">
-      <div class="career-body">
-        <ul class="feature-list clean">
-          <li data-i18n="car.1">Президент Международной Ассоциации ICU в РК и Средней Азии — стратегическое развитие сети.</li>
-          <li data-i18n="car.2">Сооснователь Tumar Family Office.</li>
-          <li data-i18n="car.3">Внедрение коучинга в Академию государственного управления при Президенте РК.</li>
-          <li data-i18n="car.4">Открытие девяти региональных офлайн-филиалов ICU в Казахстане.</li>
-          <li data-i18n="car.5">Разработка профессионального стандарта (карточки профессии) коуча в РК.</li>
-          <li data-i18n="car.6">Создание команд изменений — трансформация управленческих коллективов.</li>
-        </ul>
+    <div class="bio">
+      <div class="side reveal">
+        <img class="bio-portrait" src="photo-portrait-sofa.jpg" alt="Галия Багдат"
+             onerror="this.style.display='none';" />
+        <span class="label" data-i18n="bio.side.l">Профиль</span>
+        <p data-i18n="bio.side.p">Нурбекова Галия Багдатовна. Психолог, бизнес-тренер, мастер-коуч. Эксперт по коучингу, лидерству и семейному капиталу.</p>
+      </div>
+      <div class="body reveal">
+        <p class="hl" data-i18n="bio.p0">Единственный коуч из Казахстана и Центральной Азии со статусом почётного члена ICU.</p>
+        <p data-i18n="bio.p1">Более 27 лет в управлении и более 13 лет в развитии коучинга, психологического сопровождения и образовательных технологий. Магистр психологии и педагогики, доцент; автор сертификационных программ по коучингу для преподавателей вузов.</p>
+        <p data-i18n="bio.p2">Награждена Министерством науки и высшего образования РК, звание почётного работника сферы образования. Под её руководством открыты девять региональных филиалов ICU в Казахстане. Личные гранты на обучение профессии — 23 млн тенге.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ SERVICES ============ -->
-<section class="section-dark" id="services">
+<!-- RECOGNITION -->
+<section id="recognition">
   <div class="wrap">
-    <div class="reveal">
-      <div class="eyebrow on-dark" data-i18n="srv.eyebrow">Чем могу быть полезна бизнесу</div>
-      <h2 class="title" data-i18n="srv.title">Направления сотрудничества</h2>
+    <div class="sec-head reveal">
+      <div class="meta"><span class="label">02</span><span class="num-tag" data-i18n="idx.rec">Признание</span></div>
+      <h2 data-i18n="rec.title">Регалии и профессиональный статус</h2>
     </div>
-    <div class="cards stagger">
-      <div class="card"><div class="ic">◆</div><h3 data-i18n="srv.1.t">Коучинг руководителей</h3><p data-i18n="srv.1.d">Индивидуальная работа с первыми лицами и топ-командами.</p></div>
-      <div class="card"><div class="ic">◆</div><h3 data-i18n="srv.2.t">Корпоративные тренинги</h3><p data-i18n="srv.2.d">Программы развития команд и управленческих компетенций.</p></div>
-      <div class="card"><div class="ic">◆</div><h3 data-i18n="srv.3.t">Авторские программы</h3><p data-i18n="srv.3.d">Уникальные обучающие программы под задачи компании.</p></div>
-      <div class="card"><div class="ic">◆</div><h3 data-i18n="srv.4.t">Подготовка коучей и наставников</h3><p data-i18n="srv.4.d">Обучение коучей, менторов и наставников.</p></div>
-      <div class="card"><div class="ic">◆</div><h3 data-i18n="srv.5.t">Онлайн-школа коучинга</h3><p data-i18n="srv.5.d">№1 онлайн-школа коучинга — масштабируемое обучение.</p></div>
+    <div class="reglist stagger">
+      <div class="row"><span class="n">01</span><p data-i18n="rec.1">Президент Международной Ассоциации ICU (International Coach Union) в РК и Средней Азии</p></div>
+      <div class="row"><span class="n">02</span><p data-i18n="rec.2">Со-основатель Tumar Family Office — партнёр, Executive-консультант глав семей</p></div>
+      <div class="row"><span class="n">03</span><p data-i18n="rec.3">Психолог, бизнес-тренер, тренер ДМД; ученица академика В. В. Козлова</p></div>
+      <div class="row"><span class="n">04</span><p data-i18n="rec.4">Преподаватель Академии госуправления при Президенте РК («Руководитель новой формации», MBA)</p></div>
+      <div class="row"><span class="n">05</span><p data-i18n="rec.5">Мастер-коуч ICU; бизнес-тренер по коучингу ICU/ICTA; мастер-коуч первых руководителей</p></div>
+      <div class="row"><span class="n">06</span><p data-i18n="rec.6">Трансформатор команд — создаёт команды изменений</p></div>
+      <div class="row"><span class="n">07</span><p data-i18n="rec.7">Внедрила коучинг в Академию госуправления; соразработчик профстандарта коуча в РК</p></div>
+      <div class="row"><span class="n">08</span><p data-i18n="rec.8">Спикер форумов и конференций, в том числе экономического форума и BeWoman</p></div>
+      <div class="row"><span class="n">09</span><p data-i18n="rec.9">Награждена Министерством науки и высшего образования РК; звание почётного работника сферы образования</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============ GALLERY ============ -->
-<section class="section-cream" id="gallery">
+<!-- ACHIEVEMENTS -->
+<section class="band" id="achievements">
   <div class="wrap">
-    <div class="reveal">
-      <div class="eyebrow" data-i18n="gal.eyebrow">Моменты и события</div>
-      <h2 class="title" data-i18n="gal.title">Из публичной жизни</h2>
+    <div class="sec-head reveal">
+      <div class="meta"><span class="label">03</span><span class="num-tag" style="color:var(--gold)" data-i18n="idx.ach">Достижения</span></div>
+      <h2 data-i18n="ach.title">Системные результаты в цифрах</h2>
     </div>
-    <div class="gallery stagger">
-      <figure>
-        <img class="ph" src="photo-pavlodar.jpg" alt="Открытие филиала ICU в Павлодаре" data-label="Открытие филиала ICU"
-             onerror="this.removeAttribute('src');this.classList.add('is-ph');" />
-        <figcaption data-i18n="gal.1">Открытие регионального филиала ICU в Павлодаре</figcaption>
+    <div class="figs stagger">
+      <div class="fig"><div class="v">10 000+</div><div class="k" data-i18n="ach.1">проведённых тренингов</div></div>
+      <div class="fig"><div class="v">27+</div><div class="k" data-i18n="ach.2">лет в управлении</div></div>
+      <div class="fig"><div class="v">9</div><div class="k" data-i18n="ach.3">региональных филиалов ICU</div></div>
+      <div class="fig"><div class="v">23 млн ₸</div><div class="k" data-i18n="ach.4">личных грантов на обучение</div></div>
+      <div class="fig"><div class="v">13+</div><div class="k" data-i18n="ach.5">лет в развитии коучинга</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="meta"><span class="label">04</span><span class="num-tag" data-i18n="idx.proj">Проекты</span></div>
+      <h2 data-i18n="proj.title">Направления и проекты</h2>
+    </div>
+    <div class="projects stagger">
+      <div class="proj">
+        <span class="n">01</span><h3>Tumar Family Office</h3>
+        <p data-i18n="proj.1">Со-основатель и партнёр. Создание, сохранение и защита ценностей и семейного благосостояния. Миссия — защита и управление благосостоянием семьи на 3–5 поколений вперёд.</p>
+        <span class="tag" data-i18n="proj.1.t">Со-основатель · партнёр</span>
+      </div>
+      <div class="proj">
+        <span class="n">02</span><h3>Vibe42</h3>
+        <p data-i18n="proj.2">Один из авторов. Программа освоения AI-инструментов и вайбкодинга; более 600 участников; выход до 400 человек в месяц в компаниях группы «Самрук-Қазына».</p>
+        <span class="tag" data-i18n="proj.2.t">Автор программы</span>
+      </div>
+      <div class="proj">
+        <span class="n">03</span><h3>ICU Kazakhstan</h3>
+        <p data-i18n="proj.3">Президент Международной Ассоциации ICU в РК и Средней Азии. Под её руководством открыты девять региональных филиалов.</p>
+        <span class="tag" data-i18n="proj.3.t">Президент</span>
+      </div>
+      <div class="proj">
+        <span class="n">04</span><h3 data-i18n="proj.4.h">Онлайн-школа коучинга</h3>
+        <p data-i18n="proj.4">Основатель. Первая в РК онлайн-школа с аккредитацией ICU и первая школа коучинга на казахском языке.</p>
+        <span class="tag" data-i18n="proj.4.t">Основатель</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="philo" id="philosophy">
+  <div class="wrap reveal">
+    <span class="label">05 · <span data-i18n="idx.phil">Философия</span></span>
+    <blockquote data-i18n="phil.quote">Хочешь изменить мир — измени себя</blockquote>
+    <p class="meta" data-i18n="phil.meta">Развитие — как живое дерево: растёт лишь тогда, когда одновременно пускает корни глубже и тянется к свету.</p>
+    <div class="sign">Галия Багдат</div>
+  </div>
+</section>
+
+<!-- MOMENTS -->
+<section id="moments">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="meta"><span class="label">06</span><span class="num-tag" data-i18n="idx.mom">Моменты</span></div>
+      <h2 data-i18n="mom.title">Моменты и события</h2>
+    </div>
+    <div class="collage stagger">
+      <figure class="c1">
+        <img src="photo-forum.jpg" alt="" onerror="this.outerHTML='&lt;div class=\'ph\' data-label=\'Форум\'&gt;&lt;/div&gt;'" />
+        <figcaption data-i18n="mom.2">Форум · «Менторство в Казахстане»</figcaption>
       </figure>
-      <figure>
-        <img class="ph" src="photo-judo.jpg" alt="Qazaqstan Barysy Grand Slam" data-label="Qazaqstan Barysy"
-             style="object-position:center 18%;"
-             onerror="this.removeAttribute('src');this.classList.add('is-ph');" />
-        <figcaption data-i18n="gal.2">Qazaqstan Barysy Grand Slam</figcaption>
+      <figure class="c2">
+        <img src="photo-speaking.jpg" alt="" onerror="this.outerHTML='&lt;div class=\'ph\' data-label=\'Выступление\'&gt;&lt;/div&gt;'" />
+        <figcaption data-i18n="mom.1">Выступление</figcaption>
+      </figure>
+      <figure class="c3">
+        <img class="por" src="photo-aifc.jpg" alt="" onerror="this.outerHTML='&lt;div class=\'ph\' data-label=\'AIFC\'&gt;&lt;/div&gt;'" />
+        <figcaption data-i18n="mom.3">Astana International Financial Centre</figcaption>
+      </figure>
+      <figure class="c4">
+        <img class="por" src="photo-judoteam.jpg" alt="" onerror="this.outerHTML='&lt;div class=\'ph\' data-label=\'Сборная\'&gt;&lt;/div&gt;'" />
+        <figcaption data-i18n="mom.6">Сборная Казахстана по дзюдо</figcaption>
+      </figure>
+      <figure class="c5">
+        <img class="por" src="photo-baku.jpg" alt="" onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='photo-judo.jpg';}else{this.outerHTML='&lt;div class=\'ph\' data-label=\'Дзюдо\'&gt;&lt;/div&gt;';}" />
+        <figcaption data-i18n="mom.5">Международный турнир по дзюдо</figcaption>
+      </figure>
+      <figure class="c6">
+        <img src="photo-pavlodar.jpg" alt="" onerror="this.outerHTML='&lt;div class=\'ph\' data-label=\'Павлодар\'&gt;&lt;/div&gt;'" />
+        <figcaption data-i18n="mom.4">Открытие филиала ICU в Павлодаре</figcaption>
       </figure>
     </div>
+    <div class="handwrite reveal" data-i18n="mom.hand">Моменты, которые вдохновляют</div>
   </div>
 </section>
 
-<!-- ============ VIBE42 ============ -->
-<section class="vibe section-dark" id="vibe42">
+<!-- VIBE42 -->
+<section class="vibe" id="vibe42">
   <div class="wrap reveal">
-    <div class="pill">Vibe42</div>
+    <span class="pill">Vibe42</span>
     <blockquote data-i18n="vibe.quote">Это программа не про искусственный интеллект — она про веру человека в то, что он способен создавать.</blockquote>
-    <div class="body">
-      <p data-i18n="vibe.p1">Я — один из авторов программы Vibe42. Через неё прошли более 600 участников: сотрудники Казахтелекома, представители бизнеса, студенты, врачи, инженеры, преподаватели, руководители и пенсионеры.</p>
-      <p data-i18n="vibe.p2">Новый этап — до 400 человек ежемесячно в компаниях группы «Самрук-Қазына» по каскадной модели обучения.</p>
-    </div>
+    <p data-i18n="vibe.p1">Я — один из авторов программы Vibe42. Через неё прошли более 600 участников: сотрудники Казахтелекома, представители бизнеса, студенты, врачи, инженеры, преподаватели, руководители и пенсионеры.</p>
+    <p data-i18n="vibe.p2">Новый этап — до 400 человек ежемесячно в компаниях группы «Самрук-Қазына» по каскадной модели обучения.</p>
     <div class="final" data-i18n="vibe.final">«Моя цель — вернуть человеку веру в то, что он способен создавать».</div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
-<section class="section-paper" id="contact">
+<!-- SERVICES -->
+<section id="services">
   <div class="wrap">
-    <div class="grid">
-      <div class="reveal">
-        <div class="eyebrow" data-i18n="ct.eyebrow">Контакты</div>
-        <h2 class="title" data-i18n="ct.title">Оставьте заявку на сотрудничество</h2>
-        <p class="lead" data-i18n="ct.lead">Заполните форму — я свяжусь с вами, чтобы обсудить задачи вашей компании.</p>
-        <form id="leadForm" novalidate>
-          <div class="field"><label data-i18n="ct.f.name">Имя</label><input type="text" name="name" data-i18n-ph="ct.ph.name" placeholder="Ваше имя" required /></div>
-          <div class="field"><label data-i18n="ct.f.company">Компания</label><input type="text" name="company" data-i18n-ph="ct.ph.company" placeholder="Название компании" /></div>
-          <div class="field"><label data-i18n="ct.f.phone">Телефон</label><input type="tel" name="phone" data-i18n-ph="ct.ph.phone" placeholder="+7 ___ ___ __ __" required /></div>
-          <div class="field"><label data-i18n="ct.f.msg">Сообщение</label><textarea name="message" data-i18n-ph="ct.ph.msg" placeholder="Коротко опишите запрос"></textarea></div>
-          <button type="submit" class="btn" data-i18n="ct.submit">Отправить заявку <span class="arr">→</span></button>
-          <div class="form-note" data-i18n="ct.note">Форма на текущем этапе — демонстрационная. Для срочной связи используйте прямые контакты.</div>
-          <div class="form-ok" id="formOk" data-i18n="ct.ok">Спасибо! Заявка получена — это демо-форма без отправки.</div>
-        </form>
-      </div>
-      <div class="reveal">
-        <div class="direct">
-          <a href="https://wa.me/77077337217" target="_blank" rel="noopener">
-            <span class="ic">✆</span>
-            <span><span class="ct-lbl">WhatsApp</span><br /><span class="ct-val">+7 707 733 7217</span></span>
-          </a>
-          <a href="mailto:galbagdat7@gmail.com">
-            <span class="ic">✉</span>
-            <span><span class="ct-lbl" data-i18n="ct.email">Почта</span><br /><span class="ct-val">galbagdat7@gmail.com</span></span>
-          </a>
-          <a href="https://instagram.com/galiya_bagdat" target="_blank" rel="noopener">
-            <span class="ic">◎</span>
-            <span><span class="ct-lbl">Instagram</span><br /><span class="ct-val">@galiya_bagdat</span></span>
-          </a>
-        </div>
-      </div>
+    <div class="sec-head reveal">
+      <div class="meta"><span class="label">08</span><span class="num-tag" data-i18n="idx.srv">Сотрудничество</span></div>
+      <h2 data-i18n="srv.title">Чем могу быть полезна бизнесу</h2>
+    </div>
+    <div class="services stagger">
+      <div class="srv"><span class="n">01</span><h3 data-i18n="srv.1">Коучинг руководителей</h3><span class="ar">→</span></div>
+      <div class="srv"><span class="n">02</span><h3 data-i18n="srv.2">Корпоративные тренинги</h3><span class="ar">→</span></div>
+      <div class="srv"><span class="n">03</span><h3 data-i18n="srv.3">Трансформация команд</h3><span class="ar">→</span></div>
+      <div class="srv"><span class="n">04</span><h3 data-i18n="srv.4">Подготовка коучей, менторов и наставников</h3><span class="ar">→</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
+<!-- CONTACTS -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="meta"><span class="label" style="color:var(--gold)">—</span><span class="num-tag" style="color:var(--gold)" data-i18n="ct.tag">Контакты</span></div>
+      <h2 data-i18n="ct.title">Давайте сотрудничать</h2>
+    </div>
+    <div class="clist stagger">
+      <a href="https://wa.me/77077337217" target="_blank" rel="noopener">
+        <div class="k">WhatsApp</div><div class="v">+7 707 733 7217</div>
+      </a>
+      <a href="mailto:galbagdat7@gmail.com">
+        <div class="k" data-i18n="ct.mail">Почта</div><div class="v">galbagdat7@gmail.com</div>
+      </a>
+      <a href="https://instagram.com/galiya_bagdat" target="_blank" rel="noopener">
+        <div class="k">Instagram</div><div class="v">@galiya_bagdat</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <div class="brand">Галия <span style="color:var(--gold)">Багдат</span></div>
+  <div class="nm">Галия Багдат</div>
   <div data-i18n="footer.copy">© 2026 Галия Багдат · Нурбекова Галия Багдатовна. Все права защищены.</div>
 </footer>
 
 <script>
-/* ============ I18N DICTIONARY ============ */
-const I18N = {
-  ru:{
-    "hero.status":"Президент Международной Ассоциации ICU в РК и Средней Азии",
-    "hero.firstname":"Галия","hero.lastname":"Багдат",
-    "hero.role":"Эксперт по коучингу и обучению первых руководителей. Психолог, бизнес-тренер, мастер-коуч ICU.",
-    "hero.stat1":"проведённых тренингов","hero.stat2":"лет опыта в управлении","hero.stat3":"онлайн-школа коучинга",
-    "hero.cta":"Записаться на консультацию",
-    "about.eyebrow":"О себе","about.title":"Развитие людей как профессия и призвание",
-    "about.p1":"Более 27 лет в управлении и более 13 лет в развитии коучинга, психологического сопровождения и образовательных технологий. Единственный коуч из Казахстана и Центральной Азии со статусом почётного члена ICU.",
-    "about.p2":"Магистр психологии и педагогики, доцент. Под её руководством открыты девять региональных офлайн-филиалов ICU в Казахстане. Личные гранты на обучение профессии — 23 млн тенге.",
-    "motto.eyebrow":"Девиз и философия","motto.quote":"Хочешь изменить мир — измени себя",
-    "motto.meta":"Развитие — как живое дерево: оно растёт лишь тогда, когда одновременно пускает корни глубже и тянется к свету.",
-    "motto.sign":"— Галия Багдат",
-    "reg.eyebrow":"Признание и экспертиза","reg.title":"Регалии и профессиональный статус",
-    "reg.1":"Президент Международной Ассоциации ICU (International Coach Union) в РК и Средней Азии",
-    "reg.2":"Сооснователь Tumar Family Office","reg.3":"Психолог, бизнес-тренер, тренер ДМД",
-    "reg.4":"Ученица академика В. В. Козлова","reg.5":"Попечитель школы «Айқанат»",
-    "reg.6":"Преподаватель Академии госуправления при Президенте РК (программа «Руководитель новой формации» и MBA)",
-    "reg.7":"Сертифицированный бизнес-тренер · Мастер-коуч ICU · Бизнес-тренер по коучингу ICU/ICTA · Мастер-коуч первых руководителей",
-    "reg.8":"Трансформатор команд — создаёт команды изменений","reg.9":"Автор нескольких авторских обучающих программ",
-    "reg.10":"Внедрила коучинг в Академию государственного управления при Президенте РК",
-    "reg.11":"Один из разработчиков профессионального стандарта (карточки профессии) коуча в РК",
-    "reg.12":"Спикер форумов и конференций, в том числе экономического форума и BeWoman",
-    "reg.13":"Награждена грамотами Министра Просвещения РК",
-    "reg.14":"Награждена Министерством науки и высшего образования РК; звание почётного работника сферы образования",
-    "ach.eyebrow":"Достижения","ach.title":"Системные результаты в цифрах",
-    "ach.1":"проведённых тренингов","ach.2":"региональных филиалов ICU открыто в Казахстане",
-    "ach.3":"личных грантов на обучение профессии","ach.4":"лет развития коучинга и образовательных технологий",
-    "edu.eyebrow":"Образование","edu.title":"Академическая и профессиональная база",
-    "edu.1":"Магистр психологии и педагогики, доцент","edu.2":"Ученица академика В. В. Козлова",
-    "edu.3":"Сертифицированный бизнес-тренер · Мастер-коуч ICU · Бизнес-тренер по коучингу ICU/ICTA",
-    "edu.4":"Автор сертификационных программ по коучингу для преподавателей вузов",
-    "edu.5":"Преподаватель Академии госуправления при Президенте РК (программа «Руководитель новой формации» и MBA)",
-    "pers.eyebrow":"Личность и общественная деятельность","pers.title":"Ценности за пределами профессии",
-    "pers.1.t":"Попечительство","pers.1.d":"Попечитель школы «Айқанат» — поддержка образования и развития детей.",
-    "pers.2.t":"Семья","pers.2.d":"Семья как опора и источник внутренней устойчивости.",
-    "pers.3.t":"Медитация","pers.3.d":"Практики осознанности и работа с внутренним состоянием.",
-    "pers.4.t":"Медицинские лагеря","pers.4.d":"Участие в организации медицинских лагерей и помощи людям.",
-    "pers.5.t":"Волонтёрство","pers.5.d":"Общественные инициативы и волонтёрская деятельность.",
-    "car.eyebrow":"Карьера","car.title":"Управленческий опыт",
-    "car.lead":"Более 27 лет в управлении — от руководящих ролей до построения команд изменений и внедрения коучинговой культуры в крупных институтах.",
-    "car.toggle.open":"Показать подробнее","car.toggle.close":"Свернуть",
-    "car.1":"Президент Международной Ассоциации ICU в РК и Средней Азии — стратегическое развитие сети.",
-    "car.2":"Сооснователь Tumar Family Office.","car.3":"Внедрение коучинга в Академию государственного управления при Президенте РК.",
-    "car.4":"Открытие девяти региональных офлайн-филиалов ICU в Казахстане.",
-    "car.5":"Разработка профессионального стандарта (карточки профессии) коуча в РК.",
-    "car.6":"Создание команд изменений — трансформация управленческих коллективов.",
-    "srv.eyebrow":"Чем могу быть полезна бизнесу","srv.title":"Направления сотрудничества",
-    "srv.1.t":"Коучинг руководителей","srv.1.d":"Индивидуальная работа с первыми лицами и топ-командами.",
-    "srv.2.t":"Корпоративные тренинги","srv.2.d":"Программы развития команд и управленческих компетенций.",
-    "srv.3.t":"Авторские программы","srv.3.d":"Уникальные обучающие программы под задачи компании.",
-    "srv.4.t":"Подготовка коучей и наставников","srv.4.d":"Обучение коучей, менторов и наставников.",
-    "srv.5.t":"Онлайн-школа коучинга","srv.5.d":"№1 онлайн-школа коучинга — масштабируемое обучение.",
-    "gal.eyebrow":"Моменты и события","gal.title":"Из публичной жизни",
-    "gal.1":"Открытие регионального филиала ICU в Павлодаре","gal.2":"Qazaqstan Barysy Grand Slam",
-    "vibe.quote":"Это программа не про искусственный интеллект — она про веру человека в то, что он способен создавать.",
-    "vibe.p1":"Я — один из авторов программы Vibe42. Через неё прошли более 600 участников: сотрудники Казахтелекома, представители бизнеса, студенты, врачи, инженеры, преподаватели, руководители и пенсионеры.",
-    "vibe.p2":"Новый этап — до 400 человек ежемесячно в компаниях группы «Самрук-Қазына» по каскадной модели обучения.",
-    "vibe.final":"«Моя цель — вернуть человеку веру в то, что он способен создавать».",
-    "ct.eyebrow":"Контакты","ct.title":"Оставьте заявку на сотрудничество",
-    "ct.lead":"Заполните форму — я свяжусь с вами, чтобы обсудить задачи вашей компании.",
-    "ct.f.name":"Имя","ct.f.company":"Компания","ct.f.phone":"Телефон","ct.f.msg":"Сообщение",
-    "ct.ph.name":"Ваше имя","ct.ph.company":"Название компании","ct.ph.phone":"+7 ___ ___ __ __","ct.ph.msg":"Коротко опишите запрос",
-    "ct.submit":"Отправить заявку","ct.note":"Форма на текущем этапе — демонстрационная. Для срочной связи используйте прямые контакты.",
-    "ct.ok":"Спасибо! Заявка получена — это демо-форма без отправки.",
-    "ct.phone":"Телефон","ct.email":"Почта",
-    "footer.copy":"© 2026 Галия Багдат · Нурбекова Галия Багдатовна. Все права защищены."
-  },
-  kz:{
-    "hero.status":"ҚР және Орталық Азиядағы ICU Халықаралық Ассоциациясының Президенті",
-    "hero.firstname":"Ғалия","hero.lastname":"Бағдат",
-    "hero.role":"Бірінші басшыларды коучинг және оқыту бойынша сарапшы. Психолог, бизнес-тренер, ICU мастер-коучы.",
-    "hero.stat1":"өткізілген тренинг","hero.stat2":"басқарудағы тәжірибе жылы","hero.stat3":"онлайн коучинг мектебі",
-    "hero.cta":"Консультацияға жазылу",
-    "about.eyebrow":"Өзім туралы","about.title":"Адамдарды дамыту — кәсіп әрі мақсат",
-    "about.p1":"Басқаруда 27 жылдан астам, коучинг, психологиялық қолдау және білім беру технологияларын дамытуда 13 жылдан астам тәжірибе. ICU құрметті мүшесі мәртебесіне ие Қазақстан мен Орталық Азиядағы жалғыз коуч.",
-    "about.p2":"Психология және педагогика магистрі, доцент. Оның жетекшілігімен Қазақстанда ICU-дың тоғыз өңірлік офлайн филиалы ашылды. Кәсіпке оқытуға арналған жеке гранттар — 23 млн теңге.",
-    "motto.eyebrow":"Ұран және философия","motto.quote":"Әлемді өзгерткің келсе — өзіңді өзгерт",
-    "motto.meta":"Даму — тірі ағаш сияқты: ол тек тамырын тереңге жіберіп әрі нұрға ұмтылғанда ғана өседі.",
-    "motto.sign":"— Ғалия Бағдат",
-    "reg.eyebrow":"Тану және сараптама","reg.title":"Регалиялар мен кәсіби мәртебе",
-    "reg.1":"ҚР және Орталық Азиядағы ICU (International Coach Union) Халықаралық Ассоциациясының Президенті",
-    "reg.2":"Tumar Family Office тең құрылтайшысы","reg.3":"Психолог, бизнес-тренер, ДМД тренері",
-    "reg.4":"Академик В. В. Козловтың шәкірті","reg.5":"«Айқанат» мектебінің қамқоршысы",
-    "reg.6":"ҚР Президенті жанындағы Мемлекеттік басқару академиясының оқытушысы («Жаңа формация басшысы» бағдарламасы және MBA)",
-    "reg.7":"Сертификатталған бизнес-тренер · ICU мастер-коучы · ICU/ICTA коучинг бойынша бизнес-тренер · Бірінші басшылардың мастер-коучы",
-    "reg.8":"Командаларды трансформациялаушы — өзгерістер командасын құрады","reg.9":"Бірнеше авторлық оқу бағдарламаларының авторы",
-    "reg.10":"ҚР Президенті жанындағы Мемлекеттік басқару академиясына коучингті енгізді",
-    "reg.11":"ҚР-да коуч кәсібінің кәсіби стандартын (кәсіп карталарын) әзірлеушілердің бірі",
-    "reg.12":"Форумдар мен конференциялардың, оның ішінде экономикалық форум мен BeWoman спикері",
-    "reg.13":"ҚР Ағарту министрінің грамоталарымен марапатталған",
-    "reg.14":"ҚР Ғылым және жоғары білім министрлігімен марапатталған; білім беру саласының құрметті қызметкері атағы",
-    "ach.eyebrow":"Жетістіктер","ach.title":"Сандармен жүйелі нәтижелер",
-    "ach.1":"өткізілген тренинг","ach.2":"Қазақстанда ашылған ICU өңірлік филиалы",
-    "ach.3":"кәсіпке оқытуға жеке грант","ach.4":"коучинг пен білім беру технологияларын дамыту жылы",
-    "edu.eyebrow":"Білім","edu.title":"Академиялық және кәсіби негіз",
-    "edu.1":"Психология және педагогика магистрі, доцент","edu.2":"Академик В. В. Козловтың шәкірті",
-    "edu.3":"Сертификатталған бизнес-тренер · ICU мастер-коучы · ICU/ICTA коучинг бойынша бизнес-тренер",
-    "edu.4":"ЖОО оқытушыларына арналған коучинг бойынша сертификаттау бағдарламаларының авторы",
-    "edu.5":"ҚР Президенті жанындағы Мемлекеттік басқару академиясының оқытушысы («Жаңа формация басшысы» және MBA)",
-    "pers.eyebrow":"Тұлға және қоғамдық қызмет","pers.title":"Кәсіптен тыс құндылықтар",
-    "pers.1.t":"Қамқоршылық","pers.1.d":"«Айқанат» мектебінің қамқоршысы — білім мен балалардың дамуын қолдау.",
-    "pers.2.t":"Отбасы","pers.2.d":"Отбасы — тірек әрі ішкі тұрақтылық көзі.",
-    "pers.3.t":"Медитация","pers.3.d":"Зейін практикалары және ішкі күймен жұмыс.",
-    "pers.4.t":"Медициналық лагерьлер","pers.4.d":"Медициналық лагерьлерді ұйымдастыруға және адамдарға көмекке қатысу.",
-    "pers.5.t":"Еріктілік","pers.5.d":"Қоғамдық бастамалар және еріктілік қызметі.",
-    "car.eyebrow":"Мансап","car.title":"Басқарушылық тәжірибе",
-    "car.lead":"Басқаруда 27 жылдан астам — жетекші рөлдерден өзгерістер командасын құруға және ірі институттарда коучинг мәдениетін енгізуге дейін.",
-    "car.toggle.open":"Толығырақ көрсету","car.toggle.close":"Жию",
-    "car.1":"ҚР және Орталық Азиядағы ICU Халықаралық Ассоциациясының Президенті — желіні стратегиялық дамыту.",
-    "car.2":"Tumar Family Office тең құрылтайшысы.","car.3":"Мемлекеттік басқару академиясына коучингті енгізу.",
-    "car.4":"Қазақстанда ICU-дың тоғыз өңірлік офлайн филиалын ашу.",
-    "car.5":"ҚР-да коуч кәсібінің кәсіби стандартын әзірлеу.",
-    "car.6":"Өзгерістер командаларын құру — басқарушылық ұжымдарды трансформациялау.",
-    "srv.eyebrow":"Бизнеске немен пайдалы боламын","srv.title":"Ынтымақтастық бағыттары",
-    "srv.1.t":"Басшыларды коучинг","srv.1.d":"Бірінші тұлғалармен және топ-командалармен жеке жұмыс.",
-    "srv.2.t":"Корпоративтік тренингтер","srv.2.d":"Командалар мен басқару құзыреттерін дамыту бағдарламалары.",
-    "srv.3.t":"Авторлық бағдарламалар","srv.3.d":"Компания міндеттеріне арналған бірегей оқу бағдарламалары.",
-    "srv.4.t":"Коучтар мен тәлімгерлерді даярлау","srv.4.d":"Коучтарды, менторларды және тәлімгерлерді оқыту.",
-    "srv.5.t":"Онлайн коучинг мектебі","srv.5.d":"№1 онлайн коучинг мектебі — масштабталатын оқыту.",
-    "gal.eyebrow":"Сәттер мен оқиғалар","gal.title":"Қоғамдық өмірден",
-    "gal.1":"Павлодарда ICU өңірлік филиалының ашылуы","gal.2":"Qazaqstan Barysy Grand Slam",
-    "vibe.quote":"Бұл бағдарлама жасанды интеллект туралы емес — ол адамның жасай алатынына деген сенімі туралы.",
-    "vibe.p1":"Мен — Vibe42 бағдарламасының авторларының бірімін. Оны 600-ден астам қатысушы өтті: Қазақтелеком қызметкерлері, бизнес өкілдері, студенттер, дәрігерлер, инженерлер, оқытушылар, басшылар және зейнеткерлер.",
-    "vibe.p2":"Жаңа кезең — «Самұрық-Қазына» тобы компанияларында каскадтық модель бойынша айына 400 адамға дейін.",
-    "vibe.final":"«Менің мақсатым — адамға өзінің жасай алатынына деген сенімін қайтару».",
-    "ct.eyebrow":"Байланыс","ct.title":"Ынтымақтастыққа өтінім қалдырыңыз",
-    "ct.lead":"Форманы толтырыңыз — компанияңыздың міндеттерін талқылау үшін сізбен байланысамын.",
-    "ct.f.name":"Аты","ct.f.company":"Компания","ct.f.phone":"Телефон","ct.f.msg":"Хабарлама",
-    "ct.ph.name":"Сіздің атыңыз","ct.ph.company":"Компания атауы","ct.ph.phone":"+7 ___ ___ __ __","ct.ph.msg":"Сұранысты қысқаша сипаттаңыз",
-    "ct.submit":"Өтінім жіберу","ct.note":"Бұл форма қазіргі кезеңде — демонстрациялық. Шұғыл байланыс үшін тікелей байланыстарды пайдаланыңыз.",
-    "ct.ok":"Рақмет! Өтінім қабылданды — бұл жіберусіз демо-форма.",
-    "ct.phone":"Телефон","ct.email":"Пошта",
-    "footer.copy":"© 2026 Ғалия Бағдат · Нұрбекова Ғалия Бағдатқызы. Барлық құқықтар қорғалған."
-  },
-  en:{
-    "hero.status":"President of the ICU International Association in Kazakhstan & Central Asia",
-    "hero.firstname":"Galiya","hero.lastname":"Bagdat",
-    "hero.role":"Expert in executive coaching and leadership development. Psychologist, business trainer, ICU master coach.",
-    "hero.stat1":"trainings delivered","hero.stat2":"years of management experience","hero.stat3":"online coaching school",
-    "hero.cta":"Book a consultation",
-    "about.eyebrow":"About","about.title":"Developing people as a profession and a calling",
-    "about.p1":"Over 27 years in management and more than 13 years developing coaching, psychological support and educational technologies. The only coach from Kazakhstan and Central Asia with honorary ICU member status.",
-    "about.p2":"Master of psychology and pedagogy, associate professor. Under her leadership, nine regional offline ICU branches were opened in Kazakhstan. Personal grants for professional training — 23 million tenge.",
-    "motto.eyebrow":"Motto & philosophy","motto.quote":"Want to change the world — change yourself",
-    "motto.meta":"Growth is like a living tree: it thrives only when it sends its roots deeper and reaches for the light at the same time.",
-    "motto.sign":"— Galiya Bagdat",
-    "reg.eyebrow":"Recognition & expertise","reg.title":"Credentials and professional standing",
-    "reg.1":"President of the ICU (International Coach Union) International Association in Kazakhstan & Central Asia",
-    "reg.2":"Co-founder of Tumar Family Office","reg.3":"Psychologist, business trainer, DMD trainer",
-    "reg.4":"Student of academician V. V. Kozlov","reg.5":"Trustee of the “Aiqanat” school",
-    "reg.6":"Lecturer at the Academy of Public Administration under the President of Kazakhstan (“Leader of a New Formation” programme and MBA)",
-    "reg.7":"Certified business trainer · ICU master coach · ICU/ICTA coaching business trainer · Master coach for top executives",
-    "reg.8":"Team transformer — builds teams of change","reg.9":"Author of several proprietary training programmes",
-    "reg.10":"Introduced coaching into the Academy of Public Administration under the President of Kazakhstan",
-    "reg.11":"One of the developers of the professional standard (occupation cards) for coaches in Kazakhstan",
-    "reg.12":"Speaker at forums and conferences, including an economic forum and BeWoman",
-    "reg.13":"Awarded certificates of honour by the Minister of Education of Kazakhstan",
-    "reg.14":"Awarded by the Ministry of Science and Higher Education of Kazakhstan; honorary education worker title",
-    "ach.eyebrow":"Achievements","ach.title":"Systemic results in numbers",
-    "ach.1":"trainings delivered","ach.2":"regional ICU branches opened in Kazakhstan",
-    "ach.3":"in personal professional-training grants","ach.4":"years developing coaching and educational technologies",
-    "edu.eyebrow":"Education","edu.title":"Academic and professional foundation",
-    "edu.1":"Master of psychology and pedagogy, associate professor","edu.2":"Student of academician V. V. Kozlov",
-    "edu.3":"Certified business trainer · ICU master coach · ICU/ICTA coaching business trainer",
-    "edu.4":"Author of coaching certification programmes for university lecturers",
-    "edu.5":"Lecturer at the Academy of Public Administration under the President of Kazakhstan (“Leader of a New Formation” and MBA)",
-    "pers.eyebrow":"Personality & public activity","pers.title":"Values beyond the profession",
-    "pers.1.t":"Trusteeship","pers.1.d":"Trustee of the “Aiqanat” school — supporting education and children’s development.",
-    "pers.2.t":"Family","pers.2.d":"Family as a foundation and source of inner stability.",
-    "pers.3.t":"Meditation","pers.3.d":"Mindfulness practices and work with one’s inner state.",
-    "pers.4.t":"Medical camps","pers.4.d":"Participation in organising medical camps and helping people.",
-    "pers.5.t":"Volunteering","pers.5.d":"Public initiatives and volunteer work.",
-    "car.eyebrow":"Career","car.title":"Management experience",
-    "car.lead":"Over 27 years in management — from leadership roles to building teams of change and embedding a coaching culture in major institutions.",
-    "car.toggle.open":"Show more","car.toggle.close":"Collapse",
-    "car.1":"President of the ICU International Association in Kazakhstan & Central Asia — strategic network development.",
-    "car.2":"Co-founder of Tumar Family Office.","car.3":"Introducing coaching into the Academy of Public Administration under the President of Kazakhstan.",
-    "car.4":"Opening nine regional offline ICU branches in Kazakhstan.",
-    "car.5":"Developing the professional standard (occupation cards) for coaches in Kazakhstan.",
-    "car.6":"Building teams of change — transforming management teams.",
-    "srv.eyebrow":"How I can help your business","srv.title":"Areas of collaboration",
-    "srv.1.t":"Executive coaching","srv.1.d":"One-on-one work with top leaders and senior teams.",
-    "srv.2.t":"Corporate trainings","srv.2.d":"Programmes for team and leadership-competency development.",
-    "srv.3.t":"Proprietary programmes","srv.3.d":"Unique training programmes tailored to company goals.",
-    "srv.4.t":"Training coaches and mentors","srv.4.d":"Educating coaches, mentors and advisors.",
-    "srv.5.t":"Online coaching school","srv.5.d":"The #1 online coaching school — scalable learning.",
-    "gal.eyebrow":"Moments & events","gal.title":"From public life",
-    "gal.1":"Opening of the regional ICU branch in Pavlodar","gal.2":"Qazaqstan Barysy Grand Slam",
-    "vibe.quote":"This programme is not about artificial intelligence — it is about a person’s belief that they are capable of creating.",
-    "vibe.p1":"I am one of the authors of the Vibe42 programme. More than 600 participants have gone through it: Kazakhtelecom employees, business representatives, students, doctors, engineers, lecturers, executives and retirees.",
-    "vibe.p2":"A new stage — up to 400 people per month in companies of the “Samruk-Kazyna” group via a cascade model.",
-    "vibe.final":"“My goal is to give people back the belief that they are capable of creating.”",
-    "ct.eyebrow":"Contact","ct.title":"Leave a collaboration request",
-    "ct.lead":"Fill in the form — I will get in touch to discuss your company’s goals.",
-    "ct.f.name":"Name","ct.f.company":"Company","ct.f.phone":"Phone","ct.f.msg":"Message",
-    "ct.ph.name":"Your name","ct.ph.company":"Company name","ct.ph.phone":"+7 ___ ___ __ __","ct.ph.msg":"Briefly describe your request",
-    "ct.submit":"Send request","ct.note":"At this stage the form is a demo placeholder. For urgent contact please use the direct details.",
-    "ct.ok":"Thank you! Your request has been received — this is a demo form without submission.",
-    "ct.phone":"Phone","ct.email":"Email",
-    "footer.copy":"© 2026 Galiya Bagdat · Nurbekova Galiya Bagdatovna. All rights reserved."
-  }
+const I18N={
+ ru:{
+  "brand.sub":"Коучинг · Лидерство · Family Office","nav.contact":"Связаться",
+  "idx.bio":"Биография","idx.rec":"Признание","idx.ach":"Достижения","idx.proj":"Проекты","idx.phil":"Философия","idx.mom":"Моменты","idx.srv":"Сотрудничество",
+  "hero.ey":"Президент Международной Ассоциации ICU в РК и Средней Азии",
+  "hero.role":"Коуч первых руководителей · со-основатель Tumar Family Office · автор Vibe42","hero.scroll":"Листайте",
+  "mis.label":"Миссия","mis.text":"Быть вкладом в других людей","mis.sign":"— Галия Багдат",
+  "bio.title":"Развитие людей как профессия и призвание","bio.side.l":"Профиль",
+  "bio.side.p":"Нурбекова Галия Багдатовна. Психолог, бизнес-тренер, мастер-коуч. Эксперт по коучингу, лидерству и семейному капиталу.",
+  "bio.p0":"Единственный коуч из Казахстана и Центральной Азии со статусом почётного члена ICU.",
+  "bio.p1":"Более 27 лет в управлении и более 13 лет в развитии коучинга, психологического сопровождения и образовательных технологий. Магистр психологии и педагогики, доцент; автор сертификационных программ по коучингу для преподавателей вузов.",
+  "bio.p2":"Награждена Министерством науки и высшего образования РК, звание почётного работника сферы образования. Под её руководством открыты девять региональных филиалов ICU в Казахстане. Личные гранты на обучение профессии — 23 млн тенге.",
+  "rec.title":"Регалии и профессиональный статус",
+  "rec.1":"Президент Международной Ассоциации ICU (International Coach Union) в РК и Средней Азии",
+  "rec.2":"Со-основатель Tumar Family Office — партнёр, Executive-консультант глав семей",
+  "rec.3":"Психолог, бизнес-тренер, тренер ДМД; ученица академика В. В. Козлова",
+  "rec.4":"Преподаватель Академии госуправления при Президенте РК («Руководитель новой формации», MBA)",
+  "rec.5":"Мастер-коуч ICU; бизнес-тренер по коучингу ICU/ICTA; мастер-коуч первых руководителей",
+  "rec.6":"Трансформатор команд — создаёт команды изменений",
+  "rec.7":"Внедрила коучинг в Академию госуправления; соразработчик профстандарта коуча в РК",
+  "rec.8":"Спикер форумов и конференций, в том числе экономического форума и BeWoman",
+  "rec.9":"Награждена Министерством науки и высшего образования РК; звание почётного работника сферы образования",
+  "ach.title":"Системные результаты в цифрах",
+  "ach.1":"проведённых тренингов","ach.2":"лет в управлении","ach.3":"региональных филиалов ICU","ach.4":"личных грантов на обучение","ach.5":"лет в развитии коучинга",
+  "proj.title":"Направления и проекты",
+  "proj.1":"Со-основатель и партнёр. Создание, сохранение и защита ценностей и семейного благосостояния. Миссия — защита и управление благосостоянием семьи на 3–5 поколений вперёд.","proj.1.t":"Со-основатель · партнёр",
+  "proj.2":"Один из авторов. Программа освоения AI-инструментов и вайбкодинга; более 600 участников; выход до 400 человек в месяц в компаниях группы «Самрук-Қазына».","proj.2.t":"Автор программы",
+  "proj.3":"Президент Международной Ассоциации ICU в РК и Средней Азии. Под её руководством открыты девять региональных филиалов.","proj.3.t":"Президент",
+  "proj.4.h":"Онлайн-школа коучинга","proj.4":"Основатель. Первая в РК онлайн-школа с аккредитацией ICU и первая школа коучинга на казахском языке.","proj.4.t":"Основатель",
+  "phil.quote":"Хочешь изменить мир — измени себя",
+  "phil.meta":"Развитие — как живое дерево: растёт лишь тогда, когда одновременно пускает корни глубже и тянется к свету.",
+  "mom.title":"Моменты и события","mom.1":"Выступление","mom.2":"Форум · «Менторство в Казахстане»","mom.3":"Astana International Financial Centre","mom.4":"Открытие филиала ICU в Павлодаре","mom.5":"Международный турнир по дзюдо","mom.6":"Сборная Казахстана по дзюдо","mom.hand":"Моменты, которые вдохновляют",
+  "vibe.quote":"Это программа не про искусственный интеллект — она про веру человека в то, что он способен создавать.",
+  "vibe.p1":"Я — один из авторов программы Vibe42. Через неё прошли более 600 участников: сотрудники Казахтелекома, представители бизнеса, студенты, врачи, инженеры, преподаватели, руководители и пенсионеры.",
+  "vibe.p2":"Новый этап — до 400 человек ежемесячно в компаниях группы «Самрук-Қазына» по каскадной модели обучения.",
+  "vibe.final":"«Моя цель — вернуть человеку веру в то, что он способен создавать».",
+  "srv.title":"Чем могу быть полезна бизнесу","srv.1":"Коучинг руководителей","srv.2":"Корпоративные тренинги","srv.3":"Трансформация команд","srv.4":"Подготовка коучей, менторов и наставников",
+  "ct.tag":"Контакты","ct.title":"Давайте сотрудничать","ct.mail":"Почта",
+  "footer.copy":"© 2026 Галия Багдат · Нурбекова Галия Багдатовна. Все права защищены."
+ },
+ kz:{
+  "brand.sub":"Коучинг · Көшбасшылық · Family Office","nav.contact":"Байланысу",
+  "idx.bio":"Өмірбаян","idx.rec":"Тану","idx.ach":"Жетістіктер","idx.proj":"Жобалар","idx.phil":"Философия","idx.mom":"Сәттер","idx.srv":"Ынтымақтастық",
+  "hero.ey":"ҚР және Орталық Азиядағы ICU Халықаралық Ассоциациясының Президенті",
+  "hero.role":"Бірінші басшылардың коучы · Tumar Family Office тең құрылтайшысы · Vibe42 авторы","hero.scroll":"Төмен",
+  "mis.label":"Миссия","mis.text":"Басқа адамдарға үлес болу","mis.sign":"— Ғалия Бағдат",
+  "bio.title":"Адамдарды дамыту — кәсіп әрі мақсат","bio.side.l":"Профиль",
+  "bio.side.p":"Нұрбекова Ғалия Бағдатқызы. Психолог, бизнес-тренер, мастер-коуч. Коучинг, көшбасшылық және отбасылық капитал бойынша сарапшы.",
+  "bio.p0":"ICU құрметті мүшесі мәртебесіне ие Қазақстан мен Орталық Азиядағы жалғыз коуч.",
+  "bio.p1":"Басқаруда 27 жылдан астам, коучинг, психологиялық қолдау және білім беру технологияларын дамытуда 13 жылдан астам тәжірибе. Психология және педагогика магистрі, доцент; ЖОО оқытушыларына арналған коучинг бойынша сертификаттау бағдарламаларының авторы.",
+  "bio.p2":"ҚР Ғылым және жоғары білім министрлігімен марапатталған, білім беру саласының құрметті қызметкері атағы. Оның жетекшілігімен Қазақстанда ICU-дың тоғыз өңірлік филиалы ашылды. Кәсіпке оқытуға жеке гранттар — 23 млн теңге.",
+  "rec.title":"Регалиялар мен кәсіби мәртебе",
+  "rec.1":"ҚР және Орталық Азиядағы ICU (International Coach Union) Халықаралық Ассоциациясының Президенті",
+  "rec.2":"Tumar Family Office тең құрылтайшысы — партнёр, отбасы басшыларының Executive-кеңесшісі",
+  "rec.3":"Психолог, бизнес-тренер, ДМД тренері; академик В. В. Козловтың шәкірті",
+  "rec.4":"ҚР Президенті жанындағы Мемлекеттік басқару академиясының оқытушысы («Жаңа формация басшысы», MBA)",
+  "rec.5":"ICU мастер-коучы; ICU/ICTA коучинг бойынша бизнес-тренер; бірінші басшылардың мастер-коучы",
+  "rec.6":"Командаларды трансформациялаушы — өзгерістер командасын құрады",
+  "rec.7":"Мемлекеттік басқару академиясына коучингті енгізді; ҚР-да коуч профстандартын әзірлеуші",
+  "rec.8":"Форумдар мен конференциялардың, оның ішінде экономикалық форум мен BeWoman спикері",
+  "rec.9":"ҚР Ғылым және жоғары білім министрлігімен марапатталған; білім беру саласының құрметті қызметкері атағы",
+  "ach.title":"Сандармен жүйелі нәтижелер",
+  "ach.1":"өткізілген тренинг","ach.2":"басқарудағы жыл","ach.3":"ICU өңірлік филиалы","ach.4":"оқытуға жеке грант","ach.5":"коучингті дамыту жылы",
+  "proj.title":"Бағыттар мен жобалар",
+  "proj.1":"Тең құрылтайшы әрі партнёр. Отбасылық құндылықтар мен әл-ауқатты құру, сақтау және қорғау. Миссия — отбасы әл-ауқатын 3–5 ұрпақ алға қорғау және басқару.","proj.1.t":"Тең құрылтайшы · партнёр",
+  "proj.2":"Авторларының бірі. AI-құралдары мен вайбкодингті меңгеру бағдарламасы; 600-ден астам қатысушы; «Самұрық-Қазына» тобында айына 400 адамға дейін.","proj.2.t":"Бағдарлама авторы",
+  "proj.3":"ҚР және Орталық Азиядағы ICU Халықаралық Ассоциациясының Президенті. Оның жетекшілігімен тоғыз өңірлік филиал ашылды.","proj.3.t":"Президент",
+  "proj.4.h":"Онлайн коучинг мектебі","proj.4":"Құрылтайшы. ICU аккредитациясы бар ҚР-дағы алғашқы онлайн мектеп және қазақ тіліндегі алғашқы коучинг мектебі.","proj.4.t":"Құрылтайшы",
+  "phil.quote":"Әлемді өзгерткің келсе — өзіңді өзгерт",
+  "phil.meta":"Даму — тірі ағаш сияқты: ол тек тамырын тереңге жіберіп әрі нұрға ұмтылғанда ғана өседі.",
+  "mom.title":"Сәттер мен оқиғалар","mom.1":"Сөйлеу","mom.2":"Форум · «Қазақстандағы менторлық»","mom.3":"Astana International Financial Centre","mom.4":"Павлодарда ICU филиалының ашылуы","mom.5":"Халықаралық дзюдо турнирі","mom.6":"Қазақстан дзюдодан құрамасы","mom.hand":"Шабыт беретін сәттер",
+  "vibe.quote":"Бұл бағдарлама жасанды интеллект туралы емес — ол адамның жасай алатынына деген сенімі туралы.",
+  "vibe.p1":"Мен — Vibe42 бағдарламасының авторларының бірімін. Оны 600-ден астам қатысушы өтті: Қазақтелеком қызметкерлері, бизнес өкілдері, студенттер, дәрігерлер, инженерлер, оқытушылар, басшылар және зейнеткерлер.",
+  "vibe.p2":"Жаңа кезең — «Самұрық-Қазына» тобы компанияларында каскадтық модель бойынша айына 400 адамға дейін.",
+  "vibe.final":"«Менің мақсатым — адамға өзінің жасай алатынына деген сенімін қайтару».",
+  "srv.title":"Бизнеске немен пайдалы боламын","srv.1":"Басшыларды коучинг","srv.2":"Корпоративтік тренингтер","srv.3":"Командаларды трансформациялау","srv.4":"Коучтар, менторлар мен тәлімгерлерді даярлау",
+  "ct.tag":"Байланыс","ct.title":"Бірге жұмыс істейік","ct.mail":"Пошта",
+  "footer.copy":"© 2026 Ғалия Бағдат · Нұрбекова Ғалия Бағдатқызы. Барлық құқықтар қорғалған."
+ },
+ en:{
+  "brand.sub":"Coaching · Leadership · Family Office","nav.contact":"Get in touch",
+  "idx.bio":"Biography","idx.rec":"Recognition","idx.ach":"Achievements","idx.proj":"Projects","idx.phil":"Philosophy","idx.mom":"Moments","idx.srv":"Collaboration",
+  "hero.ey":"President of the ICU International Association in Kazakhstan & Central Asia",
+  "hero.role":"Coach for top executives · co-founder of Tumar Family Office · author of Vibe42","hero.scroll":"Scroll",
+  "mis.label":"Mission","mis.text":"To be a contribution to other people","mis.sign":"— Galiya Bagdat",
+  "bio.title":"Developing people as a profession and a calling","bio.side.l":"Profile",
+  "bio.side.p":"Nurbekova Galiya Bagdatovna. Psychologist, business trainer, master coach. Expert in coaching, leadership and family capital.",
+  "bio.p0":"The only coach from Kazakhstan and Central Asia with honorary ICU member status.",
+  "bio.p1":"Over 27 years in management and more than 13 years developing coaching, psychological support and educational technologies. Master of psychology and pedagogy, associate professor; author of coaching certification programmes for university lecturers.",
+  "bio.p2":"Awarded by the Ministry of Science and Higher Education of Kazakhstan, honorary education worker title. Under her leadership, nine regional ICU branches were opened in Kazakhstan. Personal professional-training grants — 23 million tenge.",
+  "rec.title":"Credentials and professional standing",
+  "rec.1":"President of the ICU (International Coach Union) International Association in Kazakhstan & Central Asia",
+  "rec.2":"Co-founder of Tumar Family Office — partner, executive advisor to family heads",
+  "rec.3":"Psychologist, business trainer, DMD trainer; student of academician V. V. Kozlov",
+  "rec.4":"Lecturer at the Academy of Public Administration under the President of Kazakhstan (“Leader of a New Formation”, MBA)",
+  "rec.5":"ICU master coach; ICU/ICTA coaching business trainer; master coach for top executives",
+  "rec.6":"Team transformer — builds teams of change",
+  "rec.7":"Introduced coaching into the Academy of Public Administration; co-developer of the coach professional standard in Kazakhstan",
+  "rec.8":"Speaker at forums and conferences, including an economic forum and BeWoman",
+  "rec.9":"Awarded by the Ministry of Science and Higher Education of Kazakhstan; honorary education worker title",
+  "ach.title":"Systemic results in numbers",
+  "ach.1":"trainings delivered","ach.2":"years in management","ach.3":"regional ICU branches","ach.4":"in personal training grants","ach.5":"years developing coaching",
+  "proj.title":"Directions and projects",
+  "proj.1":"Co-founder and partner. Creating, preserving and protecting family values and wealth. The mission is to protect and manage family wealth 3–5 generations ahead.","proj.1.t":"Co-founder · partner",
+  "proj.2":"One of the authors. A programme for mastering AI tools and vibe-coding; 600+ participants; reaching up to 400 people per month in companies of the “Samruk-Kazyna” group.","proj.2.t":"Programme author",
+  "proj.3":"President of the ICU International Association in Kazakhstan & Central Asia. Under her leadership, nine regional branches were opened.","proj.3.t":"President",
+  "proj.4.h":"Online coaching school","proj.4":"Founder. The first ICU-accredited online school in Kazakhstan and the first coaching school in the Kazakh language.","proj.4.t":"Founder",
+  "phil.quote":"Want to change the world — change yourself",
+  "phil.meta":"Growth is like a living tree: it thrives only when it sends its roots deeper and reaches for the light at the same time.",
+  "mom.title":"Moments and events","mom.1":"Speaking","mom.2":"Forum · “Mentorship in Kazakhstan”","mom.3":"Astana International Financial Centre","mom.4":"Opening of the ICU branch in Pavlodar","mom.5":"International judo tournament","mom.6":"Kazakhstan national judo team","mom.hand":"Moments that inspire",
+  "vibe.quote":"This programme is not about artificial intelligence — it is about a person’s belief that they are capable of creating.",
+  "vibe.p1":"I am one of the authors of the Vibe42 programme. More than 600 participants have gone through it: Kazakhtelecom employees, business representatives, students, doctors, engineers, lecturers, executives and retirees.",
+  "vibe.p2":"A new stage — up to 400 people per month in companies of the “Samruk-Kazyna” group via a cascade model.",
+  "vibe.final":"“My goal is to give people back the belief that they are capable of creating.”",
+  "srv.title":"How I can help your business","srv.1":"Executive coaching","srv.2":"Corporate trainings","srv.3":"Team transformation","srv.4":"Training coaches, mentors and advisors",
+  "ct.tag":"Contact","ct.title":"Let’s collaborate","ct.mail":"Email",
+  "footer.copy":"© 2026 Galiya Bagdat · Nurbekova Galiya Bagdatovna. All rights reserved."
+ }
 };
 
-/* ============ LANGUAGE SWITCHING ============ */
-const langBtns = document.querySelectorAll('.lang button');
+const langBtns=document.querySelectorAll('.lang button');
 function setLang(lang){
-  const dict = I18N[lang] || I18N.ru;
-  document.documentElement.lang = lang;
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const key = el.getAttribute('data-i18n');
-    if(dict[key] !== undefined) el.textContent = dict[key];
-  });
-  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
-    const key = el.getAttribute('data-i18n-ph');
-    if(dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
-  });
-  // motto highlight: re-apply <em> styling around last phrase handled via CSS plain text; keep simple
-  langBtns.forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
-  // career toggle label respects open state
-  syncCareerLabel(lang);
+  const d=I18N[lang]||I18N.ru;
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(d[k]!==undefined)el.textContent=d[k];});
+  langBtns.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
 }
 langBtns.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
 
-/* ============ CAREER COLLAPSE ============ */
-const careerToggle = document.getElementById('careerToggle');
-const careerCollapse = document.getElementById('careerCollapse');
-let careerOpen = false;
-function currentLang(){return document.documentElement.lang || 'ru';}
-function syncCareerLabel(lang){
-  const dict = I18N[lang] || I18N.ru;
-  const key = careerOpen ? 'car.toggle.close' : 'car.toggle.open';
-  const arr = careerOpen ? '↑' : '↓';
-  careerToggle.innerHTML = dict[key] + ' <span class="arr">'+arr+'</span>';
+/* active index highlight */
+const idxLinks=document.querySelectorAll('.index-nav a');
+const secMap={};idxLinks.forEach(a=>{const id=a.getAttribute('href').slice(1);const s=document.getElementById(id);if(s)secMap[id]=a;});
+if('IntersectionObserver' in window){
+  const so=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){idxLinks.forEach(a=>a.classList.remove('active'));if(secMap[e.target.id])secMap[e.target.id].classList.add('active');}});},{rootMargin:'-45% 0px -50% 0px'});
+  Object.keys(secMap).forEach(id=>so.observe(document.getElementById(id)));
 }
-careerToggle.addEventListener('click',()=>{
-  careerOpen = !careerOpen;
-  careerCollapse.classList.toggle('open', careerOpen);
-  careerToggle.setAttribute('aria-expanded', String(careerOpen));
-  syncCareerLabel(currentLang());
-});
 
-/* ============ FORM (demo) ============ */
-const form = document.getElementById('leadForm');
-const formOk = document.getElementById('formOk');
-form.addEventListener('submit',e=>{
-  e.preventDefault();
-  if(!form.checkValidity()){form.reportValidity();return;}
-  formOk.classList.add('show');
-  form.reset();
-  setTimeout(()=>formOk.classList.remove('show'),6000);
-});
-
-/* ============ SCROLL REVEAL ============ */
+/* reveal */
 (function(){
-  const items = document.querySelectorAll('.reveal, .stagger');
-  if(!('IntersectionObserver' in window)){
-    items.forEach(i=>i.classList.add('in'));
-    return;
-  }
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(en=>{
-      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
-    });
-  },{threshold:.12, rootMargin:'0px 0px -8% 0px'});
+  const items=document.querySelectorAll('.reveal,.stagger');
+  if(!('IntersectionObserver' in window)){items.forEach(i=>i.classList.add('in'));return;}
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
   items.forEach(i=>io.observe(i));
-  // Safety net: guarantee visibility after ~3s regardless
   setTimeout(()=>items.forEach(i=>i.classList.add('in')),3000);
 })();
 
-/* init */
 setLang('ru');
 </script>
 </body>
