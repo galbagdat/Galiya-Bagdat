@@ -17,9 +17,10 @@
 
 | Файл | Назначение |
 |------|-----------|
-| `photo-dior.jpg` | портрет в полный рост (Hero) |
+| `photo-aifc.jpg` | портрет у Astana International Financial Centre (Hero) |
+| `photo-portrait-sofa.jpg` | портрет на кремовом диване (Биография) |
+| `photo-mentoring.jpg` | менторская встреча (коллаж) |
 | `photo-speaking.jpg` | выступление (коллаж) |
-| `photo-aifc.jpg` | Astana International Financial Centre (коллаж) |
 | `photo-forum.jpg` | форум (коллаж) |
 | `photo-baku.jpg` | турнир по дзюдо, Баку (коллаж) |
 | `photo-judoteam.jpg` | сборная Казахстана по дзюдо (коллаж) |

@@ -34,7 +34,11 @@
       "Bash(cp \"/Users/galiya/Downloads/5220152253296532532.jpg\" photo-baku.jpg)",
       "Bash(awk '{print $9, $5}')",
       "Bash(git reset *)",
-      "Bash(git -c user.name=\"Galiya Bagdat\" -c user.email=\"galbagdat7@gmail.com\" commit -qm \"Редизайн под PRD v2.0 \\(Pearl Idea editorial\\): новая структура, миссия, проекты, фото-коллаж, реальные фотографии\")"
+      "Bash(git -c user.name=\"Galiya Bagdat\" -c user.email=\"galbagdat7@gmail.com\" commit -qm \"Редизайн под PRD v2.0 \\(Pearl Idea editorial\\): новая структура, миссия, проекты, фото-коллаж, реальные фотографии\")",
+      "Bash(cp \"/Users/galiya/Downloads/галия за столом.jpeg\" photo-mentoring.jpg)",
+      "Bash(git rm *)",
+      "Bash(rm -f photo-dior.jpg)",
+      "Bash(git -c user.name=\"Galiya Bagdat\" -c user.email=\"galbagdat7@gmail.com\" commit -qm \"Hero: заменён портрет с сумкой Dior на кадр у AIFC; в коллаж добавлена менторская встреча\")"
     ]
   }
 }
