@@ -38,7 +38,14 @@
       "Bash(cp \"/Users/galiya/Downloads/галия за столом.jpeg\" photo-mentoring.jpg)",
       "Bash(git rm *)",
       "Bash(rm -f photo-dior.jpg)",
-      "Bash(git -c user.name=\"Galiya Bagdat\" -c user.email=\"galbagdat7@gmail.com\" commit -qm \"Hero: заменён портрет с сумкой Dior на кадр у AIFC; в коллаж добавлена менторская встреча\")"
+      "Bash(git -c user.name=\"Galiya Bagdat\" -c user.email=\"galbagdat7@gmail.com\" commit -qm \"Hero: заменён портрет с сумкой Dior на кадр у AIFC; в коллаж добавлена менторская встреча\")",
+      "Bash(sips -s format jpeg -Z 1400 \"/Users/galiya/Downloads/IMG_3901.HEIC\" --out /tmp/check3901.jpg)",
+      "Read(//tmp/**)",
+      "Bash(unzip -l \"WhatsApp Unknown 2026-06-08 at 05.01.00.zip\")",
+      "Bash(rm -rf /tmp/wa /tmp/check3901.jpg)",
+      "Bash(git -c user.name=\"Galiya Bagdat\" -c user.email=\"galbagdat7@gmail.com\" commit -qm \"Биография: обновлён текст профиля \\(магистр, коуч №1, советник семей, Family Leadership Academy\\)\")",
+      "Bash(cp \"/Users/galiya/Downloads/фото галия 2.JPG\" photo-hero.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight photo-hero.jpg)"
     ]
   }
 }
