@@ -78,6 +78,18 @@
   .index-nav a:hover,.index-nav a.active{color:var(--green);padding-left:6px;}
   @media(max-width:1180px){.index-nav{display:none;}}
 
+  /* ---------- RIGHT SIDE LABEL ---------- */
+  .side-label{
+    position:fixed;right:22px;top:50%;
+    writing-mode:vertical-lr;
+    transform:translateY(-50%) rotate(180deg);
+    font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--ink-soft);opacity:0;user-select:none;pointer-events:none;
+    animation:fadeIn 1s var(--ease) 1.2s forwards;
+    z-index:40;
+  }
+  @media(max-width:1180px){.side-label{display:none;}}
+
   /* ---------- HERO ---------- */
   .hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:flex-end;overflow:hidden;}
   .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%;}
@@ -102,11 +114,13 @@
 
   /* ---------- SECTION SHELL ---------- */
   section{padding:120px 0;position:relative;}
-  .sec-head{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:start;margin-bottom:64px;}
-  .sec-head .meta{display:flex;flex-direction:column;gap:6px;padding-top:8px;}
+  .sec-head{margin-bottom:64px;}
+  .sec-head .meta{display:flex;flex-direction:row;align-items:baseline;gap:14px;
+    margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid var(--line);}
   .sec-head .meta .label{color:var(--red);}
-  .sec-head h2{font-style:italic;font-size:clamp(2.2rem,5vw,4rem);color:var(--green);max-width:16ch;}
+  .sec-head h2{font-style:italic;font-size:clamp(2.2rem,5vw,4rem);color:var(--green);max-width:26ch;}
   .lead{font-size:1.12rem;color:var(--ink-soft);max-width:62ch;letter-spacing:.01em;}
+  .band .sec-head .meta{border-bottom-color:rgba(239,233,218,.15);}
 
   /* biography two-col */
   .bio{display:grid;grid-template-columns:.4fr 1fr;gap:48px;}
@@ -229,7 +243,7 @@
     header{padding:16px 24px;}
     .hbrand .sub{display:none;}
     section{padding:80px 0;}
-    .sec-head{grid-template-columns:1fr;gap:14px;margin-bottom:40px;}
+    .sec-head{margin-bottom:40px;}.sec-head .meta{margin-bottom:14px;}
     .bio{grid-template-columns:1fr;gap:24px;}
     .figs{grid-template-columns:repeat(2,1fr);}
     .projects{grid-template-columns:1fr;}
@@ -306,6 +320,9 @@
   <a href="#vibe42"><span class="n">08</span><span>Vibe42</span></a>
   <a href="#services"><span class="n">09</span><span data-i18n="idx.srv">Сотрудничество</span></a>
 </nav>
+
+<!-- RIGHT DECORATIVE LABEL -->
+<div class="side-label" aria-hidden="true">Coaching · Leadership · Family Office</div>
 
 <!-- HERO -->
 <section class="hero" id="hero">
