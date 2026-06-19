@@ -10,8 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600;1,700&family=Manrope:wght@300;400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --paper:#f3efe6;
-    --paper-2:#ece6d9;
+    --paper:#f4eccb;
+    --paper-2:#e9dfa8;
     --ink:#2a2723;
     --ink-soft:#5f5a51;
     --line:#d8d0c0;
@@ -25,9 +25,27 @@
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    margin:0;background:var(--paper);color:var(--ink);
+    margin:0;
+    background-color:var(--paper);
+    background-image:linear-gradient(
+      125deg,
+      rgba(255,252,200,.85) 0%,
+      rgba(255,235,110,.5) 18%,
+      rgba(240,208,70,.35) 38%,
+      rgba(255,230,100,.5) 58%,
+      rgba(255,252,200,.85) 78%,
+      rgba(255,235,110,.5) 100%
+    );
+    background-size:350% 350%;
+    animation:goldShimmer 11s ease infinite;
+    color:var(--ink);
     font-family:'Manrope',system-ui,sans-serif;line-height:1.7;
     -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  @keyframes goldShimmer{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
   }
   /* paper grain overlay */
   body::before{
@@ -114,10 +132,17 @@
 
   /* ---------- SECTION SHELL ---------- */
   section{padding:120px 0;position:relative;}
-  .sec-head{display:grid;grid-template-columns:190px 1fr;gap:40px;align-items:start;margin-bottom:64px;}
-  .sec-head .meta{display:flex;flex-direction:row;align-items:baseline;gap:10px;padding-top:6px;}
-  .sec-head .meta .label{color:var(--red);}
-  .sec-head h2{font-style:italic;font-size:clamp(2.4rem,5.5vw,4.6rem);color:var(--green);}
+  .sec-head{margin-bottom:64px;}
+  .sec-head .meta{
+    display:block;
+    margin-bottom:24px;padding-bottom:16px;
+    border-bottom:1px solid var(--line);
+  }
+  /* Force label + num-tag onto ONE line — both are <span> → inline */
+  .sec-head .meta .label{display:inline;color:var(--red);}
+  .sec-head .meta .num-tag{display:inline;margin-left:10px;color:var(--red);}
+  .sec-head h2{font-style:italic;font-size:clamp(2.6rem,6vw,5rem);color:var(--green);}
+  .band .sec-head .meta{border-bottom-color:rgba(239,233,218,.18);}
   .lead{font-size:1.12rem;color:var(--ink-soft);max-width:62ch;letter-spacing:.01em;}
 
   /* biography two-col */
@@ -233,6 +258,7 @@
     *{animation-duration:.001ms !important;transition-duration:.001ms !important;scroll-behavior:auto;}
     .reveal,.stagger>*{opacity:1 !important;transform:none !important;}
     header,.index-nav{animation:none;opacity:1;transform:none;}
+    body{animation:none;background-size:100% 100%;}
   }
 
   /* responsive */
@@ -241,7 +267,7 @@
     header{padding:16px 24px;}
     .hbrand .sub{display:none;}
     section{padding:80px 0;}
-    .sec-head{grid-template-columns:1fr;gap:12px;margin-bottom:40px;}
+    .sec-head{margin-bottom:40px;}.sec-head .meta{margin-bottom:16px;padding-bottom:10px;}
     .bio{grid-template-columns:1fr;gap:24px;}
     .figs{grid-template-columns:repeat(2,1fr);}
     .projects{grid-template-columns:1fr;}
