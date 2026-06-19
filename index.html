@@ -245,6 +245,34 @@
     .lang button{padding:5px 6px;}
     .srv{grid-template-columns:40px 1fr auto;gap:12px;}
   }
+
+  /* ---------- MEDIA ---------- */
+  .media{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px;}
+  .mcard{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:3px;overflow:hidden;background:var(--paper);transition:transform .4s ease,border-color .4s ease;}
+  .mcard:hover{transform:translateY(-4px);border-color:var(--gold);}
+  .mcard .thumb{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,var(--green),var(--ink));display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .mcard .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .mcard .play{position:absolute;width:64px;height:64px;border-radius:50%;background:rgba(239,233,218,.92);display:flex;align-items:center;justify-content:center;z-index:1;}
+  .mcard .play::after{content:"";border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent var(--ink);margin-left:4px;}
+  .mcard .mbody{padding:22px 24px;}
+  .mcard .mtag{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .mcard .mt{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--ink);font-weight:600;line-height:1.2;}
+  .mcard .md{font-size:.92rem;color:var(--ink-soft);margin-top:8px;letter-spacing:.02em;line-height:1.6;}
+  .mcard .mlink{margin-top:14px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
+  .mcard:hover .mlink{text-decoration:underline;}
+  .forbes-thumb{background:linear-gradient(135deg,#1a0a00,#8b3a00);display:flex;align-items:center;justify-content:center;}
+  .forbes-thumb .ftitle{font-family:'Playfair Display',serif;font-style:italic;font-size:1.8rem;color:rgba(239,233,218,.9);text-align:center;padding:0 28px;line-height:1.2;z-index:1;}
+
+  /* ---------- WHY CHOOSE ---------- */
+  .why{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;border-top:1px solid rgba(239,233,218,.25);}
+  .why .w{padding:30px 26px 30px 0;border-bottom:1px solid rgba(239,233,218,.12);}
+  .why .wt{font-family:'Playfair Display',serif;font-style:italic;font-size:1.5rem;color:var(--gold);margin-bottom:12px;}
+  .why .wd{font-size:.98rem;color:rgba(239,233,218,.85);letter-spacing:.03em;line-height:1.7;}
+
+  @media(max-width:900px){
+    .media{grid-template-columns:1fr;}
+    .why{grid-template-columns:1fr;}
+  }
 </style>
 </head>
 <body>
@@ -272,10 +300,11 @@
   <a href="#recognition"><span class="n">02</span><span data-i18n="idx.rec">Признание</span></a>
   <a href="#achievements"><span class="n">03</span><span data-i18n="idx.ach">Достижения</span></a>
   <a href="#projects"><span class="n">04</span><span data-i18n="idx.proj">Проекты</span></a>
-  <a href="#philosophy"><span class="n">05</span><span data-i18n="idx.phil">Философия</span></a>
-  <a href="#moments"><span class="n">06</span><span data-i18n="idx.mom">Моменты</span></a>
-  <a href="#vibe42"><span class="n">07</span><span>Vibe42</span></a>
-  <a href="#services"><span class="n">08</span><span data-i18n="idx.srv">Сотрудничество</span></a>
+  <a href="#media"><span class="n">05</span><span data-i18n="idx.media">Медиа</span></a>
+  <a href="#philosophy"><span class="n">06</span><span data-i18n="idx.phil">Философия</span></a>
+  <a href="#moments"><span class="n">07</span><span data-i18n="idx.mom">Моменты</span></a>
+  <a href="#vibe42"><span class="n">08</span><span>Vibe42</span></a>
+  <a href="#services"><span class="n">09</span><span data-i18n="idx.srv">Сотрудничество</span></a>
 </nav>
 
 <!-- HERO -->
@@ -317,8 +346,8 @@
       </div>
       <div class="body reveal">
         <p class="hl" data-i18n="bio.p0">Единственный коуч из Казахстана и Центральной Азии со статусом почётного члена ICU.</p>
-        <p data-i18n="bio.p1">Более 27 лет в управлении и более 13 лет в развитии коучинга, психологического сопровождения и образовательных технологий. Магистр психологии и педагогики, доцент; автор сертификационных программ по коучингу для преподавателей вузов.</p>
-        <p data-i18n="bio.p2">Награждена Министерством науки и высшего образования РК, звание почётного работника сферы образования. Под её руководством открыты девять региональных филиалов ICU в Казахстане. Личные гранты на обучение профессии — 23 млн тенге.</p>
+        <p data-i18n="bio.p1">Более 27 лет в управлении и более 13 лет в развитии коучинга, психологического сопровождения и образовательных технологий. Магистр психологии и педагогики, ассоциированный профессор; автор сертификационных программ по коучингу для преподавателей вузов.</p>
+        <p data-i18n="bio.p2">Награждена Министерством науки и высшего образования РК, звание почётного работника сферы образования. Под её руководством открыты девять региональных филиалов ICU в Казахстане. Личные гранты на обучение профессии — 32 млн ₸.</p>
       </div>
     </div>
   </div>
@@ -339,8 +368,9 @@
       <div class="row"><span class="n">05</span><p data-i18n="rec.5">Мастер-коуч ICU; бизнес-тренер по коучингу ICU/ICTA; мастер-коуч первых руководителей</p></div>
       <div class="row"><span class="n">06</span><p data-i18n="rec.6">Трансформатор команд — создаёт команды изменений</p></div>
       <div class="row"><span class="n">07</span><p data-i18n="rec.7">Внедрила коучинг в Академию госуправления; соразработчик профстандарта коуча в РК</p></div>
-      <div class="row"><span class="n">08</span><p data-i18n="rec.8">Спикер форумов и конференций, в том числе экономического форума и BeWoman</p></div>
+      <div class="row"><span class="n">08</span><p data-i18n="rec.8">Спикер форумов и конференций, в том числе AEF, EXPO Dubai 2022 и BeWoman</p></div>
       <div class="row"><span class="n">09</span><p data-i18n="rec.9">Награждена Министерством науки и высшего образования РК; звание почётного работника сферы образования</p></div>
+      <div class="row star"><span class="n">★</span><p data-i18n="rec.10">Коуч по ментальной подготовке Олимпийской сборной РК по дзюдо; награды от 8 ведущих университетов РК</p></div>
     </div>
   </div>
 </section>
@@ -356,7 +386,7 @@
       <div class="fig"><div class="v">10 000+</div><div class="k" data-i18n="ach.1">проведённых тренингов</div></div>
       <div class="fig"><div class="v">27+</div><div class="k" data-i18n="ach.2">лет в управлении</div></div>
       <div class="fig"><div class="v">9</div><div class="k" data-i18n="ach.3">региональных филиалов ICU</div></div>
-      <div class="fig"><div class="v">23 млн ₸</div><div class="k" data-i18n="ach.4">личных грантов на обучение</div></div>
+      <div class="fig"><div class="v">32 млн ₸</div><div class="k" data-i18n="ach.4">личных грантов на обучение</div></div>
       <div class="fig"><div class="v">13+</div><div class="k" data-i18n="ach.5">лет в развитии коучинга</div></div>
     </div>
   </div>
@@ -394,10 +424,69 @@
   </div>
 </section>
 
+<!-- MEDIA -->
+<section id="media">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="meta"><span class="label">05</span><span class="num-tag" data-i18n="idx.media">Медиа</span></div>
+      <h2 data-i18n="media.title">Публикации и интервью</h2>
+    </div>
+    <div class="media stagger">
+      <a class="mcard" href="https://youtu.be/MAE3wBVpf20" target="_blank" rel="noopener">
+        <div class="thumb">
+          <img src="https://img.youtube.com/vi/MAE3wBVpf20/maxresdefault.jpg" alt="YouTube интервью" onerror="this.style.display='none'" />
+          <div class="play"></div>
+        </div>
+        <div class="mbody">
+          <div class="mtag" data-i18n="media.1.tag">YouTube · Арман Байтасов</div>
+          <div class="mt" data-i18n="media.1.t">Галия Багдат: Для чего нужна Стратегия семьи</div>
+          <div class="md" data-i18n="media.1.d">Интервью о семейном капитале, преемственности и роли коучинга в развитии семейного бизнеса. Канал Армана Байтасова.</div>
+          <div class="mlink" data-i18n="media.1.link">Смотреть →</div>
+        </div>
+      </a>
+      <a class="mcard" href="https://forbes.kz/articles/semeynaya_strategiya_kak_vyirastit_naslednika_svoego_biznesa" target="_blank" rel="noopener">
+        <div class="thumb forbes-thumb">
+          <div class="ftitle">Forbes Kazakhstan</div>
+        </div>
+        <div class="mbody">
+          <div class="mtag" data-i18n="media.2.tag">Forbes Kazakhstan</div>
+          <div class="mt" data-i18n="media.2.t">Семейная стратегия: как вырастить наследника своего бизнеса</div>
+          <div class="md" data-i18n="media.2.d">Статья о семейном капитале, воспитании преемников и стратегии передачи бизнеса следующим поколениям.</div>
+          <div class="mlink" data-i18n="media.2.link">Читать →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="band" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="meta"><span class="label" style="color:var(--gold)">·</span><span class="num-tag" style="color:rgba(239,233,218,.65)" data-i18n="why.label">Почему выбирают</span></div>
+      <h2 data-i18n="why.title">Синтез знаний, опыта и результата</h2>
+    </div>
+    <div class="why stagger">
+      <div class="w">
+        <div class="wt" data-i18n="why.1.t">Синтез знаний</div>
+        <div class="wd" data-i18n="why.1.d">Биология, право, психология и бизнес — уникальное сочетание дисциплин, дающее объёмное понимание человека и системы.</div>
+      </div>
+      <div class="w">
+        <div class="wt" data-i18n="why.2.t">Глобальный опыт</div>
+        <div class="wd" data-i18n="why.2.d">Европа, ОАЭ, Россия, Латинская Америка — международная практика и понимание разных деловых культур.</div>
+      </div>
+      <div class="w">
+        <div class="wt" data-i18n="why.3.t">Доказанная эффективность</div>
+        <div class="wd" data-i18n="why.3.d">Олимпийские сборные, Администрация Президента, крупнейшие корпорации — подтверждённые результаты на высшем уровне.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PHILOSOPHY -->
 <section class="philo" id="philosophy">
   <div class="wrap reveal">
-    <span class="label">05 · <span data-i18n="idx.phil">Философия</span></span>
+    <span class="label">06 · <span data-i18n="idx.phil">Философия</span></span>
     <blockquote data-i18n="phil.quote">Хочешь изменить мир — измени себя</blockquote>
     <p class="meta" data-i18n="phil.meta">Развитие — как живое дерево: растёт лишь тогда, когда одновременно пускает корни глубже и тянется к свету.</p>
     <div class="sign">Галия Багдат</div>
@@ -408,7 +497,7 @@
 <section id="moments">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="meta"><span class="label">06</span><span class="num-tag" data-i18n="idx.mom">Моменты</span></div>
+      <div class="meta"><span class="label">07</span><span class="num-tag" data-i18n="idx.mom">Моменты</span></div>
       <h2 data-i18n="mom.title">Моменты и события</h2>
     </div>
     <div class="collage stagger">
@@ -456,7 +545,7 @@
 <section id="services">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="meta"><span class="label">08</span><span class="num-tag" data-i18n="idx.srv">Сотрудничество</span></div>
+      <div class="meta"><span class="label">09</span><span class="num-tag" data-i18n="idx.srv">Сотрудничество</span></div>
       <h2 data-i18n="srv.title">Чем могу быть полезна бизнесу</h2>
     </div>
     <div class="services stagger">
@@ -506,8 +595,8 @@ const I18N={
   "bio.title":"Развитие людей как профессия и призвание","bio.side.l":"Профиль",
   "bio.side.p":"Нурбекова Галия Багдатовна. Магистр психологии и педагогики, коуч № 1, советник состоятельных семей. Автор программы Family Leadership Academy.",
   "bio.p0":"Единственный коуч из Казахстана и Центральной Азии со статусом почётного члена ICU.",
-  "bio.p1":"Более 27 лет в управлении и более 13 лет в развитии коучинга, психологического сопровождения и образовательных технологий. Магистр психологии и педагогики, доцент; автор сертификационных программ по коучингу для преподавателей вузов.",
-  "bio.p2":"Награждена Министерством науки и высшего образования РК, звание почётного работника сферы образования. Под её руководством открыты девять региональных филиалов ICU в Казахстане. Личные гранты на обучение профессии — 23 млн тенге.",
+  "bio.p1":"Более 27 лет в управлении и более 13 лет в развитии коучинга, психологического сопровождения и образовательных технологий. Магистр психологии и педагогики, ассоциированный профессор; автор сертификационных программ по коучингу для преподавателей вузов.",
+  "bio.p2":"Награждена Министерством науки и высшего образования РК, звание почётного работника сферы образования. Под её руководством открыты девять региональных филиалов ICU в Казахстане. Личные гранты на обучение профессии — 32 млн ₸.",
   "rec.title":"Регалии и профессиональный статус",
   "rec.1":"Президент Международной Ассоциации ICU (International Coach Union) в РК и Средней Азии",
   "rec.2":"Со-основатель Tumar Family Office — партнёр, Executive-консультант глав семей",
@@ -516,8 +605,9 @@ const I18N={
   "rec.5":"Мастер-коуч ICU; бизнес-тренер по коучингу ICU/ICTA; мастер-коуч первых руководителей",
   "rec.6":"Трансформатор команд — создаёт команды изменений",
   "rec.7":"Внедрила коучинг в Академию госуправления; соразработчик профстандарта коуча в РК",
-  "rec.8":"Спикер форумов и конференций, в том числе экономического форума и BeWoman",
+  "rec.8":"Спикер форумов и конференций, в том числе AEF, EXPO Dubai 2022 и BeWoman",
   "rec.9":"Награждена Министерством науки и высшего образования РК; звание почётного работника сферы образования",
+  "rec.10":"Коуч по ментальной подготовке Олимпийской сборной РК по дзюдо; награды от 8 ведущих университетов РК",
   "ach.title":"Системные результаты в цифрах",
   "ach.1":"проведённых тренингов","ach.2":"лет в управлении","ach.3":"региональных филиалов ICU","ach.4":"личных грантов на обучение","ach.5":"лет в развитии коучинга",
   "proj.title":"Направления и проекты",
@@ -532,6 +622,14 @@ const I18N={
   "vibe.p1":"Я — один из авторов программы Vibe42. Через неё прошли более 600 участников: сотрудники Казахтелекома, представители бизнеса, студенты, врачи, инженеры, преподаватели, руководители и пенсионеры.",
   "vibe.p2":"Новый этап — до 400 человек ежемесячно в компаниях группы «Самрук-Қазына» по каскадной модели обучения.",
   "vibe.final":"«Моя цель — вернуть человеку веру в то, что он способен создавать».",
+  "idx.media":"Медиа",
+  "media.title":"Публикации и интервью",
+  "media.1.tag":"YouTube · Арман Байтасов","media.1.t":"Галия Багдат: Для чего нужна Стратегия семьи","media.1.d":"Интервью о семейном капитале, преемственности и роли коучинга в развитии семейного бизнеса. Канал Армана Байтасова.","media.1.link":"Смотреть →",
+  "media.2.tag":"Forbes Kazakhstan","media.2.t":"Семейная стратегия: как вырастить наследника своего бизнеса","media.2.d":"Статья о семейном капитале, воспитании преемников и стратегии передачи бизнеса следующим поколениям.","media.2.link":"Читать →",
+  "why.label":"Почему выбирают","why.title":"Синтез знаний, опыта и результата",
+  "why.1.t":"Синтез знаний","why.1.d":"Биология, право, психология и бизнес — уникальное сочетание дисциплин, дающее объёмное понимание человека и системы.",
+  "why.2.t":"Глобальный опыт","why.2.d":"Европа, ОАЭ, Россия, Латинская Америка — международная практика и понимание разных деловых культур.",
+  "why.3.t":"Доказанная эффективность","why.3.d":"Олимпийские сборные, Администрация Президента, крупнейшие корпорации — подтверждённые результаты на высшем уровне.",
   "srv.title":"Чем могу быть полезна бизнесу","srv.1":"Коучинг руководителей","srv.2":"Корпоративные тренинги","srv.3":"Трансформация команд","srv.4":"Подготовка коучей, менторов и наставников",
   "ct.tag":"Контакты","ct.title":"Давайте сотрудничать","ct.mail":"Почта",
   "footer.copy":"© 2026 Галия Багдат · Нурбекова Галия Багдатовна. Все права защищены."
@@ -545,8 +643,8 @@ const I18N={
   "bio.title":"Адамдарды дамыту — кәсіп әрі мақсат","bio.side.l":"Профиль",
   "bio.side.p":"Нұрбекова Ғалия Бағдатқызы. Психология және педагогика магистрі, № 1 коуч, ауқатты отбасылардың кеңесшісі. Family Leadership Academy бағдарламасының авторы.",
   "bio.p0":"ICU құрметті мүшесі мәртебесіне ие Қазақстан мен Орталық Азиядағы жалғыз коуч.",
-  "bio.p1":"Басқаруда 27 жылдан астам, коучинг, психологиялық қолдау және білім беру технологияларын дамытуда 13 жылдан астам тәжірибе. Психология және педагогика магистрі, доцент; ЖОО оқытушыларына арналған коучинг бойынша сертификаттау бағдарламаларының авторы.",
-  "bio.p2":"ҚР Ғылым және жоғары білім министрлігімен марапатталған, білім беру саласының құрметті қызметкері атағы. Оның жетекшілігімен Қазақстанда ICU-дың тоғыз өңірлік филиалы ашылды. Кәсіпке оқытуға жеке гранттар — 23 млн теңге.",
+  "bio.p1":"Басқаруда 27 жылдан астам, коучинг, психологиялық қолдау және білім беру технологияларын дамытуда 13 жылдан астам тәжірибе. Психология және педагогика магистрі, қауымдастырылған профессор; ЖОО оқытушыларына арналған коучинг бойынша сертификаттау бағдарламаларының авторы.",
+  "bio.p2":"ҚР Ғылым және жоғары білім министрлігімен марапатталған, білім беру саласының құрметті қызметкері атағы. Оның жетекшілігімен Қазақстанда ICU-дың тоғыз өңірлік филиалы ашылды. Кәсіпке оқытуға жеке гранттар — 32 млн ₸.",
   "rec.title":"Регалиялар мен кәсіби мәртебе",
   "rec.1":"ҚР және Орталық Азиядағы ICU (International Coach Union) Халықаралық Ассоциациясының Президенті",
   "rec.2":"Tumar Family Office тең құрылтайшысы — партнёр, отбасы басшыларының Executive-кеңесшісі",
@@ -555,8 +653,9 @@ const I18N={
   "rec.5":"ICU мастер-коучы; ICU/ICTA коучинг бойынша бизнес-тренер; бірінші басшылардың мастер-коучы",
   "rec.6":"Командаларды трансформациялаушы — өзгерістер командасын құрады",
   "rec.7":"Мемлекеттік басқару академиясына коучингті енгізді; ҚР-да коуч профстандартын әзірлеуші",
-  "rec.8":"Форумдар мен конференциялардың, оның ішінде экономикалық форум мен BeWoman спикері",
+  "rec.8":"Форумдар мен конференциялардың, оның ішінде AEF, EXPO Dubai 2022 және BeWoman спикері",
   "rec.9":"ҚР Ғылым және жоғары білім министрлігімен марапатталған; білім беру саласының құрметті қызметкері атағы",
+  "rec.10":"ҚР дзюдодан Олимпиялық құрамасының ментальды дайындық коучы; ҚР-ның 8 жетекші университетінің марапаттары",
   "ach.title":"Сандармен жүйелі нәтижелер",
   "ach.1":"өткізілген тренинг","ach.2":"басқарудағы жыл","ach.3":"ICU өңірлік филиалы","ach.4":"оқытуға жеке грант","ach.5":"коучингті дамыту жылы",
   "proj.title":"Бағыттар мен жобалар",
@@ -571,6 +670,14 @@ const I18N={
   "vibe.p1":"Мен — Vibe42 бағдарламасының авторларының бірімін. Оны 600-ден астам қатысушы өтті: Қазақтелеком қызметкерлері, бизнес өкілдері, студенттер, дәрігерлер, инженерлер, оқытушылар, басшылар және зейнеткерлер.",
   "vibe.p2":"Жаңа кезең — «Самұрық-Қазына» тобы компанияларында каскадтық модель бойынша айына 400 адамға дейін.",
   "vibe.final":"«Менің мақсатым — адамға өзінің жасай алатынына деген сенімін қайтару».",
+  "idx.media":"Медиа",
+  "media.title":"Жарияланымдар мен сұхбаттар",
+  "media.1.tag":"YouTube · Арман Байтасов","media.1.t":"Ғалия Бағдат: Отбасы стратегиясы не үшін керек","media.1.d":"Отбасылық капитал, мирасқорлық және коучингтің отбасылық бизнесті дамытудағы рөлі туралы сұхбат.","media.1.link":"Қарау →",
+  "media.2.tag":"Forbes Kazakhstan","media.2.t":"Отбасы стратегиясы: бизнес мирасқорын қалай тәрбиелеу керек","media.2.d":"Отбасылық капитал, мирасқорларды тәрбиелеу және бизнесті келесі ұрпаққа беру стратегиясы туралы мақала.","media.2.link":"Оқу →",
+  "why.label":"Неліктен таңдайды","why.title":"Білім, тәжірибе және нәтиженің синтезі",
+  "why.1.t":"Білім синтезі","why.1.d":"Биология, құқық, психология және бизнес — адам мен жүйені кешенді түсінуге мүмкіндік беретін пәндердің бірегей үйлесімі.",
+  "why.2.t":"Жаһандық тәжірибе","why.2.d":"Еуропа, БАӘ, Ресей, Латын Америкасы — халықаралық тәжірибе және әртүрлі іскерлік мәдениеттерді түсіну.",
+  "why.3.t":"Дәлелденген тиімділік","why.3.d":"Олимпиялық құрамалар, Президент Әкімшілігі, ірі корпорациялар — жоғары деңгейде расталған нәтижелер.",
   "srv.title":"Бизнеске немен пайдалы боламын","srv.1":"Басшыларды коучинг","srv.2":"Корпоративтік тренингтер","srv.3":"Командаларды трансформациялау","srv.4":"Коучтар, менторлар мен тәлімгерлерді даярлау",
   "ct.tag":"Байланыс","ct.title":"Бірге жұмыс істейік","ct.mail":"Пошта",
   "footer.copy":"© 2026 Ғалия Бағдат · Нұрбекова Ғалия Бағдатқызы. Барлық құқықтар қорғалған."
@@ -585,7 +692,7 @@ const I18N={
   "bio.side.p":"Nurbekova Galiya Bagdatovna. Master of psychology and pedagogy, coach No. 1, advisor to wealthy families. Author of the Family Leadership Academy programme.",
   "bio.p0":"The only coach from Kazakhstan and Central Asia with honorary ICU member status.",
   "bio.p1":"Over 27 years in management and more than 13 years developing coaching, psychological support and educational technologies. Master of psychology and pedagogy, associate professor; author of coaching certification programmes for university lecturers.",
-  "bio.p2":"Awarded by the Ministry of Science and Higher Education of Kazakhstan, honorary education worker title. Under her leadership, nine regional ICU branches were opened in Kazakhstan. Personal professional-training grants — 23 million tenge.",
+  "bio.p2":"Awarded by the Ministry of Science and Higher Education of Kazakhstan, honorary education worker title. Under her leadership, nine regional ICU branches were opened in Kazakhstan. Personal professional-training grants — 32 million tenge.",
   "rec.title":"Credentials and professional standing",
   "rec.1":"President of the ICU (International Coach Union) International Association in Kazakhstan & Central Asia",
   "rec.2":"Co-founder of Tumar Family Office — partner, executive advisor to family heads",
@@ -594,8 +701,9 @@ const I18N={
   "rec.5":"ICU master coach; ICU/ICTA coaching business trainer; master coach for top executives",
   "rec.6":"Team transformer — builds teams of change",
   "rec.7":"Introduced coaching into the Academy of Public Administration; co-developer of the coach professional standard in Kazakhstan",
-  "rec.8":"Speaker at forums and conferences, including an economic forum and BeWoman",
+  "rec.8":"Speaker at forums and conferences, including AEF, EXPO Dubai 2022 and BeWoman",
   "rec.9":"Awarded by the Ministry of Science and Higher Education of Kazakhstan; honorary education worker title",
+  "rec.10":"Mental preparation coach for the Olympic judo team of Kazakhstan; awards from 8 leading universities in Kazakhstan",
   "ach.title":"Systemic results in numbers",
   "ach.1":"trainings delivered","ach.2":"years in management","ach.3":"regional ICU branches","ach.4":"in personal training grants","ach.5":"years developing coaching",
   "proj.title":"Directions and projects",
@@ -610,6 +718,14 @@ const I18N={
   "vibe.p1":"I am one of the authors of the Vibe42 programme. More than 600 participants have gone through it: Kazakhtelecom employees, business representatives, students, doctors, engineers, lecturers, executives and retirees.",
   "vibe.p2":"A new stage — up to 400 people per month in companies of the “Samruk-Kazyna” group via a cascade model.",
   "vibe.final":"“My goal is to give people back the belief that they are capable of creating.”",
+  "idx.media":"Media",
+  "media.title":"Publications and interviews",
+  "media.1.tag":"YouTube · Arman Baitassov","media.1.t":"Galiya Bagdat: Why Does a Family Need a Strategy","media.1.d":"Interview about family capital, succession and the role of coaching in developing a family business. Arman Baitassov’s channel.","media.1.link":"Watch →",
+  "media.2.tag":"Forbes Kazakhstan","media.2.t":"Family strategy: how to raise an heir for your business","media.2.d":"Article about family capital, succession planning and the strategy for transferring a business to the next generation.","media.2.link":"Read →",
+  "why.label":"Why choose","why.title":"Synthesis of knowledge, experience and results",
+  "why.1.t":"Synthesis of knowledge","why.1.d":"Biology, law, psychology and business — a unique combination of disciplines providing a multi-dimensional understanding of people and systems.",
+  "why.2.t":"Global experience","why.2.d":"Europe, UAE, Russia, Latin America — international practice and understanding of different business cultures.",
+  "why.3.t":"Proven effectiveness","why.3.d":"Olympic teams, the Presidential Administration, major corporations — verified results at the highest level.",
   "srv.title":"How I can help your business","srv.1":"Executive coaching","srv.2":"Corporate trainings","srv.3":"Team transformation","srv.4":"Training coaches, mentors and advisors",
   "ct.tag":"Contact","ct.title":"Let’s collaborate","ct.mail":"Email",
   "footer.copy":"© 2026 Galiya Bagdat · Nurbekova Galiya Bagdatovna. All rights reserved."
