@@ -118,12 +118,13 @@
   .hero .ph-fallback{position:absolute;inset:0;z-index:0;background:
     radial-gradient(120% 90% at 80% 30%,rgba(179,137,63,.3),transparent 55%),
     linear-gradient(135deg,var(--green),var(--green-2));}
-  .hero .inner{position:relative;z-index:3;padding:0 40px 9vh 270px;max-width:var(--maxw);margin:0 auto;width:100%;}
-  @media(max-width:1180px){.hero .inner{padding-left:40px;}}
+  /* Text block hard-capped at left 56% — photo never overlaps */
+  .hero .inner{position:relative;z-index:3;padding:0 32px 9vh 270px;width:56%;overflow:hidden;}
+  @media(max-width:1180px){.hero .inner{padding-left:40px;width:100%;}}
   .scroll-hint{z-index:3;}
-  .hero .ey{color:var(--paper);opacity:.75;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;margin-bottom:16px;max-width:36ch;}
-  .hero h1{font-style:italic;font-size:clamp(1.6rem,2.8vw,2.6rem);color:#fff;letter-spacing:-.01em;font-weight:600;max-width:14ch;}
-  .hero .role{color:rgba(255,255,255,.82);font-size:clamp(.88rem,1.3vw,1.05rem);max-width:32ch;margin-top:14px;font-weight:400;}
+  .hero .ey{color:var(--paper);opacity:.75;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;margin-bottom:14px;}
+  .hero h1{font-style:italic;font-size:clamp(1.4rem,2.2vw,2.2rem);color:#fff;letter-spacing:-.01em;font-weight:600;white-space:nowrap;}
+  .hero .role{color:rgba(255,255,255,.82);font-size:clamp(.84rem,1.2vw,1rem);max-width:28ch;margin-top:12px;font-weight:400;}
   .scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,.8);
     font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px;}
   .scroll-hint::after{content:"";width:1px;height:34px;background:rgba(255,255,255,.6);animation:pulse 2s var(--ease) infinite;}
