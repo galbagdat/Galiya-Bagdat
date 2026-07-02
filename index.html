@@ -118,9 +118,9 @@
   .hero .ph-fallback{position:absolute;inset:0;z-index:0;background:
     radial-gradient(120% 90% at 80% 30%,rgba(179,137,63,.3),transparent 55%),
     linear-gradient(135deg,var(--green),var(--green-2));}
-  /* Text block hard-capped at left 56% — photo never overlaps */
-  .hero .inner{position:relative;z-index:3;padding:0 32px 9vh 270px;width:56%;overflow:hidden;}
-  @media(max-width:1180px){.hero .inner{padding-left:40px;width:100%;}}
+  /* Text pinned absolutely: left=268px (past nav), right=46% (before photo) */
+  .hero .inner{position:absolute;z-index:3;left:268px;right:46%;bottom:9vh;padding:0 24px;overflow:hidden;}
+  @media(max-width:1180px){.hero .inner{position:relative;left:auto;right:auto;padding:0 40px 9vh;width:100%;}}
   .scroll-hint{z-index:3;}
   .hero .ey{color:var(--paper);opacity:.75;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;margin-bottom:14px;}
   .hero h1{font-style:italic;font-size:clamp(1.4rem,2.2vw,2.2rem);color:#fff;letter-spacing:-.01em;font-weight:600;white-space:nowrap;}
