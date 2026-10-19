@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FBF4F5">
+<title>Путь к IELTS 6.5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: sticky header + scrollable tab strip, single readable column (max 760px), cards only for interactive units */
+:root{
+  --bg:#FBF4F5; --surface:#FFFFFF; --surface2:#F7E8EC; --line:#EFDCE2;
+  --ink:#3E2A33; --muted:#8A717A;
+  --rose:#E7A9BA; --rose-deep:#B5577A; --on-accent:#FFFFFF;
+  --lav:#E4DAF1; --lav-ink:#6E5A93; --sage:#DCEBE2; --sage-ink:#4E7A62;
+  --peach:#FBE3D6; --peach-ink:#A0603F; --bad:#C2546B; --bad-bg:#F9E1E6;
+  --f-display:"Prata", Georgia, "Times New Roman", serif;
+  --f-body:"Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --r:16px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#211A1E; --surface:#2C2328; --surface2:#382C32; --line:#46363D;
+  --ink:#F6E9ED; --muted:#C2A9B1;
+  --rose:#7E4A5B; --rose-deep:#F0B3C5; --on-accent:#2A1A20;
+  --lav:#3A3247; --lav-ink:#CDBDEB; --sage:#2D3C34; --sage-ink:#A9D3BB;
+  --peach:#3F2E27; --peach-ink:#F0BFA2; --bad:#F09AAE; --bad-bg:#45272F; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#211A1E; --surface:#2C2328; --surface2:#382C32; --line:#46363D;
+  --ink:#F6E9ED; --muted:#C2A9B1;
+  --rose:#7E4A5B; --rose-deep:#F0B3C5; --on-accent:#2A1A20;
+  --lav:#3A3247; --lav-ink:#CDBDEB; --sage:#2D3C34; --sage-ink:#A9D3BB;
+  --peach:#3F2E27; --peach-ink:#F0BFA2; --bad:#F09AAE; --bad-bg:#45272F; color-scheme:dark }
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+[hidden]{display:none!important}
+html,body{background:var(--bg)}
+body{color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0;line-height:1.25}
+h1{font-size:1.55rem} h2{font-size:1.35rem} h3{font-size:1.1rem}
+p{margin:0}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--rose-deep);outline-offset:2px;border-radius:8px}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px 6px}
+.brand .mark{display:flex;align-items:center;gap:10px;min-width:0}
+.logo{width:36px;height:36px;border-radius:50%;background:var(--rose);display:grid;place-items:center;font-family:var(--f-display);color:var(--rose-deep);flex:none;font-size:15px}
+.brand small{display:block;color:var(--muted);font-size:.78rem;letter-spacing:.02em}
+.count{font-variant-numeric:tabular-nums;text-align:right;font-size:.8rem;color:var(--muted);flex:none}
+.count b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.25rem;color:var(--rose-deep)}
+nav.tabs{display:flex;gap:6px;overflow-x:auto;padding-block:6px 10px;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;font-weight:700;font-size:.9rem;color:var(--muted)}
+.tab[aria-current="page"]{background:var(--rose-deep);border-color:var(--rose-deep);color:var(--on-accent)}
+main{padding-block:20px 60px;display:flex;flex-direction:column;gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.soft{background:var(--surface2);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:10px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.eyebrow{font-size:.74rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)} .small{font-size:.88rem}
+.btn{border:0;border-radius:12px;padding:11px 18px;font-weight:800;background:var(--rose-deep);color:var(--on-accent)}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.btn.soft{background:var(--surface2);color:var(--ink)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.sm{padding:7px 12px;font-size:.88rem;border-radius:10px}
+.chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 10px;font-size:.78rem;font-weight:800}
+.c-lav{background:var(--lav);color:var(--lav-ink)} .c-sage{background:var(--sage);color:var(--sage-ink)} .c-peach{background:var(--peach);color:var(--peach-ink)} .c-rose{background:var(--surface2);color:var(--rose-deep)}
+.bar{height:8px;border-radius:99px;background:var(--surface2);overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--rose-deep);border-radius:99px;transition:width .4s}
+.stat{display:flex;flex-direction:column;gap:2px}
+.stat b{font-family:var(--f-display);font-weight:400;font-size:1.7rem;font-variant-numeric:tabular-nums;color:var(--rose-deep);line-height:1.1}
+.hero{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:var(--rose);opacity:.35;pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px}
+.steps{display:flex;flex-direction:column;gap:8px}
+.step{display:flex;gap:12px;align-items:center;padding:10px 12px;border-radius:12px;background:var(--surface2)}
+.step .dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.8rem;background:var(--surface);color:var(--muted);flex:none;font-variant-numeric:tabular-nums}
+.step.done .dot{background:var(--sage-ink);color:var(--surface)}
+.step.cur{outline:2px solid var(--rose-deep)}
+.step .t{flex:1;min-width:0}
+.q{display:flex;flex-direction:column;gap:8px;padding-block:6px}
+.q+.q{border-top:1px dashed var(--line);padding-top:14px}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.opt{text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 12px;font-weight:600}
+.opt:hover:not(:disabled){border-color:var(--rose-deep)}
+.opt.ok{background:var(--sage);border-color:var(--sage-ink);color:var(--sage-ink)}
+.opt.no{background:var(--bad-bg);border-color:var(--bad);color:var(--bad)}
+.opt:disabled{cursor:default}
+.expl{font-size:.88rem;color:var(--muted);background:var(--surface2);border-radius:10px;padding:8px 10px}
+.rule{white-space:pre-line}
+.trap{background:var(--peach);color:var(--peach-ink);border-radius:12px;padding:10px 12px;font-size:.92rem}
+.trap b{display:block;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
+.ex{font-style:italic}
+.passage{font-size:1.02rem;line-height:1.75;max-width:65ch;white-space:pre-line}
+textarea,input[type=text],input[type=date],select{width:100%;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 12px}
+textarea{min-height:70px;resize:vertical}
+.flash{min-height:230px;align-items:center;justify-content:center;text-align:center;gap:14px}
+.flash .w{font-family:var(--f-display);font-size:2rem;color:var(--rose-deep)}
+.flash .ru{font-size:1.15rem;font-weight:700}
+.speak{border:0;background:var(--surface2);color:var(--rose-deep);border-radius:50%;width:38px;height:38px;display:inline-grid;place-items:center;font-size:1rem;flex:none}
+.timer{font-family:var(--f-display);font-size:2.2rem;font-variant-numeric:tabular-nums;color:var(--rose-deep)}
+.list{display:flex;flex-direction:column}
+.li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
+.li:last-child{border-bottom:0}
+.li .grow{flex:1;min-width:0}
+.ladder{display:flex;flex-direction:column;gap:10px}
+.lvl{display:grid;grid-template-columns:54px 1fr auto;gap:14px;align-items:center;padding:14px;border-radius:14px;border:1px solid var(--line);background:var(--surface)}
+.lvl .band{font-family:var(--f-display);font-size:1.5rem;color:var(--rose-deep);text-align:center;font-variant-numeric:tabular-nums}
+.lvl.lock{opacity:.6}
+.lvl.now{border-color:var(--rose-deep);box-shadow:0 0 0 3px var(--surface2)}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg button{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:6px 12px;font-weight:700;font-size:.88rem;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--surface2);color:var(--rose-deep);border-color:var(--rose)}
+.check{display:flex;gap:10px;align-items:flex-start}
+.check input{width:20px;height:20px;accent-color:var(--rose-deep);margin-top:2px;flex:none}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:700;z-index:20;max-width:90vw}
+.modal{position:fixed;inset:0;background:rgba(40,20,30,.45);display:grid;place-items:center;z-index:30;padding:16px}
+.modal .card{max-width:420px;width:100%}
+@media (max-width:520px){ h1{font-size:1.35rem} .flash .w{font-size:1.7rem} .lvl{grid-template-columns:44px 1fr} .lvl>:last-child{grid-column:1/-1} }
+@media (prefers-reduced-motion:reduce){ *{transition:none!important;animation:none!important} }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">
+        <div class="logo" aria-hidden="true">6.5</div>
+        <div><h1 style="font-size:1.15rem">Путь к IELTS 6.5</h1><small id="subtitle">B1 → Band 6.5 · PhD Coaching &amp; Leadership</small></div>
+      </div>
+      <div class="count"><b id="daysLeft">—</b>дней до экзамена</div>
+    </div>
+    <nav class="tabs" id="tabs" aria-label="Разделы"></nav>
+  </div>
+</header>
+<main class="wrap" id="app"></main>
+
+<script>
+/* ================= ДАННЫЕ ================= */
+const STAGES=[
+ {n:1,band:"5.0",cefr:"B1",name:"Фундамент",goal:"Уверенные базовые времена, артикли, 100+ рабочих слов, ответы Part 1",weeks:6},
+ {n:2,band:"5.5",cefr:"B1+",name:"Академический старт",goal:"Условные предложения, модальность, Part 2 монолог 1,5–2 мин",weeks:8},
+ {n:3,band:"6.0",cefr:"B2",name:"Ядро B2",goal:"Пассив, косвенная речь, чтение 600+ слов, связная речь",weeks:10},
+ {n:4,band:"6.5",cefr:"B2+",name:"Экзаменационная стратегия",goal:"Академический стиль, связки, True/False/Not Given, Part 3",weeks:9},
+ {n:5,band:"7.0",cefr:"C1",name:"Готовность к PhD",goal:"Инверсия, хеджирование, интервью для поступления, запас 6.5+",weeks:8}
+];
+const CAT={b:["Бизнес","c-peach"],a:["Академ.","c-lav"],c:["Коучинг","c-sage"]};
+const V={
+1:[["achieve","достигать","She achieved her sales goal in March.","b"],["approach","подход","Our approach to coaching is client-centred.","c"],["benefit","польза, выгода","Regular practice brings real benefits.","b"],["challenge","вызов, трудная задача","Learning a language is a great challenge.","b"],["colleague","коллега","I discussed the project with a colleague.","b"],["deadline","крайний срок","The deadline for applications is in January.","b"],["decision","решение","Leaders make difficult decisions every day.","b"],["develop","развивать","Coaching helps people develop new skills.","c"],["goal","цель","What is your main goal for this year?","c"],["improve","улучшать","I want to improve my speaking.","a"],["manage","управлять; справляться","She manages a team of ten people.","b"],["opportunity","возможность","This programme is a great opportunity.","b"],["purpose","цель, смысл","Purpose gives meaning to our work.","c"],["require","требовать","The university requires IELTS 6.5.","a"],["responsibility","ответственность","Taking responsibility is a sign of maturity.","c"],["schedule","расписание, график","I have a busy schedule this week.","b"],["skill","навык","Listening is a key coaching skill.","c"],["support","поддержка; поддерживать","Good leaders support their teams.","c"],["value","ценность; ценить","Honesty is one of our core values.","c"],["research","исследование","I am interested in research on leadership.","a"]],
+2:[["accomplish","выполнять, достигать","We accomplished the task ahead of time.","b"],["collaborate","сотрудничать","The two universities collaborate on research.","a"],["commitment","обязательство, приверженность","Success requires long-term commitment.","c"],["consistent","последовательный","Consistent practice is better than long sessions.","a"],["contribute","вносить вклад","Everyone can contribute to the discussion.","b"],["effective","эффективный","Effective feedback is specific and timely.","b"],["establish","устанавливать, основывать","She established her company in 2010.","b"],["evaluate","оценивать","We need to evaluate the results carefully.","a"],["feedback","обратная связь","Clients value honest feedback.","c"],["initiative","инициатива","He took the initiative to start the project.","b"],["insight","понимание, инсайт","The session gave me a new insight.","c"],["motivate","мотивировать","What motivates people to change?","c"],["negotiate","вести переговоры","They negotiated a new contract.","b"],["objective","цель (конкретная)","The main objective is to raise awareness.","a"],["perspective","точка зрения, перспектива","Try to see it from a different perspective.","c"],["priority","приоритет","Family is my top priority.","b"],["resilience","устойчивость","Athletes need mental resilience.","c"],["stakeholder","заинтересованная сторона","All stakeholders were invited to the meeting.","b"],["strategy","стратегия","We developed a clear strategy for growth.","b"],["sustainable","устойчивый, долгосрочный","Sustainable change takes time.","a"]],
+3:[["accountability","подотчётность, ответственность","Coaching creates accountability for action.","c"],["adapt","адаптироваться","Leaders must adapt to rapid change.","b"],["assumption","предположение, допущение","Let us question our assumptions.","a"],["coherent","связный, логичный","Your answer should be coherent.","a"],["consciousness","сознание","The programme explores human consciousness.","a"],["cultivate","развивать, взращивать","We cultivate a culture of trust.","c"],["empower","наделять силой и правами","Good coaches empower their clients.","c"],["framework","концептуальная основа, модель","The GROW model is a popular coaching framework.","c"],["implement","внедрять","The company implemented a new policy.","b"],["integrity","честность, целостность","Integrity is essential for leaders.","c"],["mindfulness","осознанность","Mindfulness reduces stress at work.","c"],["methodology","методология","Describe the methodology of your study.","a"],["outcome","результат, исход","The outcome of the session was positive.","b"],["potential","потенциал","Every person has unlimited potential.","c"],["reflect","размышлять, отражать","Take time to reflect on your progress.","c"],["self-awareness","самоосознание","Self-awareness is the basis of leadership.","c"],["significant","значительный","There was a significant improvement.","a"],["transformation","трансформация","The organisation went through a deep transformation.","b"],["well-being","благополучие","Employee well-being affects performance.","c"],["vision","видение","A leader needs a clear vision.","b"]],
+4:[["articulate","чётко формулировать","She articulated her ideas clearly.","a"],["comprehensive","всесторонний","The report gives a comprehensive overview.","a"],["cognitive","когнитивный","Meditation may improve cognitive function.","a"],["empirical","эмпирический","There is empirical evidence for this claim.","a"],["facilitate","содействовать, фасилитировать","The coach facilitated the group session.","c"],["hypothesis","гипотеза","The study tested the hypothesis that...","a"],["intrinsic","внутренний (о мотивации)","Intrinsic motivation lasts longer.","c"],["mitigate","смягчать, снижать","Training can mitigate the risks.","b"],["paradigm","парадигма","This is a new paradigm in leadership.","a"],["qualitative","качественный","I will use qualitative interviews.","a"],["quantitative","количественный","Quantitative data was collected by survey.","a"],["rationale","обоснование","Explain the rationale for your choice.","a"],["substantial","существенный","A substantial number of leaders agreed.","a"],["synthesis","синтез","The thesis is a synthesis of two theories.","a"],["transcend","выходить за пределы","Great leaders transcend their ego.","c"],["undergo","проходить, подвергаться","Participants had to undergo eight weeks of training.","a"],["validate","подтверждать, валидировать","The results validate the model.","a"],["inherent","присущий","Risk is inherent in any change.","a"],["foster","способствовать, развивать","Coaching fosters a growth mindset.","c"],["enhance","усиливать, улучшать","Reflection enhances learning.","a"]],
+5:[["ambiguity","неоднозначность","Leaders must tolerate ambiguity.","b"],["autonomy","автономия","Autonomy increases engagement.","c"],["coherence","связность, согласованность","Coherence is a criterion in IELTS speaking.","a"],["contemplative","созерцательный","Contemplative practices support well-being.","c"],["discourse","дискурс","Academic discourse values precision.","a"],["elicit","вызывать, выявлять (ответ)","Good questions elicit deep reflection.","c"],["epistemology","эпистемология","My research is based on an interpretive epistemology.","a"],["holistic","целостный, холистический","We take a holistic approach to development.","c"],["interdisciplinary","междисциплинарный","Leadership studies are interdisciplinary.","a"],["nuanced","нюансированный, тонкий","She gave a nuanced answer.","a"],["pedagogy","педагогика","Consciousness-based pedagogy is unique.","a"],["phenomenon","явление (мн. phenomena)","Burnout is a growing phenomenon.","a"],["profound","глубокий","Meditation had a profound effect on her.","c"],["rigorous","строгий, тщательный","PhD research must be rigorous.","a"],["salient","заметный, важнейший","The most salient finding was...","a"],["scrutiny","тщательное изучение","The data was subjected to close scrutiny.","a"],["underpin","лежать в основе","Values underpin effective leadership.","a"],["unprecedented","беспрецедентный","We live in a time of unprecedented change.","b"],["dissertation","диссертация","My dissertation will focus on executive coaching.","a"],["literature review","обзор литературы","The literature review covers fifty studies.","a"]]
+};
+const G=[
+{id:"g1",l:1,t:"Present Simple vs Present Continuous",r:"Present Simple — факты, привычки, расписание: I work in Astana. I meditate every morning.\nPresent Continuous — действие сейчас или временный период: I am preparing for IELTS this year.\nГлаголы состояния (know, believe, want, understand) обычно не идут в Continuous.",trap:"По-русски одно время «я работаю». В английском выбирайте: постоянно (I work) или сейчас/временно (I am working).",q:[{q:"I ___ for the IELTS exam this year.",o:["prepare","am preparing","prepares","prepared"],a:1,e:"Временный период «в этом году» → Present Continuous."},{q:"She usually ___ coffee in the morning.",o:["drinks","is drinking","drink","drinking"],a:0,e:"Привычка + usually → Present Simple, 3-е лицо -s."},{q:"I ___ what you mean.",o:["am understanding","understand","understands","am understand"],a:1,e:"understand — глагол состояния, без -ing."},{q:"Look! The coach ___ to the team.",o:["talks","is talking","talk","talked"],a:1,e:"Look! — действие прямо сейчас."}]},
+{id:"g2",l:1,t:"Past Simple vs Present Perfect",r:"Past Simple — законченное действие с указанием времени: I graduated in 1998.\nPresent Perfect — опыт или результат без точного времени, связь с настоящим: I have worked as a coach for 13 years.\nМаркеры Perfect: ever, never, already, yet, since, for (до сих пор).",trap:"«Я работаю коучем 13 лет» = I have worked / have been working... НЕ «I work as a coach 13 years».",q:[{q:"I ___ as a coach for 13 years.",o:["work","worked","have worked","am working"],a:2,e:"Действие длится до сих пор → Present Perfect + for."},{q:"We ___ the forum in Almaty in 2024.",o:["have organised","organised","organise","have organise"],a:1,e:"Точная дата → Past Simple."},{q:"Have you ever ___ to the USA?",o:["be","been","was","went"],a:1,e:"have + been (3-я форма)."},{q:"She hasn't finished the report ___.",o:["already","yet","ago","since"],a:1,e:"yet — в отрицаниях и вопросах в конце."}]},
+{id:"g3",l:1,t:"Артикли a / an / the",r:"a/an — один из многих, впервые упоминаем: I have an idea.\nthe — конкретный, известный обоим: The idea you shared was brilliant.\nБез артикля — общее понятие во множественном или неисчисляемое: Leaders need courage.",trap:"Главная ошибка русскоговорящих — пропуск артикля. Перед исчисляемым существительным в единственном числе артикль нужен почти всегда.",q:[{q:"She is ___ executive coach.",o:["a","an","the","—"],a:1,e:"executive начинается с гласного звука → an."},{q:"___ university I want to enter is in Iowa.",o:["A","An","The","—"],a:2,e:"Конкретный университет, уточнён придаточным → the."},{q:"___ leadership is a skill that can be learned.",o:["A","The","An","—"],a:3,e:"Абстрактное понятие в общем смысле → без артикля."},{q:"I read ___ interesting article yesterday.",o:["a","an","the","—"],a:1,e:"Первое упоминание + гласный звук → an."}]},
+{id:"g4",l:1,t:"Сравнение прилагательных",r:"Короткие: fast → faster → the fastest.\nДлинные: effective → more effective → the most effective.\nИсключения: good → better → the best; bad → worse → the worst.\nas ... as — так же, как: This task is as important as that one.",trap:"Не говорите «more better» — better уже сравнительная степень.",q:[{q:"Speaking is ___ than reading for me.",o:["more difficult","difficulter","most difficult","more difficulter"],a:0,e:"Длинное прилагательное → more."},{q:"This is ___ book on coaching I have read.",o:["the better","the best","best","the most good"],a:1,e:"good → the best."},{q:"My English is ___ than last year.",o:["more better","gooder","better","best"],a:2,e:"good → better."}]},
+{id:"g5",l:2,t:"Present Perfect Continuous",r:"have/has been + V-ing — процесс, который начался в прошлом и продолжается (акцент на длительности): I have been studying English since October.\nЧасто с for / since / how long.",trap:"«Я учу английский с октября» = I have been studying English since October. Не Present Simple!",q:[{q:"I ___ English since October.",o:["study","am studying","have been studying","studied"],a:2,e:"since + процесс до сих пор → Perfect Continuous."},{q:"How long ___ you been meditating?",o:["do","have","are","did"],a:1,e:"How long have you been...?"},{q:"She is tired because she ___ all day.",o:["has been working","works","worked","is work"],a:0,e:"Видимый результат длительного процесса."}]},
+{id:"g6",l:2,t:"Будущее: will / going to / Present Continuous",r:"will — решение в момент речи, прогноз, обещание: I will help you.\ngoing to — план, намерение: I am going to apply to MIU.\nPresent Continuous — договорённость: I am meeting my tutor on Monday.",trap:"Для заранее принятых планов лучше going to, а не will.",q:[{q:"I have decided. I ___ apply for the PhD next year.",o:["will","am going to","apply","applying"],a:1,e:"Заранее принятое решение → going to."},{q:"The phone is ringing. — I ___ answer it.",o:["am going to","will","answer","am answering"],a:1,e:"Спонтанное решение → will."},{q:"I ___ my tutor at 10 tomorrow. It is in my calendar.",o:["meet","will meet","am meeting","met"],a:2,e:"Договорённость → Present Continuous."}]},
+{id:"g7",l:2,t:"Модальные глаголы: must / have to / should",r:"must — внутренняя необходимость, правило: I must practise every day.\nhave to — внешняя необходимость: Applicants have to submit IELTS scores.\nshould — совет: You should read every day.\nmustn't — запрещено; don't have to — не обязательно.",trap:"mustn't ≠ don't have to. You mustn't be late = нельзя. You don't have to come = можно не приходить.",q:[{q:"Applicants ___ submit an IELTS certificate.",o:["have to","should to","musts","has to"],a:0,e:"Внешнее требование университета → have to."},{q:"You ___ smoke here. It is forbidden.",o:["don't have to","mustn't","shouldn't to","needn't"],a:1,e:"Запрет → mustn't."},{q:"You look tired. You ___ rest.",o:["should","must to","have","ought"],a:0,e:"Совет → should."}]},
+{id:"g8",l:2,t:"Условные предложения 1 и 2 типа",r:"1 тип (реальное будущее): If + Present, will + V: If I practise daily, I will get 6.5.\n2 тип (нереальное настоящее): If + Past, would + V: If I had more time, I would study more.",trap:"После if не ставим will: If I will pass → If I pass.",q:[{q:"If I ___ every day, I will reach band 6.5.",o:["will practise","practise","practised","would practise"],a:1,e:"1 тип: if + Present Simple."},{q:"If I ___ in the USA, I would speak better.",o:["live","lived","will live","living"],a:1,e:"2 тип: if + Past."},{q:"If she gets the scholarship, she ___ to Iowa.",o:["would move","moves","will move","moved"],a:2,e:"1 тип: will + V."}]},
+{id:"g9",l:3,t:"Пассивный залог",r:"be + V3: The study was conducted in 2020.\nИспользуется в академическом английском, когда важен результат, а не исполнитель.\nPresent: is done; Past: was done; Perfect: has been done; Future: will be done.",trap:"Не забывайте to be: «The research conducted» → The research was conducted.",q:[{q:"The data ___ by survey in 2025.",o:["collected","was collected","has collected","is collect"],a:1,e:"Past Simple Passive: was + V3."},{q:"Many studies ___ on mindfulness since 2000.",o:["have been published","were publish","has published","published"],a:0,e:"since → Present Perfect Passive."},{q:"The results ___ next month.",o:["will announce","will be announced","are announce","announced"],a:1,e:"Future Passive."}]},
+{id:"g10",l:3,t:"Придаточные определительные (who/which/that/whose)",r:"who — люди; which — предметы; that — люди и предметы (в определяющих); whose — чей.\nDefining: The coach who trained me is from London.\nNon-defining (с запятыми, без that): MIU, which is in Iowa, offers a PhD.",trap:"В придаточных с запятыми нельзя использовать that.",q:[{q:"MIU, ___ is located in Iowa, offers a PhD.",o:["that","which","who","what"],a:1,e:"Запятые → which, не that."},{q:"The leader ___ inspired me was my first boss.",o:["which","who","whose","whom"],a:1,e:"Человек → who."},{q:"She is a coach ___ clients are CEOs.",o:["who","whose","which","that"],a:1,e:"Принадлежность → whose."}]},
+{id:"g11",l:3,t:"Косвенная речь",r:"Время сдвигается назад: She said, 'I am tired.' → She said (that) she was tired.\nwill → would; can → could; Present Perfect → Past Perfect.\nВопросы — прямой порядок слов: He asked where I lived.",trap:"В косвенном вопросе нет инверсии: He asked where did I live → He asked where I lived.",q:[{q:"She said she ___ busy.",o:["is","was","will","be"],a:1,e:"am → was."},{q:"He asked me where ___.",o:["did I work","I worked","do I work","I work did"],a:1,e:"Прямой порядок слов."},{q:"They said they ___ help us.",o:["will","would","can will","are"],a:1,e:"will → would."}]},
+{id:"g12",l:3,t:"Условные 3 типа и смешанные",r:"3 тип (нереальное прошлое): If + had V3, would have V3: If I had started earlier, I would have finished.\nСмешанный: If I had learned English as a child, I would be fluent now.",trap:"Не путайте would have done (прошлое) и would do (настоящее).",q:[{q:"If I had known, I ___ you.",o:["would tell","would have told","told","will tell"],a:1,e:"3 тип → would have + V3."},{q:"If she ___ harder, she would have passed.",o:["studied","had studied","has studied","would study"],a:1,e:"3 тип: if + had V3."},{q:"If I had moved to London, I ___ fluent now.",o:["would be","would have been","am","will be"],a:0,e:"Смешанный: результат в настоящем."}]},
+{id:"g13",l:4,t:"Связки и контраст",r:"Контраст: however, whereas, while, although, despite + noun/V-ing, in spite of.\nДобавление: moreover, furthermore, in addition.\nПричина/следствие: therefore, as a result, consequently, due to + noun.",trap:"despite the fact that... или despite + существительное. Не «despite of».",q:[{q:"___ the rain, the forum went ahead.",o:["Although","Despite","However","Despite of"],a:1,e:"Despite + noun."},{q:"Coaching is popular in the USA, ___ it is new in Kazakhstan.",o:["whereas","despite","therefore","moreover"],a:0,e:"Сравнение-контраст двух частей → whereas."},{q:"The sample was small. ___, the results must be treated with caution.",o:["However","Therefore","Whereas","Although"],a:1,e:"Следствие → Therefore."}]},
+{id:"g14",l:4,t:"Академический стиль: номинализация",r:"Превращайте глаголы в существительные — так текст звучит академично:\nWe analysed the data → The analysis of the data showed...\nPeople participated → Participation increased.\nИзбегайте сокращений (don't → do not) и разговорных слов (a lot of → a significant number of).",trap:"В Writing и в мотивационном письме избегайте «a lot of», «get», «thing».",q:[{q:"Выберите академичный вариант:",o:["We got a lot of results.","A substantial number of results were obtained.","We got lots of stuff.","Results was many."],a:1,e:"Номинализация + пассив + точная лексика."},{q:"Существительное от «improve»:",o:["improving","improvement","improval","improvance"],a:1,e:"improve → improvement."},{q:"Существительное от «analyse»:",o:["analysation","analysis","analysement","analyzing"],a:1,e:"analyse → analysis (мн. analyses)."}]},
+{id:"g15",l:4,t:"Герундий или инфинитив",r:"После enjoy, avoid, consider, suggest, finish — V-ing: I enjoy coaching.\nПосле want, decide, plan, hope, agree — to V: I decided to apply.\nПосле предлогов — всегда V-ing: interested in studying.\nstop doing (прекратить) ≠ stop to do (остановиться, чтобы).",trap:"«Я заинтересована изучать» = I am interested in studying, не «interested to study».",q:[{q:"I am interested in ___ leadership.",o:["study","to study","studying","studied"],a:2,e:"После предлога → V-ing."},{q:"She decided ___ for a PhD.",o:["applying","to apply","apply","applied"],a:1,e:"decide + to V."},{q:"We should avoid ___ too many questions.",o:["to ask","asking","ask","asked"],a:1,e:"avoid + V-ing."}]},
+{id:"g16",l:5,t:"Инверсия для усиления",r:"Отрицательное наречие в начале → порядок как в вопросе:\nNever have I seen such commitment.\nNot only does coaching improve performance, but it also increases well-being.\nRarely do leaders admit mistakes.",trap:"Это приём для Band 7+: используйте 1–2 раза за ответ, не чаще.",q:[{q:"Never ___ such a motivated team.",o:["I have seen","have I seen","I saw","did I saw"],a:1,e:"Never + have I seen."},{q:"Not only ___ meditation reduce stress, but it also improves focus.",o:["does","do","is","it"],a:0,e:"Not only does + подлежащее + V."},{q:"Rarely ___ leaders admit their mistakes.",o:["do","are","does","have"],a:0,e:"Rarely do + подлежащее во мн. числе."}]},
+{id:"g17",l:5,t:"Хеджирование (осторожные формулировки)",r:"Академический английский избегает категоричности:\nIt appears that..., This may suggest..., It is likely that..., tend to, to some extent, arguably.\nThe results suggest that meditation may enhance focus.",trap:"Русская привычка к категоричным выводам («это доказывает») звучит в академическом английском слишком сильно. Лучше: This suggests...",q:[{q:"Наиболее академичная формулировка:",o:["This proves meditation works.","The findings suggest that meditation may be beneficial.","Meditation is 100% good.","Everyone knows meditation works."],a:1,e:"suggest + may — хеджирование."},{q:"Leaders ___ to underestimate the role of rest.",o:["tend","are tend","tending","tends"],a:0,e:"tend to + V."},{q:"Выберите хедж:",o:["certainly","to some extent","always","definitely"],a:1,e:"to some extent смягчает утверждение."}]}
+];
+const R=[
+{id:"r1",l:1,t:"The Power of Morning Routines",p:"Many successful people start their day with a routine. Some of them wake up early, drink water and spend a few minutes in silence. Others write a list of goals for the day.\n\nResearchers believe that a morning routine helps people feel more in control. When the first hour of the day is calm, it is easier to make good decisions later. However, a routine does not have to be long. Even ten minutes can make a difference.\n\nExperts also say that the best routine is the one you can repeat every day. Consistency is more important than perfection.",q:[{q:"A morning routine must last at least one hour.",o:["True","False","Not Given"],a:1},{q:"Researchers think routines help people feel in control.",o:["True","False","Not Given"],a:0},{q:"Most successful people wake up at 5 a.m.",o:["True","False","Not Given"],a:2},{q:"According to experts, what matters most?",o:["Perfection","Waking early","Consistency","Silence"],a:2}]},
+{id:"r2",l:2,t:"What Makes a Good Coach?",p:"Coaching has become one of the fastest-growing professions in the world. But what makes a coach effective? According to several professional associations, the most important skill is not giving advice but asking powerful questions.\n\nA good coach listens actively. This means paying attention not only to the client's words but also to their emotions and body language. Coaches also need to create a safe space where clients can speak honestly.\n\nFinally, effective coaches hold their clients accountable. They help clients turn insights into concrete actions and check progress regularly. Without accountability, even the best ideas may never become reality.",q:[{q:"The main skill of a coach is giving good advice.",o:["True","False","Not Given"],a:1},{q:"Active listening includes noticing body language.",o:["True","False","Not Given"],a:0},{q:"Coaching is the fastest-growing profession in Europe.",o:["True","False","Not Given"],a:2},{q:"Accountability helps clients to...",o:["relax","turn insights into action","find a new job","speak honestly"],a:1}]},
+{id:"r3",l:3,t:"Meditation in the Workplace",p:"Over the past two decades, a significant number of companies have introduced meditation programmes for their employees. The rationale is simple: stress is costly. It reduces productivity, increases absenteeism and contributes to burnout.\n\nStudies of workplace meditation have reported improvements in concentration, emotional regulation and job satisfaction. Some organisations offer short guided sessions during lunch breaks, while others invest in longer training programmes.\n\nCritics, however, warn that meditation should not be used as a quick fix. If the causes of stress lie in poor management or unrealistic workloads, meditation alone cannot solve the problem. The most successful programmes, they argue, combine individual practice with changes in organisational culture.",q:[{q:"Stress has financial costs for companies.",o:["True","False","Not Given"],a:0},{q:"All companies offer meditation during lunch breaks.",o:["True","False","Not Given"],a:1},{q:"Meditation programmes are cheaper than salary increases.",o:["True","False","Not Given"],a:2},{q:"According to critics, the best programmes...",o:["replace management","combine practice with culture change","are very short","focus only on individuals"],a:1}]},
+{id:"r4",l:4,t:"From Traits to Consciousness: Theories of Leadership",p:"Early leadership research focused on traits: scholars attempted to identify the inherent qualities, such as intelligence or confidence, that distinguished leaders from followers. This approach was gradually abandoned when empirical studies failed to find a consistent set of traits.\n\nIn the second half of the twentieth century, attention shifted to behaviour and context. Situational models proposed that effective leaders adapt their style to the readiness of their team. Later, transformational leadership emphasised vision, inspiration and the intellectual stimulation of followers.\n\nMore recent paradigms, including authentic and consciousness-based leadership, place the inner development of the leader at the centre. Proponents argue that self-awareness and inner stability underpin sound decision-making, although researchers note that these constructs remain difficult to measure quantitatively.",q:[{q:"Trait theory was abandoned because no consistent traits were found.",o:["True","False","Not Given"],a:0},{q:"Situational models say leaders should keep one fixed style.",o:["True","False","Not Given"],a:1},{q:"Transformational leadership was developed in Japan.",o:["True","False","Not Given"],a:2},{q:"What limitation of recent paradigms is mentioned?",o:["They ignore vision","They are hard to measure quantitatively","They reject self-awareness","They are too old"],a:1}]},
+{id:"r5",l:5,t:"Consciousness-Based Education",p:"Consciousness-Based Education is an approach in which the development of the student's inner awareness is treated as a foundation for academic learning. In institutions that follow this model, students typically practise a meditation technique twice a day and study in a block system, focusing on one course at a time.\n\nSupporters maintain that this structure reduces cognitive overload and fosters deeper engagement with each subject. They point to studies reporting reduced anxiety and improved academic performance among participants.\n\nSceptics, by contrast, call for more rigorous, independent replication, observing that some studies have been conducted by researchers affiliated with the institutions concerned. The debate illustrates a broader challenge in educational research: how to evaluate holistic outcomes such as well-being, creativity and character, which resist simple measurement.",q:[{q:"Students in this model usually study several courses at the same time.",o:["True","False","Not Given"],a:1},{q:"Sceptics want more independent studies.",o:["True","False","Not Given"],a:0},{q:"The block system was invented in 1971.",o:["True","False","Not Given"],a:2},{q:"The broader challenge is how to...",o:["teach meditation","measure holistic outcomes","reduce fees","hire researchers"],a:1}]}
+];
+const T=[
+{l:1,ru:"Я работаю коучем уже тринадцать лет.",en:"I have been working as a coach for thirteen years."},
+{l:1,ru:"Каждое утро я медитирую двадцать минут.",en:"I meditate for twenty minutes every morning."},
+{l:1,ru:"Моя главная цель — сдать IELTS на 6,5.",en:"My main goal is to get 6.5 in IELTS."},
+{l:1,ru:"У меня четверо детей.",en:"I have four children."},
+{l:1,ru:"Я живу в Астане, столице Казахстана.",en:"I live in Astana, the capital of Kazakhstan."},
+{l:1,ru:"Вчера у меня была важная встреча с клиентом.",en:"Yesterday I had an important meeting with a client."},
+{l:2,ru:"Я собираюсь поступать в американский университет.",en:"I am going to apply to an American university."},
+{l:2,ru:"Если я буду заниматься каждый день, я достигну своей цели.",en:"If I practise every day, I will achieve my goal."},
+{l:2,ru:"Хороший коуч задаёт сильные вопросы, а не даёт советы.",en:"A good coach asks powerful questions rather than giving advice."},
+{l:2,ru:"Я изучаю английский с октября.",en:"I have been studying English since October."},
+{l:2,ru:"Обратная связь помогает людям развиваться.",en:"Feedback helps people to develop."},
+{l:2,ru:"Абитуриенты должны предоставить сертификат IELTS.",en:"Applicants have to submit an IELTS certificate."},
+{l:3,ru:"Исследование было проведено в 2025 году.",en:"The research was conducted in 2025."},
+{l:3,ru:"Лидер, который вдохновил меня, был моим первым руководителем.",en:"The leader who inspired me was my first manager."},
+{l:3,ru:"Осознанность снижает стресс и улучшает концентрацию.",en:"Mindfulness reduces stress and improves concentration."},
+{l:3,ru:"Если бы я начала раньше, я бы уже говорила свободно.",en:"If I had started earlier, I would already speak fluently."},
+{l:3,ru:"Она сказала, что программа изменила её жизнь.",en:"She said that the programme had changed her life."},
+{l:3,ru:"Самоосознание является основой эффективного лидерства.",en:"Self-awareness is the foundation of effective leadership."},
+{l:4,ru:"Несмотря на трудности, команда достигла своих целей.",en:"Despite the difficulties, the team achieved its goals."},
+{l:4,ru:"Я заинтересована в изучении лидерства, основанного на сознании.",en:"I am interested in studying consciousness-based leadership."},
+{l:4,ru:"Результаты показывают, что коучинг может повысить вовлечённость сотрудников.",en:"The results suggest that coaching may increase employee engagement."},
+{l:4,ru:"Внутренняя мотивация длится дольше, чем внешняя.",en:"Intrinsic motivation lasts longer than extrinsic motivation."},
+{l:4,ru:"Анализ данных выявил существенные различия.",en:"The analysis of the data revealed substantial differences."},
+{l:4,ru:"Коучинг популярен в США, тогда как в Казахстане он относительно новый.",en:"Coaching is popular in the USA, whereas in Kazakhstan it is relatively new."},
+{l:5,ru:"Моя диссертация будет посвящена коучингу руководителей в Центральной Азии.",en:"My dissertation will focus on executive coaching in Central Asia."},
+{l:5,ru:"Никогда раньше я не видела такой приверженности делу.",en:"Never before have I seen such commitment."},
+{l:5,ru:"Можно утверждать, что ценности лежат в основе устойчивого лидерства.",en:"It could be argued that values underpin sustainable leadership."},
+{l:5,ru:"Я применю качественную методологию, включая глубинные интервью.",en:"I will apply a qualitative methodology, including in-depth interviews."},
+{l:5,ru:"Не только медитация снижает тревожность, но и повышает креативность.",en:"Not only does meditation reduce anxiety, but it also increases creativity."},
+{l:5,ru:"Междисциплинарный подход позволяет взглянуть на проблему целостно.",en:"An interdisciplinary approach allows us to look at the problem holistically."}
+];
+const S=[
+{l:1,part:"Part 1",t:"Your work",q:["What do you do?","Why did you choose this job?","What do you like most about your work?"],ph:["I work as an executive coach.","What I enjoy most is...","The main reason is that..."]},
+{l:1,part:"Part 1",t:"Mornings",q:["Are you a morning person?","What do you usually do in the morning?","Has your routine changed recently?"],ph:["To be honest, I am definitely a morning person.","I usually start my day with...","These days I tend to..."]},
+{l:2,part:"Part 2",t:"Describe a person who has inspired you",q:["Who this person is","How you know them","What they did","Explain why they inspired you"],ph:["I would like to talk about...","I first met her when...","What really impressed me was...","Looking back, I realise that..."],cue:true},
+{l:2,part:"Part 1",t:"Learning English",q:["Why are you learning English?","What is the most difficult part for you?","How do you practise?"],ph:["The main reason is that I am planning to...","I find speaking the most challenging because...","I try to practise every single day."]},
+{l:3,part:"Part 2",t:"Describe a time you helped someone achieve a goal",q:["Who the person was","What the goal was","How you helped","Explain how you felt about it"],ph:["A few years ago, one of my clients...","Her goal was to...","At first, she struggled with...","It was incredibly rewarding because..."],cue:true},
+{l:3,part:"Part 3",t:"Leadership",q:["What qualities make a good leader?","Are leaders born or made?","How has leadership changed in recent years?"],ph:["In my view, the most important quality is...","I would say it is a combination of both.","Compared with the past, leaders today..."]},
+{l:4,part:"Part 3",t:"Education and leadership",q:["Should leadership be taught at university?","What are the limits of academic training for leaders?","Will AI change the role of managers?"],ph:["There are strong arguments on both sides.","On the one hand..., on the other hand...","It is likely that..., although..."]},
+{l:4,part:"Part 2",t:"Describe a book that changed your thinking",q:["What the book is","When you read it","What it is about","Explain how it changed your thinking"],ph:["The book I would like to describe is...","It deals with the idea that...","It made me reconsider...","Since then, I have..."],cue:true},
+{l:5,part:"Interview",t:"PhD admission interview",q:["Why do you want to pursue a PhD in Management?","Why this university?","What will your research focus on?","How will your experience contribute to the programme?"],ph:["Over the past 13 years as a coach, I have noticed that...","What attracts me most is the consciousness-based approach...","My research will explore...","I believe my experience with Olympic athletes and UHNW families will..."]},
+{l:5,part:"Part 3",t:"Well-being in organisations",q:["Is employee well-being the responsibility of the company?","Can meditation improve organisational performance?","How should success be measured beyond profit?"],ph:["Arguably, organisations have a duty to...","The evidence suggests that..., to some extent.","A more holistic measure would include..."]}
+];
+
+/* ================= СОСТОЯНИЕ ================= */
+const KEY="ielts65_v1";
+const todayKey=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+const addDays=(k,n)=>{const d=new Date(k+"T12:00:00");d.setDate(d.getDate()+n);return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+const diff=(a,b)=>Math.round((new Date(b+"T12:00:00")-new Date(a+"T12:00:00"))/864e5);
+const defaults=()=>({start:"2026-10-18",exam:"2027-08-01",unlocked:1,newPerDay:8,tests:{},words:{},custom:[],days:{},grammar:{},reading:{},trans:0,speak:0});
+let st;
+try{st=Object.assign(defaults(),JSON.parse(localStorage.getItem(KEY)||"{}"))}catch(e){st=defaults()}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}};
+const ui={view:"today",wordsTab:"today",gTopic:null,rId:null,sIdx:0,tIdx:0,session:null,test:null,dictQ:"",dictCat:"all",card:null};
+let timerInt=null,spInt=null;
+
+/* ================= УТИЛИТЫ ================= */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+function toast(m){const t=document.createElement("div");t.className="toast";t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),2200)}
+function speak(text){try{const u=new SpeechSynthesisUtterance(text);u.lang="en-US";u.rate=.9;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){toast("Озвучка недоступна в этом браузере")}}
+const allWords=()=>{const out=[];for(let l=1;l<=5;l++)V[l].forEach((w,i)=>out.push({id:"L"+l+"-"+i,en:w[0],ru:w[1],ex:w[2],cat:w[3],l}));st.custom.forEach((w,i)=>out.push({id:"c-"+i,en:w.en,ru:w.ru,ex:w.ex||"",cat:"c",l:0,own:true}));return out};
+const wordById=id=>allWords().find(w=>w.id===id);
+const unlockedWords=()=>allWords().filter(w=>w.l<=st.unlocked);
+const INT=[0,1,3,7,14,30,60];
+function day(k=todayKey()){if(!st.days[k])st.days[k]={morning:false,steps:[],newWords:[],learned:0};return st.days[k]}
+function ensureNewWords(){const d=day();if(d.newWords.length)return d.newWords;const pool=unlockedWords().filter(w=>!st.words[w.id]);const own=pool.filter(w=>w.own);const rest=pool.filter(w=>!w.own);d.newWords=own.concat(rest).slice(0,st.newPerDay).map(w=>w.id);save();return d.newWords}
+const dueWords=()=>{const t=todayKey();return Object.entries(st.words).filter(([id,s])=>s.due<=t&&wordById(id)).map(([id])=>id)};
+function grade(id,know){const s=st.words[id]||{box:0,due:todayKey()};s.box=know?Math.min(s.box+1,6):1;s.due=addDays(todayKey(),INT[s.box]);st.words[id]=s;if(know)day().learned++;save()}
+function streak(){let k=todayKey(),n=0;if(!day(k).morning)k=addDays(k,-1);while(st.days[k]&&st.days[k].morning){n++;k=addDays(k,-1)}return n}
+const bandNow=()=>{const passed=Object.keys(st.tests).filter(k=>st.tests[k].best>=70).map(Number);const top=passed.length?Math.max(...passed):0;return top?STAGES[top-1].band:"4.5–5.0"};
+function stageDates(){let k=st.start;return STAGES.map(s=>{const from=k;k=addDays(k,s.weeks*7);return{from,to:addDays(k,-1)}})}
+const fmt=k=>new Date(k+"T12:00:00").toLocaleDateString("ru-RU",{day:"numeric",month:"short",year:"numeric"});
+const dayIdx=()=>Math.max(0,diff(st.start,todayKey()));
+function pickTopic(){const av=G.filter(g=>g.l<=st.unlocked);const nd=av.find(g=>st.grammar[g.id]==null);if(nd)return nd;return av.slice().sort((a,b)=>(st.grammar[a.id]??0)-(st.grammar[b.id]??0))[dayIdx()%Math.min(3,av.length)]}
+function pickReading(){const av=R.filter(r=>r.l<=st.unlocked);const nd=av.filter(r=>st.reading[r.id]==null);return nd.length?nd[nd.length-1]:av[dayIdx()%av.length]}
+const availT=()=>T.filter(t=>t.l<=st.unlocked);
+const availS=()=>S.filter(s=>s.l<=st.unlocked);
+
+/* ================= КВИЗ ================= */
+function quizHTML(key,qs){return qs.map((q,i)=>`<div class="q" data-quiz="${key}" data-qi="${i}"><div><b>${i+1}.</b> ${esc(q.q)}</div><div class="opts">${q.o.map((o,j)=>`<button class="opt" data-quiz="${key}" data-qi="${i}" data-oi="${j}">${esc(o)}</button>`).join("")}</div><div class="expl" hidden></div></div>`).join("")}
+const quizzes={};
+function regQuiz(key,qs,onDone){quizzes[key]={qs,ans:{},onDone}}
+function answer(btn){const key=btn.dataset.quiz,qi=+btn.dataset.qi,oi=+btn.dataset.oi,z=quizzes[key];if(!z||z.ans[qi]!=null)return;const q=z.qs[qi];z.ans[qi]=oi;const box=btn.closest(".q");box.querySelectorAll(".opt").forEach((b,j)=>{b.disabled=true;if(j===q.a)b.classList.add("ok");else if(j===oi)b.classList.add("no")});const ex=box.querySelector(".expl");const ok=oi===q.a;ex.hidden=false;ex.textContent=(ok?"Верно. ":"Правильно: "+q.o[q.a]+". ")+(q.e||"");if(Object.keys(z.ans).length===z.qs.length){const score=Math.round(z.qs.filter((q,i)=>z.ans[i]===q.a).length/z.qs.length*100);z.onDone&&z.onDone(score)}}
+
+/* ================= ВИДЫ ================= */
+const TABS=[["today","Сегодня"],["words","Слова"],["grammar","Грамматика"],["speak","Речь"],["trans","Перевод"],["read","Чтение"],["stages","Этапы и тесты"],["settings","Настройки"]];
+function renderTabs(){$("#tabs").innerHTML=TABS.map(([k,n])=>`<button class="tab" data-go="${k}" ${ui.view===k?'aria-current="page"':""}>${n}</button>`).join("")}
+function render(){clearInterval(timerInt);clearInterval(spInt);renderTabs();$("#daysLeft").textContent=Math.max(0,diff(todayKey(),st.exam));const v={today:vToday,words:vWords,grammar:vGrammar,speak:vSpeak,trans:vTrans,read:vRead,stages:vStages,settings:vSettings}[ui.view];$("#app").innerHTML=v();after[ui.view]&&after[ui.view]();window.scrollTo(0,0)}
+const after={};
+
+const BLOCKS=[["w","Разминка: повторение слов",5],["g","Грамматика",8],["r","Чтение",7],["t","Перевод RU → EN",5],["s","Разговорная речь",5]];
+function vToday(){
+ const d=day(),nw=ensureNewWords(),due=dueWords().length,stg=STAGES[st.unlocked-1],dates=stageDates()[st.unlocked-1];
+ const left=diff(todayKey(),st.exam),weeks=Math.max(0,Math.ceil(left/7));
+ if(ui.session)return vSession();
+ const learnedPct=Math.min(100,Math.round(d.learned/Math.max(1,nw.length)*100));
+ return `
+ <section class="hero">
+  <div class="eyebrow">${new Date().toLocaleDateString("ru-RU",{weekday:"long",day:"numeric",month:"long"})}</div>
+  <h2>${d.morning?"Утреннее занятие выполнено. Отличная работа!":"Доброе утро. Ваши 30 минут ждут."}</h2>
+  <div class="stats">
+   <div class="stat"><b>${streak()}</b><span class="small muted">дней подряд</span></div>
+   <div class="stat"><b>${bandNow()}</b><span class="small muted">текущий band</span></div>
+   <div class="stat"><b>${weeks}</b><span class="small muted">недель до цели</span></div>
+   <div class="stat"><b>${Object.keys(st.words).length}</b><span class="small muted">слов в изучении</span></div>
+  </div>
+  <div class="row"><button class="btn" data-act="startSession">${d.morning?"Пройти ещё раз":"Начать утреннее занятие · 30 мин"}</button><span class="chip c-rose">Этап ${stg.n} · ${stg.cefr} → band ${stg.band}</span></div>
+ </section>
+ <section class="card">
+  <div class="row" style="justify-content:space-between"><h3>План утра</h3><span class="small muted">5 блоков · 30 минут</span></div>
+  <div class="steps">${BLOCKS.map((b,i)=>`<div class="step ${d.steps.includes(b[0])?"done":""}"><div class="dot">${d.steps.includes(b[0])?"✓":i+1}</div><div class="t"><b>${b[1]}</b></div><span class="small muted">${b[2]} мин</span></div>`).join("")}</div>
+ </section>
+ <section class="card">
+  <div class="row" style="justify-content:space-between"><h3>Слова в течение дня</h3><span class="chip c-sage">${d.learned} / ${nw.length} новых</span></div>
+  <p class="small muted">Три короткие подхода по 3–5 минут: в обед, после работы и перед сном. Новые слова сегодня и ${due} на повторение.</p>
+  <div class="bar"><i style="width:${learnedPct}%"></i></div>
+  <div class="row">${nw.slice(0,8).map(id=>{const w=wordById(id);return w?`<span class="chip c-lav">${esc(w.en)}</span>`:""}).join("")}</div>
+  <div class="row"><button class="btn soft" data-act="goWords">Учить слова дня</button>${due?`<button class="btn ghost" data-act="goReview">Повторить (${due})</button>`:""}</div>
+ </section>
+ <section class="soft">
+  <div class="eyebrow">Текущий этап</div>
+  <h3>${stg.n}. ${stg.name}</h3>
+  <p class="small">${stg.goal}</p>
+  <p class="small muted">По плану: ${fmt(dates.from)} — ${fmt(dates.to)}. Тест этапа открывает следующий уровень при результате от 70%.</p>
+  <div class="row"><button class="btn sm ghost" data-go="stages">Открыть дорожную карту</button></div>
+ </section>`;
+}
+function vSession(){
+ const s=ui.session,b=BLOCKS[s.step],el=Math.floor((Date.now()-s.t0)/1000);
+ let body="";
+ if(b[0]==="w")body=blockWarm();
+ if(b[0]==="g")body=blockGrammar(s.topic,"sg");
+ if(b[0]==="r")body=blockReading(s.read,"sr");
+ if(b[0]==="t")body=blockTrans(s.trans);
+ if(b[0]==="s")body=blockSpeak(s.speakItem);
+ return `<section class="card">
+  <div class="row" style="justify-content:space-between"><div><div class="eyebrow">Блок ${s.step+1} из 5 · ${b[2]} мин</div><h2>${b[1]}</h2></div><div style="text-align:right"><div class="timer" id="sessTimer">${mmss(el)}</div><span class="small muted">из 30:00</span></div></div>
+  <div class="bar"><i style="width:${s.step/5*100}%"></i></div>
+ </section>
+ ${body}
+ <div class="row" style="justify-content:space-between"><button class="btn ghost" data-act="quitSession">Выйти</button><button class="btn" data-act="nextBlock">${s.step===4?"Завершить занятие":"Следующий блок →"}</button></div>`;
+}
+const mmss=s=>String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
+after.today=()=>{if(ui.session){timerInt=setInterval(()=>{const t=$("#sessTimer");if(t)t.textContent=mmss(Math.floor((Date.now()-ui.session.t0)/1000))},1000);bindSessionQuizzes()}};
+function bindSessionQuizzes(){const s=ui.session,b=BLOCKS[s.step][0];if(b==="g")regGrammar(s.topic,"sg");if(b==="r")regReading(s.read,"sr");if(b==="w")regQuiz("sw",s.warm,sc=>toast("Разминка: "+sc+"%"))}
+function blockWarm(){const s=ui.session;return `<section class="card"><p class="small muted">Выберите перевод. Слова взяты из повторения и слов дня.</p>${quizHTML("sw",s.warm)}</section>`}
+function makeWarm(){let ids=dueWords();if(ids.length<5)ids=ids.concat(ensureNewWords());ids=shuffle([...new Set(ids)]).slice(0,5);const pool=unlockedWords();return ids.map(id=>{const w=wordById(id);const wrong=shuffle(pool.filter(x=>x.id!==id)).slice(0,3).map(x=>x.ru);const o=shuffle([w.ru,...wrong]);return{q:w.en,o,a:o.indexOf(w.ru),e:w.ex}})}
+
+function blockGrammar(g,key){return `<section class="card"><div class="row" style="justify-content:space-between"><h3>${esc(g.t)}</h3><span class="chip c-lav">${STAGES[g.l-1].cefr}</span></div><p class="rule">${esc(g.r)}</p><div class="trap"><b>Ловушка для русскоговорящих</b>${esc(g.trap)}</div></section><section class="card"><h3>Практика</h3>${quizHTML(key,g.q)}</section>`}
+function regGrammar(g,key){regQuiz(key,g.q,sc=>{st.grammar[g.id]=Math.max(st.grammar[g.id]??0,sc);save();toast("Грамматика: "+sc+"%")})}
+function blockReading(r,key){return `<section class="card"><div class="row" style="justify-content:space-between"><h3>${esc(r.t)}</h3><span class="chip c-lav">${STAGES[r.l-1].cefr}</span></div><p class="passage">${esc(r.p)}</p></section><section class="card"><div class="row" style="justify-content:space-between"><h3>Вопросы</h3><span class="small muted">True / False / Not Given</span></div><p class="small muted">Not Given — информации в тексте нет. False — текст утверждает обратное.</p>${quizHTML(key,r.q)}</section>`}
+function regReading(r,key){regQuiz(key,r.q,sc=>{st.reading[r.id]=Math.max(st.reading[r.id]??0,sc);save();toast("Чтение: "+sc+"%")})}
+function blockTrans(items){return `<section class="card"><p class="small muted">Переведите на английский, затем нажмите «Проверить». Сравните с эталоном и отметьте отличия.</p>${items.map((t,i)=>`<div class="q"><b>${i+1}. ${esc(t.ru)}</b><textarea id="tr${i}" placeholder="Ваш перевод на английском"></textarea><div class="row"><button class="btn sm soft" data-act="checkTr" data-i="${i}">Проверить</button><button class="speak" data-say="${esc(t.en)}" aria-label="Озвучить эталон">▶</button></div><div class="expl" id="trr${i}" hidden></div></div>`).join("")}</section>`}
+function blockSpeak(x){return `<section class="card"><div class="row" style="justify-content:space-between"><h3>${esc(x.t)}</h3><span class="chip c-peach">${x.part}</span></div>
+ ${x.cue?`<div class="soft"><b>You should say:</b>${x.q.map(q=>`<div>• ${esc(q)}</div>`).join("")}</div><p class="small muted">1 минута на подготовку, затем говорите 2 минуты без остановки.</p>`:`<div class="list">${x.q.map(q=>`<div class="li"><div class="grow">${esc(q)}</div><button class="speak" data-say="${esc(q)}" aria-label="Озвучить вопрос">▶</button></div>`).join("")}</div><p class="small muted">Отвечайте вслух: 2–4 предложения на вопрос, с причиной и примером.</p>`}
+ <div class="row"><div class="timer" id="spT">${x.cue?"01:00":"02:00"}</div><button class="btn sm" data-act="spTimer" data-sec="${x.cue?60:120}">Подготовка / старт</button>${x.cue?`<button class="btn sm soft" data-act="spTimer" data-sec="120">Говорить 2 мин</button>`:""}</div>
+ <div class="soft"><div class="eyebrow">Полезные фразы</div>${x.ph.map(p=>`<div class="row" style="flex-wrap:nowrap"><button class="speak" data-say="${esc(p)}" aria-label="Озвучить">▶</button><span class="ex">${esc(p)}</span></div>`).join("")}</div>
+ <div><div class="eyebrow" style="margin-bottom:6px">Самопроверка по критериям IELTS</div>
+ ${["Fluency & Coherence — говорила без долгих пауз, использовала связки","Lexical Resource — применила 3+ слова из своего списка","Grammar — минимум одно сложное предложение (if, which, although)","Pronunciation — чёткие окончания -s, -ed, ударения"].map((c,i)=>`<label class="check"><input type="checkbox" id="sc${i}"><span class="small">${c}</span></label>`).join("")}</div></section>`}
+
+function startSpTimer(sec){clearInterval(spInt);let s=sec;const el=$("#spT");el.textContent=mmss(s);spInt=setInterval(()=>{s--;if(el)el.textContent=mmss(Math.max(0,s));if(s<=0){clearInterval(spInt);toast("Время вышло")}},1000)}
+
+function checkTr(i,items){const t=items[i],a=($("#tr"+i).value||"").toLowerCase().replace(/[^a-z' ]/g," ").split(/\s+/).filter(Boolean);const key=t.en.toLowerCase().replace(/[^a-z' -]/g," ").split(/\s+/).filter(w=>w.length>3);const hit=key.filter(w=>a.includes(w)).length;const p=key.length?Math.round(hit/key.length*100):0;const box=$("#trr"+i);box.hidden=false;box.innerHTML=`<b>Эталон:</b> ${esc(t.en)}<br>Совпадение ключевых слов: <b>${p}%</b>. ${p>=70?"Отлично.":p>=40?"Хорошо, сверьте порядок слов и время.":"Сравните конструкцию с эталоном и повторите вслух."}`;st.trans++;save()}
+
+/* --- Слова --- */
+function vWords(){
+ const seg=[["today","Слова дня"],["review","Повторение ("+dueWords().length+")"],["dict","Словарь"],["add","Добавить своё"]];
+ let body="";
+ if(ui.wordsTab==="today"||ui.wordsTab==="review")body=vFlash();
+ if(ui.wordsTab==="dict")body=vDict();
+ if(ui.wordsTab==="add")body=vAdd();
+ return `<section><h2>Слова</h2><p class="muted small" style="margin-top:4px">Бизнес, академическая и коучинговая лексика под PhD Coaching &amp; Leadership. Повторение по интервалам 1–3–7–14–30–60 дней.</p></section>
+ <div class="seg">${seg.map(([k,n])=>`<button data-wt="${k}" aria-pressed="${ui.wordsTab===k}">${n}</button>`).join("")}</div>${body}`;
+}
+function vFlash(){
+ const ids=ui.wordsTab==="today"?ensureNewWords().filter(id=>!(st.words[id]&&st.words[id].due>todayKey())):dueWords();
+ if(!ids.length)return `<section class="card flash"><div class="w">✓</div><p>${ui.wordsTab==="today"?"Все слова дня изучены. Загляните в повторение вечером.":"Нет слов на повторение. Новые появятся завтра."}</p></section>`;
+ if(!ui.card||!ids.includes(ui.card.id))ui.card={id:ids[0],open:false};
+ const w=wordById(ui.card.id);
+ return `<section class="card flash">
+  <span class="small muted">Осталось: ${ids.length}</span>
+  <div class="row" style="justify-content:center"><div class="w">${esc(w.en)}</div><button class="speak" data-say="${esc(w.en)}" aria-label="Произношение">▶</button></div>
+  <span class="chip ${CAT[w.cat][1]}">${w.own?"Моё слово":CAT[w.cat][0]}</span>
+  ${ui.card.open?`<div class="ru">${esc(w.ru)}</div>${w.ex?`<div class="row" style="justify-content:center;flex-wrap:nowrap"><span class="ex">${esc(w.ex)}</span><button class="speak" data-say="${esc(w.ex)}" aria-label="Пример">▶</button></div>`:""}
+  <div class="row" style="justify-content:center"><button class="btn soft" data-act="grade" data-k="0">Повторить</button><button class="btn" data-act="grade" data-k="1">Знаю</button></div>`
+  :`<button class="btn" data-act="flip">Показать перевод</button>`}
+ </section>`;
+}
+function vDict(){
+ const q=ui.dictQ.toLowerCase();
+ const ws=unlockedWords().filter(w=>(ui.dictCat==="all"||w.cat===ui.dictCat||(ui.dictCat==="own"&&w.own))&&(!q||w.en.includes(q)||w.ru.toLowerCase().includes(q)));
+ return `<section class="card"><input type="text" id="dictQ" placeholder="Поиск по английскому или русскому" value="${esc(ui.dictQ)}">
+ <div class="seg">${[["all","Все"],["b","Бизнес"],["a","Академ."],["c","Коучинг"],["own","Мои"]].map(([k,n])=>`<button data-dc="${k}" aria-pressed="${ui.dictCat===k}">${n}</button>`).join("")}</div>
+ <div class="list">${ws.map(w=>{const s=st.words[w.id];return `<div class="li"><button class="speak" data-say="${esc(w.en)}" aria-label="Произношение">▶</button><div class="grow"><b>${esc(w.en)}</b> — ${esc(w.ru)}<div class="small muted ex">${esc(w.ex)}</div></div><span class="chip ${s?(s.box>=4?"c-sage":"c-lav"):"c-rose"}">${s?(s.box>=4?"выучено":"учу"):"новое"}</span></div>`}).join("")||'<p class="muted">Ничего не найдено.</p>'}</div>
+ <p class="small muted">Открыто слов: ${unlockedWords().length}. Следующий этап добавит 20 новых.</p></section>`;
+}
+function vAdd(){return `<section class="card"><h3>Добавить своё слово</h3><p class="small muted">Слова из статей, вебинаров, переписки с университетом. Ваши слова идут в «Слова дня» первыми.</p>
+ <input type="text" id="aEn" placeholder="Английское слово или фраза"><input type="text" id="aRu" placeholder="Перевод на русский"><input type="text" id="aEx" placeholder="Пример предложения (необязательно)">
+ <div class="row"><button class="btn" data-act="addWord">Добавить</button></div>
+ ${st.custom.length?`<div class="list">${st.custom.map(w=>`<div class="li"><div class="grow"><b>${esc(w.en)}</b> — ${esc(w.ru)}</div></div>`).join("")}</div>`:""}</section>`}
+after.words=()=>{const i=$("#dictQ");if(i){i.addEventListener("input",e=>{ui.dictQ=e.target.value;const pos=e.target.selectionStart;render();const n=$("#dictQ");n.focus();n.setSelectionRange(pos,pos)})}};
+
+/* --- Грамматика --- */
+function vGrammar(){
+ if(ui.gTopic){const g=G.find(x=>x.id===ui.gTopic);return `<button class="btn ghost sm" data-act="gBack" style="align-self:flex-start">← Все темы</button>${blockGrammar(g,"gg")}`}
+ return `<section><h2>Грамматика</h2><p class="muted small" style="margin-top:4px">Правила на русском, примеры из коучинга и лидерства, типичные ошибки русскоговорящих.</p></section>
+ ${STAGES.map(s=>`<section class="card ${s.n>st.unlocked?"lock":""}"><div class="row" style="justify-content:space-between"><h3>${s.cefr} · ${s.name}</h3>${s.n>st.unlocked?'<span class="chip c-rose">откроется после теста</span>':""}</div>
+ <div class="list">${G.filter(g=>g.l===s.n).map(g=>{const sc=st.grammar[g.id];return `<div class="li"><div class="grow"><b>${esc(g.t)}</b></div>${sc!=null?`<span class="chip ${sc>=75?"c-sage":"c-peach"}">${sc}%</span>`:""}${s.n<=st.unlocked?`<button class="btn sm soft" data-gt="${g.id}">Открыть</button>`:""}</div>`}).join("")}</div></section>`).join("")}`;
+}
+after.grammar=()=>{if(ui.gTopic)regGrammar(G.find(x=>x.id===ui.gTopic),"gg")};
+
+/* --- Речь --- */
+function vSpeak(){const av=availS();const x=av[ui.sIdx%av.length];return `<section><h2>Разговорная речь</h2><p class="muted small" style="margin-top:4px">IELTS Speaking Part 1, 2, 3 и интервью для поступления. Говорите вслух, засекайте время, проверяйте себя по 4 критериям.</p></section>
+ <div class="seg">${av.map((s,i)=>`<button data-si="${i}" aria-pressed="${i===ui.sIdx%av.length}">${s.part}: ${esc(s.t.length>26?s.t.slice(0,24)+"…":s.t)}</button>`).join("")}</div>${blockSpeak(x)}`}
+
+/* --- Перевод --- */
+function vTrans(){const av=availT();const start=(ui.tIdx*3)%av.length;const items=[0,1,2].map(i=>av[(start+i)%av.length]);ui.trItems=items;return `<section><h2>Перевод RU → EN</h2><p class="muted small" style="margin-top:4px">Предложения из вашей реальной жизни и будущего PhD. Всего переведено: ${st.trans}.</p></section>${blockTrans(items)}<div class="row"><button class="btn soft" data-act="nextTr">Следующие 3 предложения</button></div>`}
+
+/* --- Чтение --- */
+function vRead(){
+ if(ui.rId){const r=R.find(x=>x.id===ui.rId);return `<button class="btn ghost sm" data-act="rBack" style="align-self:flex-start">← Все тексты</button>${blockReading(r,"rr")}`}
+ return `<section><h2>Чтение</h2><p class="muted small" style="margin-top:4px">Академические тексты о коучинге, лидерстве и осознанности в формате IELTS Academic.</p></section>
+ <section class="card"><div class="list">${R.map(r=>{const sc=st.reading[r.id];const lock=r.l>st.unlocked;return `<div class="li"><div class="grow"><b>${esc(r.t)}</b><div class="small muted">${STAGES[r.l-1].cefr} · ${r.p.split(/\s+/).length} слов</div></div>${sc!=null?`<span class="chip ${sc>=75?"c-sage":"c-peach"}">${sc}%</span>`:""}${lock?'<span class="chip c-rose">закрыто</span>':`<button class="btn sm soft" data-ri="${r.id}">Читать</button>`}</div>`}).join("")}</div></section>`;
+}
+after.read=()=>{if(ui.rId)regReading(R.find(x=>x.id===ui.rId),"rr")};
+
+/* --- Этапы и тесты --- */
+function vStages(){
+ if(ui.test)return vTest();
+ const dates=stageDates();
+ return `<section><h2>Дорожная карта до августа 2027</h2><p class="muted small" style="margin-top:4px">5 этапов, ${STAGES.reduce((a,s)=>a+s.weeks,0)} недель. Каждый тест этапа: 12 вопросов (слова + грамматика), проходной балл 70%. Успешный тест открывает новые слова, темы, тексты и задания.</p></section>
+ <div class="ladder">${STAGES.map((s,i)=>{const t=st.tests[s.n];const lock=s.n>st.unlocked;const now=s.n===st.unlocked;return `<div class="lvl ${lock?"lock":""} ${now?"now":""}"><div class="band">${s.band}</div><div style="min-width:0"><div class="row"><b>${s.n}. ${s.name}</b><span class="chip c-lav">${s.cefr}</span>${t?`<span class="chip ${t.best>=70?"c-sage":"c-peach"}">тест ${t.best}%</span>`:""}</div><div class="small">${s.goal}</div><div class="small muted">${fmt(dates[i].from)} — ${fmt(dates[i].to)} · ${s.weeks} нед.</div></div><div>${lock?'<span class="chip c-rose">закрыт</span>':`<button class="btn sm ${now?"":"soft"}" data-test="${s.n}">${t?"Пересдать":"Пройти тест"}</button>`}</div></div>`}).join("")}</div>
+ <section class="soft"><div class="eyebrow">Как читать шкалу</div><p class="small">Band — ориентир по шкале IELTS для каждого этапа. Цель поступления — общий балл 6.5. Этап 5 даёт запас на случай, если один из модулей (обычно Writing или Speaking) окажется ниже.</p></section>`;
+}
+function makeTest(n){const ws=allWords().filter(w=>w.l===n);const pool=unlockedWords();const qs=[];
+ shuffle(ws).slice(0,4).forEach(w=>{const o=shuffle([w.ru,...shuffle(pool.filter(x=>x.id!==w.id)).slice(0,3).map(x=>x.ru)]);qs.push({q:"Перевод: "+w.en,o,a:o.indexOf(w.ru),e:w.ex})});
+ shuffle(ws).slice(0,3).forEach(w=>{const re=new RegExp(w.en.replace(/[-]/g,"\\-"),"i");const gap=w.ex.replace(re,"_____");const o=shuffle([w.en,...shuffle(ws.filter(x=>x.id!==w.id)).slice(0,3).map(x=>x.en)]);qs.push({q:gap,o,a:o.indexOf(w.en),e:w.ex})});
+ shuffle(G.filter(g=>g.l===n).flatMap(g=>g.q)).slice(0,5).forEach(q=>qs.push(q));return shuffle(qs)}
+function vTest(){const n=ui.test.n,s=STAGES[n-1];return `<button class="btn ghost sm" data-act="testBack" style="align-self:flex-start">← К этапам</button><section class="card"><div class="eyebrow">Тест этапа ${n}</div><h2>${s.name} · ${s.cefr}</h2><p class="small muted">12 вопросов. Для перехода на следующий этап нужно 70% и выше.</p></section><section class="card">${quizHTML("test",ui.test.qs)}</section><div id="testRes"></div>`}
+after.stages=()=>{if(ui.test){const n=ui.test.n;regQuiz("test",ui.test.qs,sc=>{const prev=st.tests[n]?.best??0;st.tests[n]={best:Math.max(prev,sc),date:todayKey()};let msg="";if(sc>=70&&n===st.unlocked&&n<5){st.unlocked=n+1;msg="Открыт этап "+(n+1)+": "+STAGES[n].name+". Добавлены 20 слов, новые темы грамматики, тексты и задания."}else if(sc>=70&&n===5){msg="Вы прошли финальный этап. Уровень band 7.0 по материалам приложения."}else msg="Нужно 70%. Повторите темы этапа и попробуйте снова через пару дней.";save();$("#testRes").innerHTML=`<section class="card"><h3>Результат: ${sc}%</h3><p>${msg}</p><div class="row"><button class="btn" data-act="testBack">К дорожной карте</button></div></section>`;$("#testRes").scrollIntoView({behavior:"smooth"})})}};
+
+/* --- Настройки --- */
+function vSettings(){return `<section><h2>Настройки</h2></section>
+ <section class="card"><div class="grid2"><label class="stat"><span class="small muted">Дата старта</span><input type="date" id="sStart" value="${st.start}"></label><label class="stat"><span class="small muted">Дата экзамена IELTS</span><input type="date" id="sExam" value="${st.exam}"></label></div>
+ <label class="stat"><span class="small muted">Новых слов в день</span><select id="sNew">${[5,8,10,12].map(n=>`<option ${st.newPerDay===n?"selected":""}>${n}</option>`).join("")}</select></label>
+ <div class="row"><button class="btn" data-act="saveSet">Сохранить</button></div></section>
+ <section class="card"><h3>Резервная копия</h3><p class="small muted">Прогресс хранится в этом браузере. Скопируйте код, чтобы перенести его на другое устройство.</p><textarea id="bk" style="min-height:90px"></textarea><div class="row"><button class="btn soft" data-act="exp">Получить код</button><button class="btn ghost" data-act="imp">Загрузить код</button></div></section>
+ <section class="card"><h3>Сброс прогресса</h3><p class="small muted">Удаляет все слова, результаты и историю.</p><div class="row"><button class="btn ghost" data-act="askReset">Сбросить всё</button></div></section>`}
+
+/* ================= СОБЫТИЯ ================= */
+document.addEventListener("click",e=>{
+ const t=e.target.closest("button");if(!t)return;
+ if(t.classList.contains("opt"))return answer(t);
+ if(t.dataset.say)return speak(t.dataset.say);
+ if(t.dataset.go){ui.view=t.dataset.go;ui.test=null;return render()}
+ if(t.dataset.wt){ui.wordsTab=t.dataset.wt;ui.card=null;return render()}
+ if(t.dataset.dc){ui.dictCat=t.dataset.dc;return render()}
+ if(t.dataset.gt){ui.gTopic=t.dataset.gt;return render()}
+ if(t.dataset.ri){ui.rId=t.dataset.ri;return render()}
+ if(t.dataset.si!=null){ui.sIdx=+t.dataset.si;return render()}
+ if(t.dataset.test){ui.test={n:+t.dataset.test,qs:makeTest(+t.dataset.test)};return render()}
+ const a=t.dataset.act;
+ const A={
+  startSession(){const av=availT(),i0=(dayIdx()*3)%av.length;ui.session={step:0,t0:Date.now(),topic:pickTopic(),read:pickReading(),trans:[0,1,2].map(i=>av[(i0+i)%av.length]),speakItem:availS()[dayIdx()%availS().length],warm:makeWarm()};render()},
+  nextBlock(){const s=ui.session,d=day();const b=BLOCKS[s.step][0];if(!d.steps.includes(b))d.steps.push(b);if(b==="s")st.speak++;save();if(s.step<4){s.step++;render()}else{d.morning=true;save();ui.session=null;render();toast("Занятие завершено! Серия: "+streak()+" дн.")}},
+  quitSession(){ui.session=null;render()},
+  goWords(){ui.view="words";ui.wordsTab="today";render()},
+  goReview(){ui.view="words";ui.wordsTab="review";render()},
+  flip(){ui.card.open=true;render()},
+  grade(){grade(ui.card.id,t.dataset.k==="1");ui.card=null;render()},
+  addWord(){const en=$("#aEn").value.trim(),ru=$("#aRu").value.trim();if(!en||!ru)return toast("Заполните слово и перевод");st.custom.push({en,ru,ex:$("#aEx").value.trim()});const d=day();if(d.newWords.length<st.newPerDay+5)d.newWords.unshift("c-"+(st.custom.length-1));save();toast("Слово добавлено в слова дня");render()},
+  gBack(){ui.gTopic=null;render()},rBack(){ui.rId=null;render()},
+  checkTr(){checkTr(+t.dataset.i,ui.session?ui.session.trans:ui.trItems)},
+  nextTr(){ui.tIdx++;render()},
+  spTimer(){startSpTimer(+t.dataset.sec)},
+  testBack(){ui.test=null;render()},
+  saveSet(){st.start=$("#sStart").value||st.start;st.exam=$("#sExam").value||st.exam;st.newPerDay=+$("#sNew").value;save();toast("Сохранено");render()},
+  exp(){const b=$("#bk");b.value=btoa(unescape(encodeURIComponent(JSON.stringify(st))));b.select();try{navigator.clipboard.writeText(b.value).then(()=>toast("Код скопирован"),()=>toast("Выделите и скопируйте код"))}catch(_){toast("Выделите и скопируйте код")}},
+  imp(){try{st=Object.assign(defaults(),JSON.parse(decodeURIComponent(escape(atob($("#bk").value.trim())))));save();toast("Прогресс загружен");render()}catch(_){toast("Код не распознан. Проверьте, что он скопирован полностью.")}},
+  askReset(){const m=document.createElement("div");m.className="modal";m.innerHTML=`<div class="card"><h3>Сбросить весь прогресс?</h3><p class="small muted">Это действие нельзя отменить.</p><div class="row"><button class="btn ghost" data-act="closeM">Отмена</button><button class="btn" data-act="doReset">Сбросить</button></div></div>`;document.body.appendChild(m)},
+  closeM(){t.closest(".modal").remove()},
+  doReset(){st=defaults();save();t.closest(".modal").remove();ui.view="today";render();toast("Прогресс сброшен")}
+ };
+ A[a]&&A[a]();
+});
+render();
+</script>
+
+</body>
+</html>
